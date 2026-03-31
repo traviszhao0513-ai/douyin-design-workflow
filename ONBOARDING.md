@@ -16,26 +16,12 @@ Clone 后你将自动获得：
 - `CLAUDE.md` — 项目规则和工作流命令
 - `design.md` — 设计系统规范（120+ token，Light/Dark）
 - `project_douyin_design_system.md` — 组件库入口
+- `Douyin_design_system/` — 组件库（已内置，无需额外配置）
 - `.claude/settings.json` — 共享权限配置
 
 ---
 
-## 2. 配置组件库路径
-
-打开 `CLAUDE.md`，找到 **Component Library Path** section，将路径改为你本地的 Douyin 组件库位置：
-
-```
-DOUYIN_COMPONENTS = /你的路径/Douyin_design_system
-```
-
-如果你还没有组件库，请从团队共享目录拷贝或 clone：
-```bash
-git clone <douyin-design-system-repo-url> ~/Douyin_design_system
-```
-
----
-
-## 3. 连接 MCP 工具
+## 2. 连接 MCP 工具
 
 ### Figma MCP（必须）
 1. 在 Claude Code 中连接 Figma MCP
@@ -47,7 +33,7 @@ git clone <douyin-design-system-repo-url> ~/Douyin_design_system
 
 ---
 
-## 4. 开始工作
+## 3. 开始工作
 
 ### 创建需求分支
 ```

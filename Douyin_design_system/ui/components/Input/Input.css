@@ -1,0 +1,166 @@
+/**
+ * Input — Douyin Delight UI Kit
+ * Figma: 83293:121624  (✏️ 通用搜索栏 / 表单项目)
+ *
+ * All color/size values reference CSS Custom Properties from tokens.css.
+ * Zero hardcoded color values.
+ */
+
+/* ─── Field container (label + wrapper + helper) ────────────────────────── */
+.dux-input-field {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--dux-spacing-1); /* 4px */
+  width:          100%;
+}
+
+/* ─── Label ─────────────────────────────────────────────────────────────── */
+.dux-input-label {
+  font-family:  var(--dux-font-sans);
+  font-size:    var(--dux-font-size-base); /* 14px */
+  font-weight:  var(--dux-font-weight-medium);
+  line-height:  var(--dux-line-height-normal);
+  color:        var(--dux-color-text-primary);
+}
+
+/* ─── Wrapper (the visible input box) ───────────────────────────────────── */
+.dux-input-wrapper {
+  display:      flex;
+  align-items:  center;
+  gap:          var(--dux-spacing-2);
+  border-radius: var(--dux-radius-md);
+  border:       1px solid var(--dux-color-border-light);
+  transition:
+    border-color var(--dux-duration-normal) var(--dux-ease-standard),
+    box-shadow   var(--dux-duration-normal) var(--dux-ease-standard),
+    background-color var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+/* Variant: filled */
+.dux-input-wrapper--filled {
+  background-color: var(--dux-color-bg-page);
+  border-color:     transparent;
+}
+
+/* Variant: outlined */
+.dux-input-wrapper--outlined {
+  background-color: var(--dux-color-bg-surface);
+  border-color:     var(--dux-color-border-light);
+}
+
+/* Focus-within */
+.dux-input-wrapper:focus-within {
+  border-color: var(--dux-color-border-focused);
+  box-shadow:   var(--dux-shadow-focus);
+}
+
+.dux-input-wrapper--filled:focus-within {
+  background-color: var(--dux-color-bg-surface);
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-input-wrapper--sm {
+  height:  var(--dux-spacing-8);  /* 32px */
+  padding: 0 var(--dux-spacing-2);
+}
+
+.dux-input-wrapper--md {
+  height:  40px;
+  padding: 0 var(--dux-spacing-3);
+}
+
+.dux-input-wrapper--lg {
+  height:  var(--dux-spacing-12); /* 48px */
+  padding: 0 var(--dux-spacing-4);
+}
+
+/* Search bar shape override (pill) */
+.dux-input-wrapper--filled.dux-input-wrapper--has-prefix {
+  border-radius: var(--dux-radius-full);
+}
+
+/* ─── Status ────────────────────────────────────────────────────────────── */
+.dux-input-wrapper--success {
+  border-color: var(--dux-color-status-success);
+}
+
+.dux-input-wrapper--warning {
+  border-color: var(--dux-color-status-warning);
+}
+
+.dux-input-wrapper--error {
+  border-color: var(--dux-color-status-error);
+}
+
+/* ─── Disabled ──────────────────────────────────────────────────────────── */
+.dux-input-wrapper--disabled {
+  opacity: 0.48;
+  cursor:  not-allowed;
+}
+
+.dux-input-wrapper--disabled .dux-input__native {
+  cursor: not-allowed;
+}
+
+/* ─── Native input ──────────────────────────────────────────────────────── */
+.dux-input__native {
+  flex:          1;
+  min-width:     0;
+  background:    transparent;
+  border:        none;
+  outline:       none;
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-base); /* 14px */
+  line-height:   var(--dux-line-height-normal);
+  color:         var(--dux-color-text-primary);
+  padding:       0;
+}
+
+.dux-input-wrapper--sm .dux-input__native { font-size: var(--dux-font-size-sm); }
+.dux-input-wrapper--lg .dux-input__native { font-size: var(--dux-font-size-lg); }
+
+.dux-input__native::placeholder {
+  color: var(--dux-color-text-tertiary);
+}
+
+/* ─── Prefix / Suffix ───────────────────────────────────────────────────── */
+.dux-input__prefix,
+.dux-input__suffix {
+  display:     inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color:       var(--dux-color-text-secondary);
+  font-size:   var(--dux-font-size-base);
+}
+
+/* ─── Clear button ──────────────────────────────────────────────────────── */
+.dux-input__clear {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  flex-shrink:      0;
+  background:       transparent;
+  border:           none;
+  padding:          0;
+  cursor:           pointer;
+  color:            var(--dux-color-text-tertiary);
+  transition:       color var(--dux-duration-fast) var(--dux-ease-standard);
+  line-height:      1;
+}
+
+.dux-input__clear:hover {
+  color: var(--dux-color-text-secondary);
+}
+
+/* ─── Helper text ───────────────────────────────────────────────────────── */
+.dux-input-helper {
+  margin:      0;
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-sm); /* 12px */
+  line-height: var(--dux-line-height-normal);
+  color:       var(--dux-color-text-secondary);
+}
+
+.dux-input-helper--error   { color: var(--dux-color-status-error);   }
+.dux-input-helper--warning { color: var(--dux-color-status-warning); }
+.dux-input-helper--success { color: var(--dux-color-status-success); }

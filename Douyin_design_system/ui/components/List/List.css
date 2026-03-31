@@ -1,0 +1,95 @@
+/* ─── List container ───────────────────────────────────────────────────────── */
+.dux-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  width: 100%;
+}
+
+.dux-list--card .dux-list__row {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.dux-list--divider .dux-list__row + .dux-list__row {
+  border-top: 0.5px solid #f0f0f0;
+}
+
+/* ─── List item ────────────────────────────────────────────────────────────── */
+.dux-list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 16px;
+  background: #fff;
+  border: none;
+  text-align: left;
+  gap: 12px;
+  box-sizing: border-box;
+  transition: background 0.15s;
+}
+
+.dux-list-item--clickable {
+  cursor: pointer;
+}
+
+.dux-list-item--clickable:active {
+  background: #f5f5f5;
+}
+
+.dux-list-item--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── Icon ─────────────────────────────────────────────────────────────────── */
+.dux-list-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #666;
+}
+
+/* ─── Body ─────────────────────────────────────────────────────────────────── */
+.dux-list-item__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.dux-list-item__title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dux-list-item__subtitle {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Right slot ───────────────────────────────────────────────────────────── */
+.dux-list-item__right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #bbb;
+  margin-left: 4px;
+}

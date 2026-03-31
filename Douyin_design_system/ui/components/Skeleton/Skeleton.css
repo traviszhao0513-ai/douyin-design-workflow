@@ -1,0 +1,93 @@
+/**
+ * Skeleton — Douyin Delight UI Kit
+ */
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+.dux-skeleton {
+  background:    var(--dux-color-bg-subtle);
+  border-radius: var(--dux-radius-xs);
+  display:       block;
+}
+
+/* ─── Shimmer animation ─────────────────────────────────────────────────── */
+.dux-skeleton--animated {
+  background: linear-gradient(
+    90deg,
+    var(--dux-color-bg-subtle)  0%,
+    var(--dux-color-border-light) 50%,
+    var(--dux-color-bg-subtle)  100%
+  );
+  background-size: 200% 100%;
+  animation: dux-shimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes dux-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Variants ──────────────────────────────────────────────────────────── */
+.dux-skeleton--text {
+  height:        14px;
+  border-radius: var(--dux-radius-xs);
+}
+
+.dux-skeleton--avatar {
+  width:         40px;
+  height:        40px;
+  border-radius: var(--dux-radius-sm);
+  flex-shrink:   0;
+}
+
+.dux-skeleton--avatar.dux-skeleton--round {
+  border-radius: var(--dux-radius-full);
+}
+
+.dux-skeleton--button {
+  width:         80px;
+  height:        36px;
+  border-radius: var(--dux-radius-full);
+}
+
+.dux-skeleton--image {
+  width:         100%;
+  height:        160px;
+  border-radius: var(--dux-radius-sm);
+}
+
+/* ─── Paragraph (text lines) ────────────────────────────────────────────── */
+.dux-skeleton-paragraph {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--dux-spacing-2);
+  width:          100%;
+}
+
+/* ─── Skeleton Card ─────────────────────────────────────────────────────── */
+.dux-skeleton-card {
+  display:        flex;
+  flex-direction: column;
+  gap:            0;
+  overflow:       hidden;
+  border-radius:  var(--dux-radius-md);
+}
+
+.dux-skeleton-card__body {
+  padding:        var(--dux-spacing-3);
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--dux-spacing-3);
+}
+
+.dux-skeleton-card__header {
+  display:     flex;
+  align-items: center;
+  gap:         var(--dux-spacing-2);
+}
+
+.dux-skeleton-card__meta {
+  flex:           1;
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--dux-spacing-1);
+}

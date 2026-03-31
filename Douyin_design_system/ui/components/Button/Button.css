@@ -1,0 +1,179 @@
+/**
+ * Button — Douyin Delight UI Kit
+ * Figma: 83291:121608  (⚙️ 按钮 Buttons)
+ *
+ * All color/size values reference CSS Custom Properties from tokens.css.
+ * Zero hardcoded color values.
+ */
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+.dux-btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--dux-spacing-1);          /* 4px */
+  border:          1px solid transparent;
+  border-radius:   var(--dux-radius-full);        /* pill */
+  font-family:     var(--dux-font-sans);
+  font-weight:     var(--dux-font-weight-medium);
+  line-height:     var(--dux-line-height-tight);
+  cursor:          pointer;
+  outline:         none;
+  transition:
+    background-color var(--dux-duration-normal) var(--dux-ease-standard),
+    border-color     var(--dux-duration-normal) var(--dux-ease-standard),
+    color            var(--dux-duration-normal) var(--dux-ease-standard),
+    box-shadow       var(--dux-duration-normal) var(--dux-ease-standard),
+    opacity          var(--dux-duration-normal) var(--dux-ease-standard);
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dux-btn:focus-visible {
+  box-shadow: var(--dux-shadow-focus);
+}
+
+.dux-btn--block {
+  width: 100%;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-btn--sm {
+  height:          var(--dux-spacing-7);          /* 28px */
+  padding:         0 var(--dux-spacing-3);        /* 0 12px */
+  font-size:       var(--dux-font-size-sm);        /* 12px */
+}
+
+.dux-btn--md {
+  height:          36px;
+  padding:         0 var(--dux-spacing-4);        /* 0 16px */
+  font-size:       var(--dux-font-size-base);      /* 14px */
+}
+
+.dux-btn--lg {
+  height:          var(--dux-spacing-12);         /* 48px */
+  padding:         0 var(--dux-spacing-6);        /* 0 24px */
+  font-size:       var(--dux-font-size-lg);        /* 16px */
+}
+
+/* ─── Variant: Primary ──────────────────────────────────────────────────── */
+.dux-btn--primary {
+  background-color: var(--dux-color-brand-primary);
+  color:            var(--dux-color-text-inverse);
+  border-color:     var(--dux-color-brand-primary);
+}
+
+.dux-btn--primary:hover:not(:disabled) {
+  background-color: var(--dux-color-brand-primary-hover);
+  border-color:     var(--dux-color-brand-primary-hover);
+}
+
+.dux-btn--primary:active:not(:disabled) {
+  background-color: var(--dux-color-brand-primary-active);
+  border-color:     var(--dux-color-brand-primary-active);
+}
+
+.dux-btn--primary:disabled {
+  background-color: var(--dux-color-brand-primary-disabled);
+  border-color:     var(--dux-color-brand-primary-disabled);
+  cursor:           not-allowed;
+}
+
+/* ─── Variant: Secondary ────────────────────────────────────────────────── */
+.dux-btn--secondary {
+  background-color: var(--dux-color-brand-primary-surface);
+  color:            var(--dux-color-brand-primary);
+  border-color:     transparent;
+}
+
+.dux-btn--secondary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--dux-color-brand-primary-surface) 80%, var(--dux-color-brand-primary) 20%);
+}
+
+.dux-btn--secondary:active:not(:disabled) {
+  background-color: color-mix(in srgb, var(--dux-color-brand-primary-surface) 60%, var(--dux-color-brand-primary) 40%);
+}
+
+.dux-btn--secondary:disabled {
+  opacity: 0.4;
+  cursor:  not-allowed;
+}
+
+/* ─── Variant: Ghost ────────────────────────────────────────────────────── */
+.dux-btn--ghost {
+  background-color: transparent;
+  color:            var(--dux-color-brand-primary);
+  border-color:     var(--dux-color-border-light);
+}
+
+.dux-btn--ghost:hover:not(:disabled) {
+  background-color: var(--dux-color-brand-primary-surface);
+  border-color:     var(--dux-color-brand-primary);
+}
+
+.dux-btn--ghost:active:not(:disabled) {
+  background-color: color-mix(in srgb, var(--dux-color-brand-primary-surface) 70%, transparent 30%);
+}
+
+.dux-btn--ghost:disabled {
+  color:        var(--dux-color-text-tertiary);
+  border-color: var(--dux-color-border-light);
+  cursor:       not-allowed;
+}
+
+/* ─── Variant: Danger ───────────────────────────────────────────────────── */
+.dux-btn--danger {
+  background-color: var(--dux-color-status-error);
+  color:            var(--dux-color-text-inverse);
+  border-color:     var(--dux-color-status-error);
+}
+
+.dux-btn--danger:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.dux-btn--danger:active:not(:disabled) {
+  opacity: 0.76;
+}
+
+.dux-btn--danger:disabled {
+  opacity: 0.4;
+  cursor:  not-allowed;
+}
+
+/* ─── Icon ──────────────────────────────────────────────────────────────── */
+.dux-btn__icon {
+  display:     inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size:   1.14em; /* icon slightly larger than text */
+}
+
+/* ─── Label ─────────────────────────────────────────────────────────────── */
+.dux-btn__label {
+  display:     inline-flex;
+  align-items: center;
+}
+
+/* ─── Loading Spinner ───────────────────────────────────────────────────── */
+.dux-btn__spinner {
+  display:       inline-block;
+  width:         1em;
+  height:        1em;
+  border:        2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--dux-radius-full);
+  animation:     dux-spin var(--dux-duration-slow) linear infinite;
+  flex-shrink:   0;
+}
+
+@keyframes dux-spin {
+  to { transform: rotate(360deg); }
+}
+
+.dux-btn--loading {
+  pointer-events: none;
+  opacity: 0.72;
+}

@@ -8,7 +8,7 @@ This is the primary design-input document for visual generation in this reposito
 
 For visual requests in this repo, Claude should read this file first, then `project_douyin_design_system.md`, then inspect the local Douyin component source directory:
 
-`<DOUYIN_COMPONENTS>/ui/components/`（路径在 CLAUDE.md 的 Component Library Path 中定义）
+`./Douyin_design_system/ui/components/`
 
 Unless the user explicitly overrides the source, this document defines how Douyin-style pages should be composed, what visual principles to preserve, and how local components should be reused.
 
@@ -358,7 +358,7 @@ Base unit: **4px**
 > 以下仅列出各场景下的推荐映射关系。
 
 Default local design-system source:
-`<DOUYIN_COMPONENTS>/ui/components/`（路径在 CLAUDE.md 的 Component Library Path 中定义）
+`./Douyin_design_system/ui/components/`
 
 Available component families (22):
 `ActionBar` / `Actionsheets` / `Avatar` / `Badge` / `BottomNav` / `Button` / `Card` / `Checkbox` / `Divider` / `Form` / `Input` / `List` / `Modal` / `PushNotification` / `Radio` / `Select` / `Skeleton` / `Tabs` / `Toast` / `Toggle` / `Tooltip` / `VideoCard`
@@ -472,7 +472,7 @@ For `/design`, `/prototype`, and default "出图" requests in this repository:
 
 1. Read `design.md` first
 2. Read `project_douyin_design_system.md` second
-3. Inspect `<DOUYIN_COMPONENTS>/ui/components/`（路径在 CLAUDE.md 的 Component Library Path 中定义）
+3. Inspect `./Douyin_design_system/ui/components/`
 4. Reuse local components first
 5. Compose from multiple local components when no single component fits
 6. Only create new structures as a fallback

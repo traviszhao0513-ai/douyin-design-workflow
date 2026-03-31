@@ -13,14 +13,14 @@ It is not the primary design-input document.
 For visual work in this repository, the default reading order is:
 1. `design.md`
 2. `project_douyin_design_system.md`
-3. `<DOUYIN_COMPONENTS>/ui/components/`（路径在 CLAUDE.md 的 Component Library Path 中定义）
+3. `./Douyin_design_system/ui/components/`
 
 ---
 
 ## Source of Truth / 真实来源
 
 Default local component source directory:
-`<DOUYIN_COMPONENTS>/ui/components/`（路径在 CLAUDE.md 的 Component Library Path 中定义）
+`./Douyin_design_system/ui/components/`
 
 This directory is the authoritative source for what components actually exist.
 

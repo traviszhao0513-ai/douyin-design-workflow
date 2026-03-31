@@ -1,0 +1,177 @@
+/**
+ * VideoCard — Douyin Delight UI Kit
+ * Vertical video feed card (抖音 feed style)
+ */
+
+/* ─── Card wrapper ──────────────────────────────────────────────────────── */
+.dux-video-card {
+  display:        flex;
+  flex-direction: column;
+  border-radius:  var(--dux-radius-md);
+  overflow:       hidden;
+  background:     var(--dux-color-text-primary);
+  position:       relative;
+}
+
+.dux-video-card--clickable {
+  cursor: pointer;
+}
+
+/* ─── Thumbnail ─────────────────────────────────────────────────────────── */
+.dux-video-card__thumb {
+  position:   relative;
+  overflow:   hidden;
+  width:      100%;
+  background: var(--dux-color-bg-subtle);
+  flex-shrink: 0;
+}
+
+.dux-video-card__img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+  transition: transform var(--dux-duration-slow) var(--dux-ease-standard);
+}
+
+.dux-video-card--clickable .dux-video-card__thumb:hover .dux-video-card__img {
+  transform: scale(1.04);
+}
+
+/* ─── Gradient overlay ──────────────────────────────────────────────────── */
+.dux-video-card__overlay {
+  position: absolute;
+  inset:    0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Play icon (shown on hover) ────────────────────────────────────────── */
+.dux-video-card__play-icon {
+  position:        absolute;
+  top:             50%;
+  left:            50%;
+  transform:       translate(-50%, -50%);
+  opacity:         0;
+  transition:      opacity var(--dux-duration-fast) var(--dux-ease-standard);
+  pointer-events:  none;
+}
+
+.dux-video-card__thumb:hover .dux-video-card__play-icon {
+  opacity: 1;
+}
+
+/* ─── Live badge ────────────────────────────────────────────────────────── */
+.dux-video-card__live-badge {
+  position:      absolute;
+  top:           var(--dux-spacing-2);
+  left:          var(--dux-spacing-2);
+  background:    var(--dux-color-brand-secondary);
+  color:         #FFFFFF;
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-xs);
+  font-weight:   var(--dux-font-weight-bold);
+  padding:       2px var(--dux-spacing-1);
+  border-radius: var(--dux-radius-xs);
+  letter-spacing: 0.04em;
+}
+
+/* ─── Duration ──────────────────────────────────────────────────────────── */
+.dux-video-card__duration {
+  position:    absolute;
+  bottom:      var(--dux-spacing-2);
+  right:       var(--dux-spacing-2);
+  color:       #FFFFFF;
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-xs);
+  font-weight: var(--dux-font-weight-medium);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ─── Thumb meta (plays count) ──────────────────────────────────────────── */
+.dux-video-card__thumb-meta {
+  position:    absolute;
+  bottom:      var(--dux-spacing-2);
+  left:        var(--dux-spacing-2);
+  display:     flex;
+  align-items: center;
+  gap:         var(--dux-spacing-1);
+}
+
+.dux-video-card__plays {
+  display:     inline-flex;
+  align-items: center;
+  gap:         3px;
+  color:       rgba(255, 255, 255, 0.9);
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-xs);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ─── Card body ─────────────────────────────────────────────────────────── */
+.dux-video-card__body {
+  padding:        var(--dux-spacing-2);
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--dux-spacing-1);
+  background:     var(--dux-color-bg-surface);
+}
+
+/* ─── Author ────────────────────────────────────────────────────────────── */
+.dux-video-card__author {
+  display:     inline-flex;
+  align-items: center;
+  gap:         var(--dux-spacing-1);
+  background:  none;
+  border:      none;
+  padding:     0;
+  cursor:      default;
+}
+
+.dux-video-card__author[disabled] { cursor: default; pointer-events: none; }
+.dux-video-card__author:not([disabled]) { cursor: pointer; }
+
+.dux-video-card__author-avatar {
+  width:         20px;
+  height:        20px;
+  border-radius: var(--dux-radius-full);
+  object-fit:    cover;
+  flex-shrink:   0;
+}
+
+.dux-video-card__author-name {
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-xs);
+  color:         var(--dux-color-text-secondary);
+  overflow:      hidden;
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+}
+
+/* ─── Title ─────────────────────────────────────────────────────────────── */
+.dux-video-card__title {
+  margin:        0;
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-sm);
+  font-weight:   var(--dux-font-weight-medium);
+  color:         var(--dux-color-text-primary);
+  overflow:      hidden;
+  display:       -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height:   var(--dux-line-height-snug);
+}
+
+/* ─── Likes ─────────────────────────────────────────────────────────────── */
+.dux-video-card__likes {
+  display:     inline-flex;
+  align-items: center;
+  gap:         3px;
+  color:       var(--dux-color-text-secondary);
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-xs);
+}

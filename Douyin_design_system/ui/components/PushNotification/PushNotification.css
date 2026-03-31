@@ -1,0 +1,152 @@
+/**
+ * PushNotification (端内提醒) — Douyin Delight UI Kit
+ * Matches Figma DuxPushNotifications spec:
+ *   Width: 359px, Height: 80px, Padding: 16px, corner radius 16px
+ */
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+.dux-push {
+  display:          flex;
+  align-items:      center;
+  gap:              var(--dux-spacing-3); /* 12px */
+  width:            359px;
+  min-height:       80px;
+  padding:          var(--dux-spacing-4); /* 16px all sides */
+  border-radius:    var(--dux-radius-lg); /* 16px */
+  background:       rgba(255, 255, 255, 0.92);
+  backdrop-filter:  blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:       var(--dux-shadow-lg);
+  font-family:      var(--dux-font-sans);
+  animation:        dux-push-in var(--dux-duration-slow) var(--dux-ease-enter);
+}
+
+/* ─── Dark forced ───────────────────────────────────────────────────────── */
+.dux-push--dark {
+  background: rgba(30, 30, 36, 0.92);
+}
+
+.dux-push--dark .dux-push__title      { color: #F4F4F4; }
+.dux-push--dark .dux-push__body       { color: #8A8B94; }
+.dux-push--dark .dux-push__timestamp  { color: #8A8B94; }
+.dux-push--dark .dux-push__action     { color: #F4F4F4; }
+.dux-push--dark .dux-push__dismiss    { color: #8A8B94; }
+
+/* ─── Avatar wrapper ────────────────────────────────────────────────────── */
+.dux-push__avatar-wrap {
+  position:    relative;
+  flex-shrink: 0;
+  width:       48px;
+  height:      48px;
+}
+
+.dux-push__avatar {
+  width:         100%;
+  height:        100%;
+  border-radius: var(--dux-radius-full);
+  object-fit:    cover;
+  display:       block;
+  background:    var(--dux-color-bg-subtle);
+  color:         var(--dux-color-text-secondary);
+}
+
+.dux-push__avatar--fallback,
+.dux-push__avatar--default {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  background:      var(--dux-color-brand-primary-surface);
+  color:           var(--dux-color-brand-primary);
+}
+
+/* App icon overlay — bottom-right of avatar, 24px circle */
+.dux-push__app-icon {
+  position:      absolute;
+  bottom:        -2px;
+  right:         -2px;
+  width:         24px;
+  height:        24px;
+  border-radius: var(--dux-radius-full);
+  border:        2px solid var(--dux-color-bg-surface);
+  object-fit:    cover;
+}
+
+/* ─── Content ───────────────────────────────────────────────────────────── */
+.dux-push__content {
+  flex:          1;
+  min-width:     0;
+  display:       flex;
+  flex-direction: column;
+  gap:           2px;
+}
+
+.dux-push__title-row {
+  display:       flex;
+  align-items:   baseline;
+  gap:           var(--dux-spacing-2);
+}
+
+.dux-push__title {
+  font-size:     var(--dux-font-size-base); /* 14px */
+  font-weight:   var(--dux-font-weight-medium);
+  color:         var(--dux-color-text-primary);
+  overflow:      hidden;
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+  line-height:   var(--dux-line-height-snug);
+}
+
+.dux-push__timestamp {
+  font-size:   var(--dux-font-size-xs); /* 10px */
+  color:       var(--dux-color-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.dux-push__body {
+  margin:        0;
+  font-size:     var(--dux-font-size-sm); /* 12px */
+  color:         var(--dux-color-text-secondary);
+  overflow:      hidden;
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+  line-height:   var(--dux-line-height-snug);
+}
+
+/* ─── Action button ─────────────────────────────────────────────────────── */
+.dux-push__action {
+  flex-shrink:   0;
+  background:    none;
+  border:        none;
+  padding:       var(--dux-spacing-1) 0;
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-sm);
+  font-weight:   var(--dux-font-weight-medium);
+  color:         var(--dux-color-brand-primary);
+  cursor:        pointer;
+  white-space:   nowrap;
+}
+
+.dux-push__action:hover { opacity: 0.8; }
+
+/* ─── Dismiss button ────────────────────────────────────────────────────── */
+.dux-push__dismiss {
+  flex-shrink:     0;
+  background:      none;
+  border:          none;
+  padding:         var(--dux-spacing-1);
+  cursor:          pointer;
+  color:           var(--dux-color-text-tertiary);
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  border-radius:   var(--dux-radius-full);
+}
+
+.dux-push__dismiss:hover { color: var(--dux-color-text-secondary); }
+
+/* ─── Animation ─────────────────────────────────────────────────────────── */
+@keyframes dux-push-in {
+  from { opacity: 0; transform: translateY(-12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)      scale(1); }
+}

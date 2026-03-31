@@ -1,0 +1,191 @@
+/**
+ * Select — Douyin Delight UI Kit
+ */
+
+/* ─── Field wrapper ─────────────────────────────────────────────────────── */
+.dux-select-field {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--dux-spacing-1);
+}
+
+.dux-select__label {
+  font-family:  var(--dux-font-sans);
+  font-size:    var(--dux-font-size-sm);
+  font-weight:  var(--dux-font-weight-medium);
+  color:        var(--dux-color-text-primary);
+  line-height:  var(--dux-line-height-snug);
+}
+
+/* ─── Container (relative for dropdown) ────────────────────────────────── */
+.dux-select__container {
+  position: relative;
+}
+
+/* ─── Trigger button ────────────────────────────────────────────────────── */
+.dux-select__trigger {
+  width:           100%;
+  display:         flex;
+  align-items:     center;
+  gap:             var(--dux-spacing-2);
+  font-family:     var(--dux-font-sans);
+  cursor:          pointer;
+  text-align:      left;
+  transition:
+    border-color     var(--dux-duration-fast) var(--dux-ease-standard),
+    box-shadow       var(--dux-duration-fast) var(--dux-ease-standard),
+    background-color var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+/* ─── Variants ──────────────────────────────────────────────────────────── */
+.dux-select__trigger--outlined {
+  background:    var(--dux-color-bg-surface);
+  border:        1px solid var(--dux-color-border-light);
+  border-radius: var(--dux-radius-sm);
+}
+
+.dux-select__trigger--outlined:hover:not(.dux-select__trigger--disabled) {
+  border-color: var(--dux-color-border-focused);
+}
+
+.dux-select__trigger--outlined.dux-select__trigger--open {
+  border-color: var(--dux-color-border-focused);
+  box-shadow:   var(--dux-shadow-focus);
+}
+
+.dux-select__trigger--filled {
+  background:    var(--dux-color-bg-subtle);
+  border:        1px solid transparent;
+  border-radius: var(--dux-radius-sm);
+}
+
+.dux-select__trigger--filled:hover:not(.dux-select__trigger--disabled) {
+  background: var(--dux-color-border-light);
+}
+
+/* ─── Status ────────────────────────────────────────────────────────────── */
+.dux-select__trigger--error   { border-color: var(--dux-color-status-error) !important; }
+.dux-select__trigger--warning { border-color: var(--dux-color-status-warning) !important; }
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-select__trigger--sm { height: 28px; padding: 0 var(--dux-spacing-3); font-size: var(--dux-font-size-sm); }
+.dux-select__trigger--md { height: 36px; padding: 0 var(--dux-spacing-3); font-size: var(--dux-font-size-base); }
+.dux-select__trigger--lg { height: 44px; padding: 0 var(--dux-spacing-4); font-size: var(--dux-font-size-lg); }
+
+/* ─── Disabled ──────────────────────────────────────────────────────────── */
+.dux-select__trigger--disabled {
+  opacity: 0.4;
+  cursor:  not-allowed;
+}
+
+/* ─── Value area ────────────────────────────────────────────────────────── */
+.dux-select__value {
+  flex:          1;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+  white-space:   nowrap;
+  color:         var(--dux-color-text-primary);
+}
+
+.dux-select__placeholder { color: var(--dux-color-text-tertiary); }
+
+.dux-select__selected {
+  display:     inline-flex;
+  align-items: center;
+  gap:         var(--dux-spacing-1);
+}
+
+/* ─── Prefix / Arrow ────────────────────────────────────────────────────── */
+.dux-select__prefix {
+  display:     inline-flex;
+  color:       var(--dux-color-text-secondary);
+  flex-shrink: 0;
+}
+
+.dux-select__arrow {
+  display:     inline-flex;
+  color:       var(--dux-color-text-secondary);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* ─── Clear button ──────────────────────────────────────────────────────── */
+.dux-select__clear {
+  display:         inline-flex;
+  align-items:     center;
+  background:      none;
+  border:          none;
+  padding:         0;
+  cursor:          pointer;
+  color:           var(--dux-color-text-tertiary);
+  flex-shrink:     0;
+}
+.dux-select__clear:hover { color: var(--dux-color-text-secondary); }
+
+/* ─── Dropdown ──────────────────────────────────────────────────────────── */
+.dux-select__dropdown {
+  position:      absolute;
+  top:           calc(100% + 4px);
+  left:          0;
+  right:         0;
+  background:    var(--dux-color-bg-surface);
+  border:        1px solid var(--dux-color-border-light);
+  border-radius: var(--dux-radius-md);
+  box-shadow:    var(--dux-shadow-lg);
+  list-style:    none;
+  margin:        0;
+  padding:       var(--dux-spacing-1);
+  max-height:    240px;
+  overflow-y:    auto;
+  z-index:       100;
+  animation:     dux-select-open var(--dux-duration-fast) var(--dux-ease-enter);
+}
+
+@keyframes dux-select-open {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Option ────────────────────────────────────────────────────────────── */
+.dux-select__option {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--dux-spacing-2);
+  padding:       var(--dux-spacing-2) var(--dux-spacing-3);
+  border-radius: var(--dux-radius-xs);
+  cursor:        pointer;
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-base);
+  color:         var(--dux-color-text-primary);
+  transition:    background-color var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+.dux-select__option:hover:not(.dux-select__option--disabled) {
+  background: var(--dux-color-bg-subtle);
+}
+
+.dux-select__option--selected {
+  color:      var(--dux-color-brand-primary);
+  background: var(--dux-color-brand-primary-surface);
+  font-weight: var(--dux-font-weight-medium);
+}
+
+.dux-select__option--disabled {
+  opacity: 0.4;
+  cursor:  not-allowed;
+}
+
+.dux-select__option-label { flex: 1; }
+.dux-select__option-icon  { display: inline-flex; color: var(--dux-color-text-secondary); }
+
+/* ─── Helper text ───────────────────────────────────────────────────────── */
+.dux-select__helper {
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-sm);
+  line-height: var(--dux-line-height-snug);
+  margin:      0;
+}
+
+.dux-select__helper--default { color: var(--dux-color-text-secondary); }
+.dux-select__helper--error   { color: var(--dux-color-status-error); }
+.dux-select__helper--warning { color: var(--dux-color-status-warning); }

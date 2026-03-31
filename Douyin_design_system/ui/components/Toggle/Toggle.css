@@ -1,0 +1,78 @@
+/**
+ * Toggle (Switch) — Douyin Delight UI Kit
+ */
+
+.dux-toggle {
+  display:     inline-flex;
+  align-items: center;
+  gap:         var(--dux-spacing-2);
+  cursor:      pointer;
+  user-select: none;
+  font-family: var(--dux-font-sans);
+  color:       var(--dux-color-text-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dux-toggle--label-start { flex-direction: row-reverse; }
+
+.dux-toggle--disabled {
+  opacity:        0.4;
+  cursor:         not-allowed;
+  pointer-events: none;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-toggle--sm .dux-toggle__track { width: 28px; height: 16px; }
+.dux-toggle--sm .dux-toggle__thumb { width: 12px; height: 12px; }
+.dux-toggle--sm .dux-toggle__label { font-size: var(--dux-font-size-sm); }
+
+.dux-toggle--md .dux-toggle__track { width: 36px; height: 20px; }
+.dux-toggle--md .dux-toggle__thumb { width: 16px; height: 16px; }
+.dux-toggle--md .dux-toggle__label { font-size: var(--dux-font-size-base); }
+
+.dux-toggle--lg .dux-toggle__track { width: 44px; height: 24px; }
+.dux-toggle--lg .dux-toggle__thumb { width: 20px; height: 20px; }
+.dux-toggle--lg .dux-toggle__label { font-size: var(--dux-font-size-lg); }
+
+/* ─── Track ─────────────────────────────────────────────────────────────── */
+.dux-toggle__track {
+  position:      relative;
+  display:       inline-flex;
+  align-items:   center;
+  border-radius: var(--dux-radius-full);
+  background:    var(--dux-color-border-medium);
+  flex-shrink:   0;
+  transition:    background-color var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+.dux-toggle--checked .dux-toggle__track {
+  background: var(--dux-color-brand-primary);
+}
+
+/* ─── Native input ──────────────────────────────────────────────────────── */
+.dux-toggle__native {
+  position: absolute;
+  opacity:  0;
+  width:    0;
+  height:   0;
+  margin:   0;
+}
+
+/* ─── Thumb ─────────────────────────────────────────────────────────────── */
+.dux-toggle__thumb {
+  position:      absolute;
+  left:          2px;
+  border-radius: var(--dux-radius-full);
+  background:    var(--dux-color-bg-surface);
+  box-shadow:    var(--dux-shadow-sm);
+  transition:    transform var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+.dux-toggle--sm.dux-toggle--checked  .dux-toggle__thumb { transform: translateX(12px); }
+.dux-toggle--md.dux-toggle--checked  .dux-toggle__thumb { transform: translateX(16px); }
+.dux-toggle--lg.dux-toggle--checked  .dux-toggle__thumb { transform: translateX(20px); }
+
+/* ─── Focus ring ────────────────────────────────────────────────────────── */
+.dux-toggle__native:focus-visible ~ .dux-toggle__thumb {
+  box-shadow: var(--dux-shadow-focus);
+}

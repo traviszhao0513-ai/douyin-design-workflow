@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(SKILLS_BASE=\"/Users/bytedance/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/8f9e31c0-055d-4097-84f2-f184b887fcc5/feea8d74-32b2-4933-b468-d752d706e346\")",
+      "Bash(mkdir -p \"$SKILLS_BASE/douyin-design-system-workspace/iteration-1/eval-profile/with_skill/outputs\")",
+      "Bash(mkdir -p \"$SKILLS_BASE/douyin-design-system-workspace/iteration-1/eval-profile/without_skill/outputs\")",
+      "Bash(mkdir -p \"$SKILLS_BASE/douyin-design-system-workspace/iteration-1/eval-settings/with_skill/outputs\")",
+      "Bash(mkdir -p \"$SKILLS_BASE/douyin-design-system-workspace/iteration-1/eval-settings/without_skill/outputs\")",
+      "Bash(mkdir -p \"$SKILLS_BASE/douyin-design-system-workspace/iteration-1/eval-notifications/with_skill/outputs\")",
+      "Bash(mkdir -p \"$SKILLS_BASE/douyin-design-system-workspace/iteration-1/eval-notifications/without_skill/outputs\")",
+      "Bash(echo 'not found' ls /Users/bytedance/Desktop/Claude/trae-message/src/pages/UserProfile.* 2)",
+      "Bash(/dev/null grep:*)",
+      "Bash(SKILL_CREATOR=\"/Users/bytedance/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/8f9e31c0-055d-4097-84f2-f184b887fcc5/feea8d74-32b2-4933-b468-d752d706e346/skills/skill-creator\")",
+      "Bash(SKILL_DIR=\"/Users/bytedance/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/8f9e31c0-055d-4097-84f2-f184b887fcc5/feea8d74-32b2-4933-b468-d752d706e346/skills/douyin-design-system\")",
+      "Read(//Users/bytedance/Desktop/Claude/Douyin_design_system/**)",
+      "Bash(python -m scripts.package_skill \"$SKILL_DIR\")",
+      "Bash(python3 -m scripts.package_skill \"$SKILL_DIR\")",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -m scripts.package_skill \"$SKILL_DIR/\")",
+      "Read(//Users/bytedance/.claude/**)",
+      "Read(//Users/bytedance/.claude/skills/**)"
+    ]
+  }
+}

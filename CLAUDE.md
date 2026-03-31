@@ -43,17 +43,10 @@ You are Claude, acting as a senior product designer and design systems partner f
 
 ## Component Library Path / 组件库路径
 
-> **每位团队成员需在首次使用时配置此路径。**
-
-抖音组件库的本地路径（clone 后根据实际位置修改）：
+组件库已内置在仓库中，clone 后即可使用，无需额外配置：
 
 ```
-DOUYIN_COMPONENTS = /path/to/Douyin_design_system
-```
-
-**当前值（请替换为你的本地路径）：**
-```
-DOUYIN_COMPONENTS = /Users/bytedance/Desktop/Claude/Douyin_design_system
+DOUYIN_COMPONENTS = ./Douyin_design_system
 ```
 
 文档中所有 `<DOUYIN_COMPONENTS>` 引用都指向此路径。

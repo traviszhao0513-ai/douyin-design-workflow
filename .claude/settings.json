@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm install)",
+      "Bash(npx serve dist)",
+      "Bash(git worktree *)",
+      "Bash(git diff *)",
+      "Bash(git merge *)",
+      "Bash(git branch *)",
+      "Bash(git log *)",
+      "Bash(git status *)",
+      "mcp__571d8049-c20f-4122-9c17-7dc623ef7cca__get_screenshot",
+      "mcp__571d8049-c20f-4122-9c17-7dc623ef7cca__get_design_context",
+      "mcp__571d8049-c20f-4122-9c17-7dc623ef7cca__search_design_system",
+      "mcp__571d8049-c20f-4122-9c17-7dc623ef7cca__get_metadata",
+      "mcp__571d8049-c20f-4122-9c17-7dc623ef7cca__use_figma",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_Preview__preview_screenshot",
+      "mcp__Claude_Preview__preview_stop"
+    ]
+  }
+}

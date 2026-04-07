@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import '../Douyin_design_system/ui/tokens.css'
 import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

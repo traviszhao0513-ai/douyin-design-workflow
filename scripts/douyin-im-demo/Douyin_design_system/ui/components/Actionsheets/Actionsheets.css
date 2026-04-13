@@ -1,0 +1,113 @@
+/* ─── Backdrop ─────────────────────────────────────────────────────────────── */
+.dux-actionsheets-mask {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+
+.dux-actionsheets-mask--immersive {
+  background: transparent;
+}
+
+/* ─── Sheet ────────────────────────────────────────────────────────────────── */
+.dux-actionsheets {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 901;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  animation: dux-actionsheets-slide-up 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.dux-actionsheets--immersive {
+  border-radius: 20px 20px 0 0;
+}
+
+@keyframes dux-actionsheets-slide-up {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+/* ─── List ─────────────────────────────────────────────────────────────────── */
+.dux-actionsheets__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Item ─────────────────────────────────────────────────────────────────── */
+.dux-actionsheets__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-top: 0.5px solid #f0f0f0;
+  font-size: 17px;
+  font-weight: 400;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dux-actionsheets__list li:first-child .dux-actionsheets__item {
+  border-top: none;
+  border-radius: 16px 16px 0 0;
+}
+
+.dux-actionsheets__item:active {
+  background: #f5f5f5;
+}
+
+.dux-actionsheets__item--destructive {
+  color: #fe2c55;
+}
+
+.dux-actionsheets__item--disabled {
+  color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.dux-actionsheets__item-label {
+  display: block;
+}
+
+.dux-actionsheets__item-desc {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ─── Gap + Cancel ─────────────────────────────────────────────────────────── */
+.dux-actionsheets__gap {
+  height: 8px;
+  background: #f5f5f5;
+}
+
+.dux-actionsheets__cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  background: #fff;
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.dux-actionsheets__cancel:active {
+  background: #f5f5f5;
+}

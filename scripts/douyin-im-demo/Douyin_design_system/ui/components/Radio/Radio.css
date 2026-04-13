@@ -1,0 +1,78 @@
+/**
+ * Radio — Douyin Delight UI Kit
+ */
+
+.dux-radio {
+  display:     inline-flex;
+  align-items: center;
+  gap:         var(--dux-spacing-2);
+  cursor:      pointer;
+  user-select: none;
+  font-family: var(--dux-font-sans);
+  color:       var(--dux-color-text-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dux-radio--disabled {
+  opacity:        0.4;
+  cursor:         not-allowed;
+  pointer-events: none;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-radio--sm .dux-radio__dot  { width: 14px; height: 14px; }
+.dux-radio--sm .dux-radio__label { font-size: var(--dux-font-size-sm); }
+.dux-radio--md .dux-radio__dot  { width: 18px; height: 18px; }
+.dux-radio--md .dux-radio__label { font-size: var(--dux-font-size-base); }
+
+/* ─── Control ───────────────────────────────────────────────────────────── */
+.dux-radio__control {
+  position:    relative;
+  display:     inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.dux-radio__native {
+  position: absolute;
+  opacity:  0;
+  width:    0;
+  height:   0;
+  margin:   0;
+}
+
+/* ─── Visual dot ────────────────────────────────────────────────────────── */
+.dux-radio__dot {
+  border-radius:   var(--dux-radius-full);
+  background:      var(--dux-color-bg-surface);
+  border:          1.5px solid var(--dux-color-border-medium);
+  transition:
+    background-color var(--dux-duration-fast) var(--dux-ease-standard),
+    border-color     var(--dux-duration-fast) var(--dux-ease-standard),
+    box-shadow       var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+/* ─── Checked state ─────────────────────────────────────────────────────── */
+.dux-radio--checked .dux-radio__dot {
+  border-color: var(--dux-color-brand-primary);
+  background:   var(--dux-color-brand-primary);
+  box-shadow:   inset 0 0 0 3px var(--dux-color-bg-surface);
+}
+
+/* ─── Hover ─────────────────────────────────────────────────────────────── */
+.dux-radio:not(.dux-radio--disabled):hover .dux-radio__dot {
+  border-color: var(--dux-color-brand-primary);
+}
+
+/* ─── Focus ring ────────────────────────────────────────────────────────── */
+.dux-radio__native:focus-visible ~ .dux-radio__dot {
+  box-shadow: var(--dux-shadow-focus);
+}
+
+/* ─── Group ─────────────────────────────────────────────────────────────── */
+.dux-radio-group {
+  display: flex;
+}
+
+.dux-radio-group--vertical   { flex-direction: column; gap: var(--dux-spacing-2); }
+.dux-radio-group--horizontal { flex-direction: row;    gap: var(--dux-spacing-4); flex-wrap: wrap; }

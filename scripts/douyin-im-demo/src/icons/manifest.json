@@ -1,0 +1,4770 @@
+{
+  "ic_s_s_usertwostarcircle": {
+    "24": {
+      "filled": "ic_s_s_usertwostarcircle_24_filled.svg",
+      "outlined": "ic_s_s_usertwostarcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_livesteaming": {
+    "24": {
+      "outlined": "ic_s_s_livesteaming_24_outlined.svg"
+    }
+  },
+  "ic_s_s_guangjie": {
+    "24": {
+      "outlined": "ic_s_s_guangjie_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ky": {
+    "24": {
+      "outlined": "ic_s_s_ky_24_outlined.svg"
+    }
+  },
+  "ic_s_s_text": {
+    "20": {
+      "outlined": "ic_s_s_text_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_text_24_outlined.svg"
+    }
+  },
+  "ic_s_s_zhangbei": {
+    "24": {
+      "outlined": "ic_s_s_zhangbei_24_outlined.svg"
+    }
+  },
+  "ic_s_s_dingdan": {
+    "24": {
+      "outlined": "ic_s_s_dingdan_24_outlined.svg"
+    }
+  },
+  "ic_s_s_checkmark": {
+    "12": {
+      "outlined": "ic_s_s_checkmark_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_checkmark_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_checkmark_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_checkmark_24_outlined.svg"
+    }
+  },
+  "ic_s_s_xmark": {
+    "12": {
+      "outlined": "ic_s_s_xmark_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_xmark_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_xmark_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_xmark_24_outlined.svg"
+    }
+  },
+  "ic_s_s_plus": {
+    "12": {
+      "outlined": "ic_s_s_plus_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_plus_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_plus_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_plus_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowleftup": {
+    "12": {
+      "outlined": "ic_s_s_arrowleftup_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_arrowleftup_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowleftup_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowleftup_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowrightup": {
+    "12": {
+      "outlined": "ic_s_s_arrowrightup_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_arrowrightup_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowrightup_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowrightup_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowtop": {
+    "24": {
+      "outlined": "ic_s_s_arrowtop_24_outlined.svg"
+    }
+  },
+  "ic_s_s_zoomin": {
+    "16": {
+      "outlined": "ic_s_s_zoomin_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_zoomin_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_zoomin_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowcircle": {
+    "20": {
+      "outlined": "ic_s_s_arrowcircle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowcirclemini": {
+    "24": {
+      "outlined": "ic_s_s_arrowcirclemini_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowcircleleft": {
+    "16": {
+      "filled": "ic_s_s_arrowcircleleft_16_filled.svg",
+      "outlined": "ic_s_s_arrowcircleleft_16_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_arrowcircleleft_24_filled.svg"
+    }
+  },
+  "ic_s_s_switch": {
+    "12": {
+      "outlined": "ic_s_s_switch_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_switch_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_switch_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_switch_24_outlined.svg"
+    }
+  },
+  "ic_s_s_circlegap": {
+    "12": {
+      "outlined": "ic_s_s_circlegap_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_circlegap_16_outlined.svg",
+      "filled": "ic_s_s_circlegap_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_circlegap_20_outlined.svg",
+      "filled": "ic_s_s_circlegap_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circlegap_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ellipsis": {
+    "12": {
+      "outlined": "ic_s_s_ellipsis_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_ellipsis_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_ellipsis_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_ellipsis_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ellipsisvertical": {
+    "16": {
+      "outlined": "ic_s_s_ellipsisvertical_16_outlined.svg"
+    }
+  },
+  "ic_s_s_invertarrow": {
+    "16": {
+      "outlined": "ic_s_s_invertarrow_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_invertarrow_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_invertarrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowleft": {
+    "12": {
+      "outlined": "ic_s_s_arrowleft_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_arrowleft_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowleft_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowleft_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowright": {
+    "12": {
+      "outlined": "ic_s_s_arrowright_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_arrowright_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowright_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowright_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowdown": {
+    "12": {
+      "outlined": "ic_s_s_arrowdown_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_arrowdown_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowdown_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowdown_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowup": {
+    "12": {
+      "outlined": "ic_s_s_arrowup_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_arrowup_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowup_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowup_24_outlined.svg"
+    }
+  },
+  "ic_s_s_doublearrowdown": {
+    "12": {
+      "outlined": "ic_s_s_doublearrowdown_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_doublearrowdown_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_doublearrowdown_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_doublearrowdown_24_outlined.svg"
+    }
+  },
+  "ic_s_s_doublearrowright": {
+    "12": {
+      "outlined": "ic_s_s_doublearrowright_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_doublearrowright_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_doublearrowright_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_doublearrowright_24_outlined.svg"
+    }
+  },
+  "ic_s_s_uturnleft": {
+    "20": {
+      "outlined": "ic_s_s_uturnleft_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_uturnleft_24_outlined.svg"
+    }
+  },
+  "ic_s_s_power": {
+    "24": {
+      "outlined": "ic_s_s_power_24_outlined.svg"
+    }
+  },
+  "ic_s_s_list": {
+    "24": {
+      "outlined": "ic_s_s_list_24_outlined.svg"
+    }
+  },
+  "ic_s_s_grid": {
+    "24": {
+      "outlined": "ic_s_s_grid_24_outlined.svg"
+    }
+  },
+  "ic_s_s_gridfour": {
+    "16": {
+      "outlined": "ic_s_s_gridfour_16_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburger": {
+    "20": {
+      "outlined": "ic_s_s_hamburger_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_hamburger_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgerlow": {
+    "24": {
+      "outlined": "ic_s_s_hamburgerlow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgerlowplus": {
+    "20": {
+      "outlined": "ic_s_s_hamburgerlowplus_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_hamburgerlowplus_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgernut": {
+    "20": {
+      "outlined": "ic_s_s_hamburgernut_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_hamburgernut_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgerdoublearrow": {
+    "20": {
+      "outlined": "ic_s_s_hamburgerdoublearrow_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_hamburgerdoublearrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgeruparrow": {
+    "20": {
+      "outlined": "ic_s_s_hamburgeruparrow_20_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgerdownarrow": {
+    "20": {
+      "outlined": "ic_s_s_hamburgerdownarrow_20_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgerclock": {
+    "24": {
+      "outlined": "ic_s_s_hamburgerclock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hash": {
+    "12": {
+      "outlined": "ic_s_s_hash_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_hash_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_hash_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_hash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_at": {
+    "16": {
+      "outlined": "ic_s_s_at_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_at_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_at_24_outlined.svg",
+      "filled": "ic_s_s_at_24_filled.svg"
+    }
+  },
+  "ic_s_s_soundwave": {
+    "20": {
+      "outlined": "ic_s_s_soundwave_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_soundwave_24_outlined.svg"
+    }
+  },
+  "ic_s_s_volume": {
+    "12": {
+      "outlined": "ic_s_s_volume_12_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_volume_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_volume_24_outlined.svg"
+    }
+  },
+  "ic_s_s_network": {
+    "20": {
+      "outlined": "ic_s_s_network_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_network_24_outlined.svg"
+    }
+  },
+  "ic_s_s_Target": {
+    "24": {
+      "outlined": "ic_s_s_Target_24_outlined.svg"
+    }
+  },
+  "ic_s_s_qrcode": {
+    "20": {
+      "outlined": "ic_s_s_qrcode_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_qrcode_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hamburgercheckmark": {
+    "20": {
+      "outlined": "ic_s_s_hamburgercheckmark_20_outlined.svg"
+    }
+  },
+  "ic_s_s_gongchuang": {
+    "12": {
+      "outlined": "ic_s_s_gongchuang_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_gongchuang_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_gongchuang_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_gongchuang_24_outlined.svg"
+    }
+  },
+  "ic_s_s_trianglesdown": {
+    "12": {
+      "outlined": "ic_s_s_trianglesdown_12_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_trianglesdown_24_outlined.svg"
+    }
+  },
+  "ic_s_s_trianglesup": {
+    "12": {
+      "outlined": "ic_s_s_trianglesup_12_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_trianglesup_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowdowntoright": {
+    "16": {
+      "outlined": "ic_s_s_arrowdowntoright_16_outlined.svg",
+      "filled": "ic_s_s_arrowdowntoright_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowdowntoright_20_outlined.svg",
+      "filled": "ic_s_s_arrowdowntoright_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowdowntoright_24_outlined.svg",
+      "filled": "ic_s_s_arrowdowntoright_24_filled.svg"
+    }
+  },
+  "ic_s_s_arrowupbold": {
+    "16": {
+      "filled": "ic_s_s_arrowupbold_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_arrowupbold_20_outlined.svg",
+      "filled": "ic_s_s_arrowupbold_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowupbold_24_outlined.svg",
+      "filled": "ic_s_s_arrowupbold_24_filled.svg"
+    }
+  },
+  "ic_s_s_module": {
+    "16": {
+      "filled": "ic_s_s_module_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_module_20_outlined.svg",
+      "filled": "ic_s_s_module_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_module_24_outlined.svg",
+      "filled": "ic_s_s_module_24_filled.svg"
+    }
+  },
+  "ic_s_s_xiocan": {
+    "20": {
+      "outlined": "ic_s_s_xiocan_20_outlined.svg"
+    }
+  },
+  "ic_s_s_kaleidoscope": {
+    "16": {
+      "filled": "ic_s_s_kaleidoscope_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_kaleidoscope_20_outlined.svg",
+      "filled": "ic_s_s_kaleidoscope_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_kaleidoscope_24_outlined.svg",
+      "filled": "ic_s_s_kaleidoscope_24_filled.svg"
+    }
+  },
+  "ic_s_s_checkmarkcircle": {
+    "12": {
+      "filled": "ic_s_s_checkmarkcircle_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_checkmarkcircle_16_outlined.svg",
+      "filled": "ic_s_s_checkmarkcircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_checkmarkcircle_20_outlined.svg",
+      "filled": "ic_s_s_checkmarkcircle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_checkmarkcircle_24_filled.svg",
+      "outlined": "ic_s_s_checkmarkcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_xmarkcircle": {
+    "16": {
+      "filled": "ic_s_s_xmarkcircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_xmarkcircle_20_outlined.svg",
+      "filled": "ic_s_s_xmarkcircle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_xmarkcircle_24_filled.svg",
+      "outlined": "ic_s_s_xmarkcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_pluscircle": {
+    "16": {
+      "filled": "ic_s_s_pluscircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_pluscircle_20_outlined.svg",
+      "filled": "ic_s_s_pluscircle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_pluscircle_24_filled.svg",
+      "outlined": "ic_s_s_pluscircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_minuscircle": {
+    "16": {
+      "filled": "ic_s_s_minuscircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_minuscircle_20_outlined.svg",
+      "filled": "ic_s_s_minuscircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_minuscircle_24_outlined.svg",
+      "filled": "ic_s_s_minuscircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_hamburgercircle": {
+    "16": {
+      "filled": "ic_s_s_hamburgercircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_hamburgercircle_20_outlined.svg",
+      "filled": "ic_s_s_hamburgercircle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_hamburgercircle_24_filled.svg",
+      "outlined": "ic_s_s_hamburgercircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ellipsiscircle": {
+    "16": {
+      "filled": "ic_s_s_ellipsiscircle_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_ellipsiscircle_20_filled.svg",
+      "outlined": "ic_s_s_ellipsiscircle_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_ellipsiscircle_24_filled.svg",
+      "outlined": "ic_s_s_ellipsiscircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_warningcircle": {
+    "12": {
+      "outlined": "ic_s_s_warningcircle_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_warningcircle_16_filled.svg",
+      "outlined": "ic_s_s_warningcircle_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_warningcircle_20_outlined.svg",
+      "filled": "ic_s_s_warningcircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_warningcircle_24_outlined.svg",
+      "filled": "ic_s_s_warningcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_questioncircle": {
+    "12": {
+      "outlined": "ic_s_s_questioncircle_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_questioncircle_16_outlined.svg",
+      "filled": "ic_s_s_questioncircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_questioncircle_20_outlined.svg",
+      "filled": "ic_s_s_questioncircle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_questioncircle_24_filled.svg",
+      "outlined": "ic_s_s_questioncircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_questioncamera": {
+    "20": {
+      "outlined": "ic_s_s_questioncamera_20_outlined.svg"
+    }
+  },
+  "ic_s_s_ainote": {
+    "20": {
+      "outlined": "ic_s_s_ainote_20_outlined.svg"
+    }
+  },
+  "ic_s_s_rmbcircle": {
+    "16": {
+      "filled": "ic_s_s_rmbcircle_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_rmbcircle_20_filled.svg",
+      "outlined": "ic_s_s_rmbcircle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_rmbcircle_24_outlined.svg",
+      "filled": "ic_s_s_rmbcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_volumecircle": {
+    "16": {
+      "filled": "ic_s_s_volumecircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_volumecircle_20_outlined.svg",
+      "filled": "ic_s_s_volumecircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_volumecircle_24_outlined.svg",
+      "filled": "ic_s_s_volumecircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_cycleslash": {
+    "16": {
+      "filled": "ic_s_s_cycleslash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_cycleslash_20_outlined.svg",
+      "filled": "ic_s_s_cycleslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cycleslash_24_outlined.svg",
+      "filled": "ic_s_s_cycleslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_dashang": {
+    "16": {
+      "outlined": "ic_s_s_dashang_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_dashang_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_dashang_24_filled.svg",
+      "outlined": "ic_s_s_dashang_24_outlined.svg"
+    }
+  },
+  "ic_s_s_flashcircle": {
+    "12": {
+      "filled": "ic_s_s_flashcircle_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_flashcircle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_flashcircle_20_outlined.svg",
+      "filled": "ic_s_s_flashcircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_flashcircle_24_outlined.svg",
+      "filled": "ic_s_s_flashcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_cyclelight": {
+    "20": {
+      "outlined": "ic_s_s_cyclelight_20_outlined.svg",
+      "filled": "ic_s_s_cyclelight_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cyclelight_24_outlined.svg",
+      "filled": "ic_s_s_cyclelight_24_filled.svg"
+    }
+  },
+  "ic_s_s_starcircle": {
+    "24": {
+      "filled": "ic_s_s_starcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_heartcircleslash": {
+    "24": {
+      "filled": "ic_s_s_heartcircleslash_24_filled.svg",
+      "outlined": "ic_s_s_heartcircleslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_emojisad": {
+    "12": {
+      "outlined": "ic_s_s_emojisad_12_outlined.svg",
+      "filled": "ic_s_s_emojisad_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_emojisad_16_outlined.svg",
+      "filled": "ic_s_s_emojisad_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_emojisad_20_outlined.svg",
+      "filled": "ic_s_s_emojisad_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_emojisad_24_outlined.svg",
+      "filled": "ic_s_s_emojisad_24_filled.svg"
+    }
+  },
+  "ic_s_s_emojijoy": {
+    "12": {
+      "outlined": "ic_s_s_emojijoy_12_outlined.svg",
+      "filled": "ic_s_s_emojijoy_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_emojijoy_16_outlined.svg",
+      "filled": "ic_s_s_emojijoy_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_emojijoy_20_outlined.svg",
+      "filled": "ic_s_s_emojijoy_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_emojijoy_24_outlined.svg",
+      "filled": "ic_s_s_emojijoy_24_filled.svg"
+    }
+  },
+  "ic_s_s_heart": {
+    "12": {
+      "outlined": "ic_s_s_heart_12_outlined.svg",
+      "filled": "ic_s_s_heart_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_heart_16_outlined.svg",
+      "filled": "ic_s_s_heart_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_heart_20_outlined.svg",
+      "filled": "ic_s_s_heart_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_heart_24_filled.svg",
+      "outlined": "ic_s_s_heart_24_outlined.svg"
+    }
+  },
+  "ic_s_s_heartbroken": {
+    "16": {
+      "outlined": "ic_s_s_heartbroken_16_outlined.svg",
+      "filled": "ic_s_s_heartbroken_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_heartbroken_20_outlined.svg",
+      "filled": "ic_s_s_heartbroken_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_heartbroken_24_outlined.svg",
+      "filled": "ic_s_s_heartbroken_24_filled.svg"
+    }
+  },
+  "ic_s_s_splitheart": {
+    "20": {
+      "outlined": "ic_s_s_splitheart_20_outlined.svg",
+      "filled": "ic_s_s_splitheart_20_filled.svg"
+    }
+  },
+  "ic_s_s_heartcircle": {
+    "16": {
+      "filled": "ic_s_s_heartcircle_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_heartcircle_20_filled.svg",
+      "outlined": "ic_s_s_heartcircle_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_heartcircle_24_filled.svg",
+      "outlined": "ic_s_s_heartcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_emoji": {
+    "16": {
+      "filled": "ic_s_s_emoji_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_emoji_20_outlined.svg",
+      "filled": "ic_s_s_emoji_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_emoji_24_outlined.svg",
+      "filled": "ic_s_s_emoji_24_filled.svg"
+    }
+  },
+  "ic_s_s_facetwo": {
+    "16": {
+      "filled": "ic_s_s_facetwo_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_facetwo_20_outlined.svg",
+      "filled": "ic_s_s_facetwo_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_facetwo_24_outlined.svg",
+      "filled": "ic_s_s_facetwo_24_filled.svg"
+    }
+  },
+  "ic_s_s_ad": {
+    "16": {
+      "filled": "ic_s_s_ad_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_ad_20_outlined.svg",
+      "filled": "ic_s_s_ad_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_ad_24_outlined.svg",
+      "filled": "ic_s_s_ad_24_filled.svg"
+    }
+  },
+  "ic_s_s_adslash": {
+    "16": {
+      "filled": "ic_s_s_adslash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_adslash_20_outlined.svg",
+      "filled": "ic_s_s_adslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_adslash_24_outlined.svg",
+      "filled": "ic_s_s_adslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_adminus": {
+    "20": {
+      "outlined": "ic_s_s_adminus_20_outlined.svg",
+      "filled": "ic_s_s_adminus_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_adminus_24_outlined.svg",
+      "filled": "ic_s_s_adminus_24_filled.svg"
+    }
+  },
+  "ic_s_s_squaretriangle": {
+    "20": {
+      "outlined": "ic_s_s_squaretriangle_20_outlined.svg",
+      "filled": "ic_s_s_squaretriangle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_squaretriangle_24_outlined.svg",
+      "filled": "ic_s_s_squaretriangle_24_filled.svg"
+    }
+  },
+  "ic_s_s_squaretriangletwo": {
+    "16": {
+      "filled": "ic_s_s_squaretriangletwo_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_squaretriangletwo_20_outlined.svg",
+      "filled": "ic_s_s_squaretriangletwo_20_filled.svg"
+    }
+  },
+  "ic_s_s_squaretriangleslash": {
+    "20": {
+      "outlined": "ic_s_s_squaretriangleslash_20_outlined.svg",
+      "filled": "ic_s_s_squaretriangleslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_squaretriangleslash_24_outlined.svg",
+      "filled": "ic_s_s_squaretriangleslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_collection": {
+    "16": {
+      "filled": "ic_s_s_collection_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_collection_20_outlined.svg",
+      "filled": "ic_s_s_collection_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_collection_24_outlined.svg",
+      "filled": "ic_s_s_collection_24_filled.svg"
+    }
+  },
+  "ic_s_s_medialibrary": {
+    "16": {
+      "filled": "ic_s_s_medialibrary_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_medialibrary_20_outlined.svg",
+      "filled": "ic_s_s_medialibrary_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_medialibrary_24_outlined.svg",
+      "filled": "ic_s_s_medialibrary_24_filled.svg"
+    }
+  },
+  "ic_s_s_totv": {
+    "20": {
+      "outlined": "ic_s_s_totv_20_outlined.svg",
+      "filled": "ic_s_s_totv_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_totv_24_outlined.svg",
+      "filled": "ic_s_s_totv_24_filled.svg"
+    }
+  },
+  "ic_s_s_cast": {
+    "20": {
+      "outlined": "ic_s_s_cast_20_outlined.svg",
+      "filled": "ic_s_s_cast_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_cast_24_filled.svg",
+      "outlined": "ic_s_s_cast_24_outlined.svg"
+    }
+  },
+  "ic_s_s_tvphone": {
+    "24": {
+      "outlined": "ic_s_s_tvphone_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonewindow": {
+    "24": {
+      "outlined": "ic_s_s_phonewindow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phone": {
+    "16": {
+      "outlined": "ic_s_s_phone_16_outlined.svg"
+    }
+  },
+  "ic_s_s_totvend": {
+    "20": {
+      "outlined": "ic_s_s_totvend_20_outlined.svg"
+    }
+  },
+  "ic_s_s_castdoublearrowcircle": {
+    "20": {
+      "outlined": "ic_s_s_castdoublearrowcircle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_castdoublearrowcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowdowntotightupsquare": {
+    "24": {
+      "filled": "ic_s_s_arrowdowntotightupsquare_24_filled.svg"
+    }
+  },
+  "ic_s_s_activity": {
+    "24": {
+      "outlined": "ic_s_s_activity_24_outlined.svg",
+      "filled": "ic_s_s_activity_24_filled.svg"
+    }
+  },
+  "ic_s_s_boxarrowdown": {
+    "16": {
+      "filled": "ic_s_s_boxarrowdown_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_boxarrowdown_20_outlined.svg",
+      "filled": "ic_s_s_boxarrowdown_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_boxarrowdown_24_filled.svg",
+      "outlined": "ic_s_s_boxarrowdown_24_outlined.svg"
+    }
+  },
+  "ic_s_s_boxarrowdownhigh": {
+    "20": {
+      "outlined": "ic_s_s_boxarrowdownhigh_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_boxarrowdownhigh_24_outlined.svg"
+    }
+  },
+  "ic_s_s_warningtriangle": {
+    "16": {
+      "filled": "ic_s_s_warningtriangle_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_warningtriangle_20_outlined.svg",
+      "filled": "ic_s_s_warningtriangle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_warningtriangle_24_filled.svg",
+      "outlined": "ic_s_s_warningtriangle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_msg": {
+    "16": {
+      "filled": "ic_s_s_msg_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_msg_20_filled.svg",
+      "outlined": "ic_s_s_msg_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_msg_24_filled.svg",
+      "outlined": "ic_s_s_msg_24_outlined.svg"
+    }
+  },
+  "ic_s_s_msgflash": {
+    "16": {
+      "filled": "ic_s_s_msgflash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_msgflash_20_outlined.svg",
+      "filled": "ic_s_s_msgflash_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_msgflash_24_filled.svg",
+      "outlined": "ic_s_s_msgflash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_star": {
+    "12": {
+      "filled": "ic_s_s_star_12_filled.svg",
+      "outlined": "ic_s_s_star_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_star_16_filled.svg",
+      "outlined": "ic_s_s_star_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_star_20_outlined.svg",
+      "filled": "ic_s_s_star_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_star_24_filled.svg",
+      "outlined": "ic_s_s_star_24_outlined.svg"
+    }
+  },
+  "ic_s_s_starslash": {
+    "20": {
+      "filled": "ic_s_s_starslash_20_filled.svg",
+      "outlined": "ic_s_s_starslash_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_starslash_24_filled.svg",
+      "outlined": "ic_s_s_starslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_flash": {
+    "12": {
+      "filled": "ic_s_s_flash_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_flash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_flash_20_outlined.svg",
+      "filled": "ic_s_s_flash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_flash_24_outlined.svg",
+      "filled": "ic_s_s_flash_24_filled.svg"
+    }
+  },
+  "ic_s_s_fire": {
+    "16": {
+      "filled": "ic_s_s_fire_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_fire_20_outlined.svg",
+      "filled": "ic_s_s_fire_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_fire_24_filled.svg",
+      "outlined": "ic_s_s_fire_24_outlined.svg"
+    }
+  },
+  "ic_s_s_flame": {
+    "24": {
+      "outlined": "ic_s_s_flame_24_outlined.svg"
+    }
+  },
+  "ic_s_c_fire": {
+    "16": {
+      "light": "ic_s_c_fire_16_light.svg"
+    }
+  },
+  "ic_s_s_shield": {
+    "20": {
+      "filled": "ic_s_s_shield_20_filled.svg",
+      "outlined": "ic_s_s_shield_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_shield_24_filled.svg",
+      "outlined": "ic_s_s_shield_24_outlined.svg"
+    }
+  },
+  "ic_s_s_shieldumbrella": {
+    "20": {
+      "outlined": "ic_s_s_shieldumbrella_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_shieldumbrella_24_outlined.svg"
+    }
+  },
+  "ic_s_s_polygon": {
+    "20": {
+      "outlined": "ic_s_s_polygon_20_outlined.svg",
+      "filled": "ic_s_s_polygon_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_polygon_24_outlined.svg",
+      "filled": "ic_s_s_polygon_24_filled.svg"
+    }
+  },
+  "ic_s_s_polygonslash": {
+    "20": {
+      "outlined": "ic_s_s_polygonslash_20_outlined.svg",
+      "filled": "ic_s_s_polygonslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_polygonslash_24_outlined.svg",
+      "filled": "ic_s_s_polygonslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_chain": {
+    "20": {
+      "outlined": "ic_s_s_chain_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_chain_24_outlined.svg"
+    }
+  },
+  "ic_s_s_infocircle": {
+    "12": {
+      "outlined": "ic_s_s_infocircle_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_infocircle_16_filled.svg",
+      "outlined": "ic_s_s_infocircle_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_infocircle_20_outlined.svg",
+      "filled": "ic_s_s_infocircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_infocircle_24_outlined.svg",
+      "filled": "ic_s_s_infocircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_ban": {
+    "24": {
+      "outlined": "ic_s_s_ban_24_outlined.svg"
+    }
+  },
+  "ic_s_s_circletop": {
+    "16": {
+      "filled": "ic_s_s_circletop_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_circletop_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circletop_24_outlined.svg"
+    }
+  },
+  "ic_s_s_circleright": {
+    "16": {
+      "filled": "ic_s_s_circleright_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_circleright_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circleright_24_outlined.svg"
+    }
+  },
+  "ic_s_s_rotatelock": {
+    "20": {
+      "outlined": "ic_s_s_rotatelock_20_outlined.svg"
+    }
+  },
+  "ic_s_s_user": {
+    "12": {
+      "filled": "ic_s_s_user_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_user_16_filled.svg",
+      "outlined": "ic_s_s_user_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_user_20_outlined.svg",
+      "filled": "ic_s_s_user_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_user_24_filled.svg",
+      "outlined": "ic_s_s_user_24_outlined.svg"
+    }
+  },
+  "ic_s_s_userslash": {
+    "16": {
+      "outlined": "ic_s_s_userslash_16_outlined.svg",
+      "filled": "ic_s_s_userslash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userslash_20_outlined.svg",
+      "filled": "ic_s_s_userslash_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_userslash_24_filled.svg",
+      "outlined": "ic_s_s_userslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_userarrowright": {
+    "16": {
+      "filled": "ic_s_s_userarrowright_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userarrowright_20_outlined.svg",
+      "filled": "ic_s_s_userarrowright_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userarrowright_24_outlined.svg",
+      "filled": "ic_s_s_userarrowright_24_filled.svg"
+    }
+  },
+  "ic_s_s_userarrow": {
+    "16": {
+      "filled": "ic_s_s_userarrow_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userarrow_20_outlined.svg",
+      "filled": "ic_s_s_userarrow_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userarrow_24_outlined.svg",
+      "filled": "ic_s_s_userarrow_24_filled.svg"
+    }
+  },
+  "ic_s_s_userarrowleft": {
+    "20": {
+      "outlined": "ic_s_s_userarrowleft_20_outlined.svg"
+    }
+  },
+  "ic_s_s_userswitch": {
+    "20": {
+      "outlined": "ic_s_s_userswitch_20_outlined.svg"
+    }
+  },
+  "ic_s_s_userdoublearrow": {
+    "20": {
+      "filled": "ic_s_s_userdoublearrow_20_filled.svg",
+      "outlined": "ic_s_s_userdoublearrow_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userdoublearrow_24_outlined.svg",
+      "filled": "ic_s_s_userdoublearrow_24_filled.svg"
+    }
+  },
+  "ic_s_s_usercheckmark": {
+    "16": {
+      "filled": "ic_s_s_usercheckmark_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usercheckmark_20_outlined.svg",
+      "filled": "ic_s_s_usercheckmark_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usercheckmark_24_outlined.svg",
+      "filled": "ic_s_s_usercheckmark_24_filled.svg"
+    }
+  },
+  "ic_s_s_userban": {
+    "16": {
+      "filled": "ic_s_s_userban_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userban_20_outlined.svg",
+      "filled": "ic_s_s_userban_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_userban_24_filled.svg",
+      "outlined": "ic_s_s_userban_24_outlined.svg"
+    }
+  },
+  "ic_s_s_userplus": {
+    "20": {
+      "outlined": "ic_s_s_userplus_20_outlined.svg",
+      "filled": "ic_s_s_userplus_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userplus_24_outlined.svg",
+      "filled": "ic_s_s_userplus_24_filled.svg"
+    }
+  },
+  "ic_s_s_userplusslash": {
+    "20": {
+      "outlined": "ic_s_s_userplusslash_20_outlined.svg",
+      "filled": "ic_s_s_userplusslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userplusslash_24_outlined.svg",
+      "filled": "ic_s_s_userplusslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_userdot": {
+    "16": {
+      "filled": "ic_s_s_userdot_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userdot_20_outlined.svg",
+      "filled": "ic_s_s_userdot_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userdot_24_outlined.svg",
+      "filled": "ic_s_s_userdot_24_filled.svg"
+    }
+  },
+  "ic_s_s_userblock": {
+    "16": {
+      "filled": "ic_s_s_userblock_16_filled.svg",
+      "outlined": "ic_s_s_userblock_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userblock_20_outlined.svg",
+      "filled": "ic_s_s_userblock_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_userblock_24_filled.svg",
+      "outlined": "ic_s_s_userblock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_userminus": {
+    "16": {
+      "filled": "ic_s_s_userminus_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userminus_20_outlined.svg",
+      "filled": "ic_s_s_userminus_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userminus_24_outlined.svg",
+      "filled": "ic_s_s_userminus_24_filled.svg"
+    }
+  },
+  "ic_s_s_usernut": {
+    "16": {
+      "filled": "ic_s_s_usernut_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usernut_20_outlined.svg",
+      "filled": "ic_s_s_usernut_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usernut_24_outlined.svg",
+      "filled": "ic_s_s_usernut_24_filled.svg"
+    }
+  },
+  "ic_s_s_userlock": {
+    "16": {
+      "filled": "ic_s_s_userlock_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userlock_20_outlined.svg",
+      "filled": "ic_s_s_userlock_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_userlock_24_filled.svg",
+      "outlined": "ic_s_s_userlock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_usermic": {
+    "20": {
+      "outlined": "ic_s_s_usermic_20_outlined.svg",
+      "filled": "ic_s_s_usermic_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_usermic_24_filled.svg",
+      "outlined": "ic_s_s_usermic_24_outlined.svg"
+    }
+  },
+  "ic_s_s_usestar": {
+    "20": {
+      "outlined": "ic_s_s_usestar_20_outlined.svg",
+      "filled": "ic_s_s_usestar_20_filled.svg"
+    }
+  },
+  "ic_s_s_userdouyin": {
+    "20": {
+      "outlined": "ic_s_s_userdouyin_20_outlined.svg",
+      "filled": "ic_s_s_userdouyin_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_userdouyin_24_filled.svg",
+      "outlined": "ic_s_s_userdouyin_24_outlined.svg"
+    }
+  },
+  "ic_s_s_userlink": {
+    "20": {
+      "outlined": "ic_s_s_userlink_20_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowupboldslash": {
+    "20": {
+      "outlined": "ic_s_s_arrowupboldslash_20_outlined.svg",
+      "filled": "ic_s_s_arrowupboldslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_arrowupboldslash_24_outlined.svg",
+      "filled": "ic_s_s_arrowupboldslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_rectangleonrectangleup": {
+    "12": {
+      "filled": "ic_s_s_rectangleonrectangleup_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_rectangleonrectangleup_16_filled.svg",
+      "outlined": "ic_s_s_rectangleonrectangleup_16_outlined.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_rectangleonrectangleup_20_filled.svg",
+      "outlined": "ic_s_s_rectangleonrectangleup_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_rectangleonrectangleup_24_filled.svg",
+      "outlined": "ic_s_s_rectangleonrectangleup_24_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleplus": {
+    "24": {
+      "filled": "ic_s_s_rectangleplus_24_filled.svg",
+      "outlined": "ic_s_s_rectangleplus_24_outlined.svg"
+    }
+  },
+  "ic_s_s_userheart": {
+    "16": {
+      "filled": "ic_s_s_userheart_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_userheart_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_userheart_24_outlined.svg",
+      "filled": "ic_s_s_userheart_24_filled.svg"
+    }
+  },
+  "ic_s_s_usertwo": {
+    "16": {
+      "filled": "ic_s_s_usertwo_16_filled.svg",
+      "outlined": "ic_s_s_usertwo_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usertwo_20_outlined.svg",
+      "filled": "ic_s_s_usertwo_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usertwo_24_outlined.svg",
+      "filled": "ic_s_s_usertwo_24_filled.svg"
+    }
+  },
+  "ic_s_s_usertwoslash": {
+    "16": {
+      "filled": "ic_s_s_usertwoslash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usertwoslash_20_outlined.svg",
+      "filled": "ic_s_s_usertwoslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usertwoslash_24_outlined.svg",
+      "filled": "ic_s_s_usertwoslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_usertwoarrowup": {
+    "16": {
+      "outlined": "ic_s_s_usertwoarrowup_16_outlined.svg",
+      "filled": "ic_s_s_usertwoarrowup_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_usertwoarrowup_20_filled.svg",
+      "outlined": "ic_s_s_usertwoarrowup_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_usertwoarrowup_24_filled.svg",
+      "outlined": "ic_s_s_usertwoarrowup_24_outlined.svg"
+    }
+  },
+  "ic_s_s_usertwoplus": {
+    "20": {
+      "filled": "ic_s_s_usertwoplus_20_filled.svg",
+      "outlined": "ic_s_s_usertwoplus_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_usertwoplus_24_filled.svg",
+      "outlined": "ic_s_s_usertwoplus_24_outlined.svg"
+    }
+  },
+  "ic_s_s_usertwonut": {
+    "16": {
+      "outlined": "ic_s_s_usertwonut_16_outlined.svg",
+      "filled": "ic_s_s_usertwonut_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usertwonut_20_outlined.svg",
+      "filled": "ic_s_s_usertwonut_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usertwonut_24_outlined.svg",
+      "filled": "ic_s_s_usertwonut_24_filled.svg"
+    }
+  },
+  "ic_s_s_personcircleslash": {
+    "20": {
+      "outlined": "ic_s_s_personcircleslash_20_outlined.svg",
+      "filled": "ic_s_s_personcircleslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_personcircleslash_24_outlined.svg",
+      "filled": "ic_s_s_personcircleslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_usershield": {
+    "16": {
+      "filled": "ic_s_s_usershield_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usershield_20_outlined.svg",
+      "filled": "ic_s_s_usershield_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usershield_24_outlined.svg",
+      "filled": "ic_s_s_usershield_24_filled.svg"
+    }
+  },
+  "ic_s_s_personcircle": {
+    "20": {
+      "outlined": "ic_s_s_personcircle_20_outlined.svg",
+      "filled": "ic_s_s_personcircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_personcircle_24_outlined.svg",
+      "filled": "ic_s_s_personcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_personcircleclean": {
+    "20": {
+      "outlined": "ic_s_s_personcircleclean_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_personcircleclean_24_outlined.svg"
+    }
+  },
+  "ic_s_s_folder": {
+    "16": {
+      "filled": "ic_s_s_folder_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_folder_20_outlined.svg",
+      "filled": "ic_s_s_folder_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_folder_24_filled.svg",
+      "outlined": "ic_s_s_folder_24_outlined.svg"
+    }
+  },
+  "ic_s_s_folderinnerplus": {
+    "16": {
+      "filled": "ic_s_s_folderinnerplus_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_folderinnerplus_20_outlined.svg",
+      "filled": "ic_s_s_folderinnerplus_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_folderinnerplus_24_outlined.svg",
+      "filled": "ic_s_s_folderinnerplus_24_filled.svg"
+    }
+  },
+  "ic_s_s_folderplus": {
+    "16": {
+      "filled": "ic_s_s_folderplus_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_folderplus_20_outlined.svg",
+      "filled": "ic_s_s_folderplus_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_folderplus_24_filled.svg",
+      "outlined": "ic_s_s_folderplus_24_outlined.svg"
+    }
+  },
+  "ic_s_s_folderstar": {
+    "16": {
+      "filled": "ic_s_s_folderstar_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_folderstar_20_outlined.svg",
+      "filled": "ic_s_s_folderstar_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_folderstar_24_outlined.svg",
+      "filled": "ic_s_s_folderstar_24_filled.svg"
+    }
+  },
+  "ic_s_s_doc": {
+    "16": {
+      "filled": "ic_s_s_doc_16_filled.svg",
+      "outlined": "ic_s_s_doc_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_doc_20_outlined.svg",
+      "filled": "ic_s_s_doc_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_doc_24_outlined.svg",
+      "filled": "ic_s_s_doc_24_filled.svg"
+    }
+  },
+  "ic_s_s_doccheckmark": {
+    "20": {
+      "outlined": "ic_s_s_doccheckmark_20_outlined.svg"
+    }
+  },
+  "ic_s_s_docstamp": {
+    "20": {
+      "outlined": "ic_s_s_docstamp_20_outlined.svg"
+    }
+  },
+  "ic_s_s_form": {
+    "20": {
+      "outlined": "ic_s_s_form_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_form_24_outlined.svg"
+    }
+  },
+  "ic_s_s_docpen": {
+    "24": {
+      "filled": "ic_s_s_docpen_24_filled.svg",
+      "outlined": "ic_s_s_docpen_24_outlined.svg"
+    }
+  },
+  "ic_s_s_docuser": {
+    "20": {
+      "outlined": "ic_s_s_docuser_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_docuser_24_outlined.svg"
+    }
+  },
+  "ic_s_s_docxmark": {
+    "24": {
+      "filled": "ic_s_s_docxmark_24_filled.svg",
+      "outlined": "ic_s_s_docxmark_24_outlined.svg"
+    }
+  },
+  "ic_s_s_scroll": {
+    "20": {
+      "filled": "ic_s_s_scroll_20_filled.svg",
+      "outlined": "ic_s_s_scroll_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_scroll_24_filled.svg",
+      "outlined": "ic_s_s_scroll_24_outlined.svg"
+    }
+  },
+  "ic_s_s_artical": {
+    "16": {
+      "filled": "ic_s_s_artical_16_filled.svg"
+    }
+  },
+  "ic_s_s_caption": {
+    "16": {
+      "filled": "ic_s_s_caption_16_filled.svg"
+    }
+  },
+  "ic_s_s_artboardpen": {
+    "20": {
+      "outlined": "ic_s_s_artboardpen_20_outlined.svg",
+      "filled": "ic_s_s_artboardpen_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_artboardpen_24_outlined.svg",
+      "filled": "ic_s_s_artboardpen_24_filled.svg"
+    }
+  },
+  "ic_s_s_pensketch": {
+    "16": {
+      "filled": "ic_s_s_pensketch_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_pensketch_20_outlined.svg",
+      "filled": "ic_s_s_pensketch_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_pensketch_24_outlined.svg",
+      "filled": "ic_s_s_pensketch_24_filled.svg"
+    }
+  },
+  "ic_s_s_bell": {
+    "16": {
+      "filled": "ic_s_s_bell_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_bell_20_outlined.svg",
+      "filled": "ic_s_s_bell_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_bell_24_filled.svg",
+      "outlined": "ic_s_s_bell_24_outlined.svg"
+    }
+  },
+  "ic_s_s_bellring": {
+    "16": {
+      "filled": "ic_s_s_bellring_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_bellring_20_outlined.svg",
+      "filled": "ic_s_s_bellring_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bellring_24_outlined.svg",
+      "filled": "ic_s_s_bellring_24_filled.svg"
+    }
+  },
+  "ic_s_s_bellslash": {
+    "16": {
+      "filled": "ic_s_s_bellslash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_bellslash_20_outlined.svg",
+      "filled": "ic_s_s_bellslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bellslash_24_outlined.svg",
+      "filled": "ic_s_s_bellslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_bellheart": {
+    "16": {
+      "filled": "ic_s_s_bellheart_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_bellheart_20_outlined.svg",
+      "filled": "ic_s_s_bellheart_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_bellheart_24_filled.svg",
+      "outlined": "ic_s_s_bellheart_24_outlined.svg"
+    }
+  },
+  "ic_s_s_horn": {
+    "16": {
+      "filled": "ic_s_s_horn_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_horn_20_outlined.svg",
+      "filled": "ic_s_s_horn_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_horn_24_outlined.svg",
+      "filled": "ic_s_s_horn_24_filled.svg"
+    }
+  },
+  "ic_s_s_quaver": {
+    "12": {
+      "filled": "ic_s_s_quaver_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_quaver_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_quaver_20_outlined.svg",
+      "filled": "ic_s_s_quaver_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_quaver_24_filled.svg",
+      "outlined": "ic_s_s_quaver_24_outlined.svg"
+    }
+  },
+  "ic_s_s_quaverslash": {
+    "20": {
+      "outlined": "ic_s_s_quaverslash_20_outlined.svg",
+      "filled": "ic_s_s_quaverslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_quaverslash_24_outlined.svg",
+      "filled": "ic_s_s_quaverslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_headphoneround": {
+    "16": {
+      "outlined": "ic_s_s_headphoneround_16_outlined.svg",
+      "filled": "ic_s_s_headphoneround_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_headphoneround_20_outlined.svg",
+      "filled": "ic_s_s_headphoneround_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_headphoneround_24_outlined.svg",
+      "filled": "ic_s_s_headphoneround_24_filled.svg"
+    }
+  },
+  "ic_s_s_fifteenarrowcircleright": {
+    "20": {
+      "outlined": "ic_s_s_fifteenarrowcircleright_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_fifteenarrowcircleright_24_outlined.svg"
+    }
+  },
+  "ic_s_s_fifteenarrowcircleleft": {
+    "20": {
+      "outlined": "ic_s_s_fifteenarrowcircleleft_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_fifteenarrowcircleleft_24_outlined.svg"
+    }
+  },
+  "ic_s_s_doublearrowcircle": {
+    "20": {
+      "outlined": "ic_s_s_doublearrowcircle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_doublearrowcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playcircleback": {
+    "12": {
+      "outlined": "ic_s_s_playcircleback_12_outlined.svg"
+    }
+  },
+  "ic_s_s_onedoublearrowcircle": {
+    "20": {
+      "outlined": "ic_s_s_onedoublearrowcircle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_onedoublearrowcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_play": {
+    "12": {
+      "filled": "ic_s_s_play_12_filled.svg",
+      "outlined": "ic_s_s_play_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_play_16_filled.svg",
+      "outlined": "ic_s_s_play_16_outlined.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_play_20_filled.svg",
+      "outlined": "ic_s_s_play_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_play_24_filled.svg",
+      "outlined": "ic_s_s_play_24_outlined.svg"
+    }
+  },
+  "ic_s_s_pause": {
+    "12": {
+      "filled": "ic_s_s_pause_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_pause_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_pause_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_pause_24_filled.svg"
+    }
+  },
+  "ic_s_s_doubletriangleright": {
+    "16": {
+      "filled": "ic_s_s_doubletriangleright_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_doubletriangleright_20_outlined.svg",
+      "filled": "ic_s_s_doubletriangleright_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_doubletriangleright_24_filled.svg",
+      "outlined": "ic_s_s_doubletriangleright_24_outlined.svg"
+    }
+  },
+  "ic_s_s_doubletriangleleft": {
+    "20": {
+      "outlined": "ic_s_s_doubletriangleleft_20_outlined.svg",
+      "filled": "ic_s_s_doubletriangleleft_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_doubletriangleleft_24_outlined.svg",
+      "filled": "ic_s_s_doubletriangleleft_24_filled.svg"
+    }
+  },
+  "ic_s_s_xspeed": {
+    "24": {
+      "outlined": "ic_s_s_xspeed_24_outlined.svg"
+    }
+  },
+  "ic_s_s_speed": {
+    "16": {
+      "filled": "ic_s_s_speed_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_speed_20_outlined.svg",
+      "filled": "ic_s_s_speed_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_speed_24_outlined.svg",
+      "filled": "ic_s_s_speed_24_filled.svg"
+    }
+  },
+  "ic_s_s_infinityarrow": {
+    "24": {
+      "outlined": "ic_s_s_infinityarrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_speakerwavetwo": {
+    "16": {
+      "filled": "ic_s_s_speakerwavetwo_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_speakerwavetwo_20_outlined.svg",
+      "filled": "ic_s_s_speakerwavetwo_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_speakerwavetwo_24_outlined.svg",
+      "filled": "ic_s_s_speakerwavetwo_24_filled.svg"
+    }
+  },
+  "ic_s_s_speakerwaveone": {
+    "24": {
+      "outlined": "ic_s_s_speakerwaveone_24_outlined.svg",
+      "filled": "ic_s_s_speakerwaveone_24_filled.svg"
+    }
+  },
+  "ic_s_s_playcircle": {
+    "16": {
+      "outlined": "ic_s_s_playcircle_16_outlined.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_playcircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playcircle_24_outlined.svg",
+      "filled": "ic_s_s_playcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_tv": {
+    "16": {
+      "filled": "ic_s_s_tv_16_filled.svg",
+      "outlined": "ic_s_s_tv_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_tv_20_outlined.svg",
+      "filled": "ic_s_s_tv_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_tv_24_outlined.svg",
+      "filled": "ic_s_s_tv_24_filled.svg"
+    }
+  },
+  "ic_s_s_tvminus": {
+    "20": {
+      "outlined": "ic_s_s_tvminus_20_outlined.svg",
+      "filled": "ic_s_s_tvminus_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_tvminus_24_outlined.svg",
+      "filled": "ic_s_s_tvminus_24_filled.svg"
+    }
+  },
+  "ic_s_s_video": {
+    "12": {
+      "filled": "ic_s_s_video_12_filled.svg",
+      "outlined": "ic_s_s_video_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_video_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_video_20_outlined.svg",
+      "filled": "ic_s_s_video_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_video_24_filled.svg",
+      "outlined": "ic_s_s_video_24_outlined.svg"
+    }
+  },
+  "ic_s_s_wallet": {
+    "16": {
+      "filled": "ic_s_s_wallet_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_wallet_20_outlined.svg",
+      "filled": "ic_s_s_wallet_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_wallet_24_outlined.svg",
+      "filled": "ic_s_s_wallet_24_filled.svg"
+    }
+  },
+  "ic_s_s_camera": {
+    "16": {
+      "filled": "ic_s_s_camera_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_camera_20_outlined.svg",
+      "filled": "ic_s_s_camera_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_camera_24_outlined.svg",
+      "filled": "ic_s_s_camera_24_filled.svg"
+    }
+  },
+  "ic_s_s_cameralogo": {
+    "12": {
+      "outlined": "ic_s_s_cameralogo_12_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_cameralogo_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cameralogo_24_outlined.svg",
+      "filled": "ic_s_s_cameralogo_24_filled.svg"
+    }
+  },
+  "ic_s_s_meteorcameralogo": {
+    "12": {
+      "filled": "ic_s_s_meteorcameralogo_12_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_meteorcameralogo_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_meteorcameralogo_24_filled.svg"
+    }
+  },
+  "ic_s_s_bag": {
+    "12": {
+      "filled": "ic_s_s_bag_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_bag_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_bag_20_outlined.svg",
+      "filled": "ic_s_s_bag_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bag_24_outlined.svg",
+      "filled": "ic_s_s_bag_24_filled.svg"
+    }
+  },
+  "ic_s_s_bagslash": {
+    "20": {
+      "outlined": "ic_s_s_bagslash_20_outlined.svg",
+      "filled": "ic_s_s_bagslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bagslash_24_outlined.svg",
+      "filled": "ic_s_s_bagslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_tag": {
+    "12": {
+      "filled": "ic_s_s_tag_12_filled.svg",
+      "outlined": "ic_s_s_tag_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_tag_16_filled.svg",
+      "outlined": "ic_s_s_tag_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_tag_20_outlined.svg",
+      "filled": "ic_s_s_tag_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_tag_24_outlined.svg",
+      "filled": "ic_s_s_tag_24_filled.svg"
+    }
+  },
+  "ic_s_s_tagslash": {
+    "12": {
+      "filled": "ic_s_s_tagslash_12_filled.svg",
+      "outlined": "ic_s_s_tagslash_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_tagslash_16_filled.svg",
+      "outlined": "ic_s_s_tagslash_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_tagslash_20_outlined.svg",
+      "filled": "ic_s_s_tagslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_tagslash_24_outlined.svg",
+      "filled": "ic_s_s_tagslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_cart": {
+    "16": {
+      "filled": "ic_s_s_cart_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_cart_20_outlined.svg",
+      "filled": "ic_s_s_cart_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cart_24_outlined.svg",
+      "filled": "ic_s_s_cart_24_filled.svg"
+    }
+  },
+  "ic_s_s_shop": {
+    "16": {
+      "filled": "ic_s_s_shop_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_shop_20_outlined.svg",
+      "filled": "ic_s_s_shop_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_shop_24_filled.svg",
+      "outlined": "ic_s_s_shop_24_outlined.svg"
+    }
+  },
+  "ic_s_s_diamond": {
+    "24": {
+      "outlined": "ic_s_s_diamond_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ticket": {
+    "20": {
+      "outlined": "ic_s_s_ticket_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_ticket_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ticketsimplify": {
+    "20": {
+      "outlined": "ic_s_s_ticketsimplify_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_ticketsimplify_24_outlined.svg"
+    }
+  },
+  "ic_s_s_shoppoint": {
+    "20": {
+      "outlined": "ic_s_s_shoppoint_20_outlined.svg",
+      "filled": "ic_s_s_shoppoint_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_shoppoint_24_outlined.svg",
+      "filled": "ic_s_s_shoppoint_24_filled.svg"
+    }
+  },
+  "ic_s_s_msgnut": {
+    "20": {
+      "outlined": "ic_s_s_msgnut_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_msgnut_24_filled.svg",
+      "outlined": "ic_s_s_msgnut_24_outlined.svg"
+    }
+  },
+  "ic_s_s_msgtwo": {
+    "12": {
+      "filled": "ic_s_s_msgtwo_12_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_msgtwo_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_msgtwo_24_filled.svg",
+      "outlined": "ic_s_s_msgtwo_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonedown": {
+    "12": {
+      "filled": "ic_s_s_phonedown_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_phonedown_16_filled.svg",
+      "outlined": "ic_s_s_phonedown_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_phonedown_20_outlined.svg",
+      "filled": "ic_s_s_phonedown_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_phonedown_24_outlined.svg",
+      "filled": "ic_s_s_phonedown_24_filled.svg"
+    }
+  },
+  "ic_s_s_phoneup": {
+    "12": {
+      "filled": "ic_s_s_phoneup_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_phoneup_16_filled.svg",
+      "outlined": "ic_s_s_phoneup_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_phoneup_20_outlined.svg",
+      "filled": "ic_s_s_phoneup_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_phoneup_24_outlined.svg",
+      "filled": "ic_s_s_phoneup_24_filled.svg"
+    }
+  },
+  "ic_s_s_phonearrow": {
+    "16": {
+      "filled": "ic_s_s_phonearrow_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_phonearrow_20_outlined.svg",
+      "filled": "ic_s_s_phonearrow_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_phonearrow_24_filled.svg",
+      "outlined": "ic_s_s_phonearrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_handlemic": {
+    "12": {
+      "outlined": "ic_s_s_handlemic_12_outlined.svg",
+      "filled": "ic_s_s_handlemic_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_handlemic_16_outlined.svg",
+      "filled": "ic_s_s_handlemic_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_handlemic_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_handlemic_24_outlined.svg",
+      "filled": "ic_s_s_handlemic_24_filled.svg"
+    }
+  },
+  "ic_s_s_book": {
+    "16": {
+      "filled": "ic_s_s_book_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_book_20_outlined.svg",
+      "filled": "ic_s_s_book_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_book_24_outlined.svg",
+      "filled": "ic_s_s_book_24_filled.svg"
+    }
+  },
+  "ic_s_s_dochat": {
+    "20": {
+      "outlined": "ic_s_s_dochat_20_outlined.svg",
+      "filled": "ic_s_s_dochat_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_dochat_24_outlined.svg",
+      "filled": "ic_s_s_dochat_24_filled.svg"
+    }
+  },
+  "ic_s_s_umbrella": {
+    "16": {
+      "filled": "ic_s_s_umbrella_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_umbrella_20_outlined.svg",
+      "filled": "ic_s_s_umbrella_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_umbrella_24_outlined.svg",
+      "filled": "ic_s_s_umbrella_24_filled.svg"
+    }
+  },
+  "ic_s_s_sapling": {
+    "16": {
+      "filled": "ic_s_s_sapling_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_sapling_20_outlined.svg",
+      "filled": "ic_s_s_sapling_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_sapling_24_outlined.svg",
+      "filled": "ic_s_s_sapling_24_filled.svg"
+    }
+  },
+  "ic_s_s_location": {
+    "12": {
+      "filled": "ic_s_s_location_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_location_16_filled.svg",
+      "outlined": "ic_s_s_location_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_location_20_outlined.svg",
+      "filled": "ic_s_s_location_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_location_24_filled.svg",
+      "outlined": "ic_s_s_location_24_outlined.svg"
+    }
+  },
+  "ic_s_s_lock": {
+    "12": {
+      "filled": "ic_s_s_lock_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_lock_16_filled.svg",
+      "outlined": "ic_s_s_lock_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_lock_20_outlined.svg",
+      "filled": "ic_s_s_lock_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_lock_24_filled.svg",
+      "outlined": "ic_s_s_lock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_unlock": {
+    "16": {
+      "filled": "ic_s_s_unlock_16_filled.svg",
+      "outlined": "ic_s_s_unlock_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_unlock_20_outlined.svg",
+      "filled": "ic_s_s_unlock_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_unlock_24_filled.svg",
+      "outlined": "ic_s_s_unlock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_timerlock": {
+    "20": {
+      "outlined": "ic_s_s_timerlock_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_timerlock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_key": {
+    "16": {
+      "filled": "ic_s_s_key_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_key_20_filled.svg",
+      "outlined": "ic_s_s_key_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_key_24_outlined.svg",
+      "filled": "ic_s_s_key_24_filled.svg"
+    }
+  },
+  "ic_s_s_douyinkey": {
+    "20": {
+      "outlined": "ic_s_s_douyinkey_20_outlined.svg"
+    }
+  },
+  "ic_s_s_keyshield": {
+    "20": {
+      "outlined": "ic_s_s_keyshield_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_keyshield_24_outlined.svg"
+    }
+  },
+  "ic_s_s_gear": {
+    "16": {
+      "filled": "ic_s_s_gear_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_gear_20_outlined.svg",
+      "filled": "ic_s_s_gear_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_gear_24_outlined.svg",
+      "filled": "ic_s_s_gear_24_filled.svg"
+    }
+  },
+  "ic_s_s_gearsimplify": {
+    "16": {
+      "outlined": "ic_s_s_gearsimplify_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_gearsimplify_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_gearsimplify_24_outlined.svg"
+    }
+  },
+  "ic_s_s_image": {
+    "12": {
+      "outlined": "ic_s_s_image_12_outlined.svg",
+      "filled": "ic_s_s_image_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_image_16_filled.svg",
+      "outlined": "ic_s_s_image_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_image_20_outlined.svg",
+      "filled": "ic_s_s_image_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_image_24_outlined.svg",
+      "filled": "ic_s_s_image_24_filled.svg"
+    }
+  },
+  "ic_s_s_removeimage": {
+    "20": {
+      "outlined": "ic_s_s_removeimage_20_outlined.svg"
+    }
+  },
+  "ic_s_s_broom": {
+    "16": {
+      "filled": "ic_s_s_broom_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_broom_20_outlined.svg",
+      "filled": "ic_s_s_broom_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_broom_24_outlined.svg",
+      "filled": "ic_s_s_broom_24_filled.svg"
+    }
+  },
+  "ic_s_s_trash": {
+    "16": {
+      "filled": "ic_s_s_trash_16_filled.svg",
+      "outlined": "ic_s_s_trash_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_trash_20_outlined.svg",
+      "filled": "ic_s_s_trash_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_trash_24_filled.svg",
+      "outlined": "ic_s_s_trash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_rocket": {
+    "20": {
+      "outlined": "ic_s_s_rocket_20_outlined.svg",
+      "filled": "ic_s_s_rocket_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_rocket_24_outlined.svg",
+      "filled": "ic_s_s_rocket_24_filled.svg"
+    }
+  },
+  "ic_s_s_funnel": {
+    "16": {
+      "filled": "ic_s_s_funnel_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_funnel_20_filled.svg",
+      "outlined": "ic_s_s_funnel_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_funnel_24_filled.svg",
+      "outlined": "ic_s_s_funnel_24_outlined.svg"
+    }
+  },
+  "ic_s_s_mic": {
+    "12": {
+      "outlined": "ic_s_s_mic_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_mic_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_mic_20_outlined.svg",
+      "filled": "ic_s_s_mic_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_mic_24_filled.svg",
+      "outlined": "ic_s_s_mic_24_outlined.svg"
+    }
+  },
+  "ic_s_s_pointer": {
+    "12": {
+      "filled": "ic_s_s_pointer_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_pointer_16_outlined.svg",
+      "filled": "ic_s_s_pointer_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_pointer_20_outlined.svg",
+      "filled": "ic_s_s_pointer_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_pointer_24_outlined.svg",
+      "filled": "ic_s_s_pointer_24_filled.svg"
+    }
+  },
+  "ic_s_s_micslash": {
+    "24": {
+      "filled": "ic_s_s_micslash_24_filled.svg",
+      "outlined": "ic_s_s_micslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_livephoto": {
+    "20": {
+      "outlined": "ic_s_s_livephoto_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_livephoto_24_outlined.svg"
+    }
+  },
+  "ic_s_s_clock": {
+    "12": {
+      "outlined": "ic_s_s_clock_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_clock_16_filled.svg",
+      "outlined": "ic_s_s_clock_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_clock_20_outlined.svg",
+      "filled": "ic_s_s_clock_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_clock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_alarm": {
+    "16": {
+      "outlined": "ic_s_s_alarm_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_alarm_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_alarm_24_outlined.svg"
+    }
+  },
+  "ic_s_s_link": {
+    "12": {
+      "outlined": "ic_s_s_link_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_link_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_link_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_link_24_outlined.svg",
+      "filled": "ic_s_s_link_24_filled.svg"
+    }
+  },
+  "ic_s_s_linkround": {
+    "20": {
+      "outlined": "ic_s_s_linkround_20_outlined.svg",
+      "filled": "ic_s_s_linkround_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_linkround_24_outlined.svg",
+      "filled": "ic_s_s_linkround_24_filled.svg"
+    }
+  },
+  "ic_s_s_linkslash": {
+    "16": {
+      "outlined": "ic_s_s_linkslash_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_linkslash_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_linkslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_danmuoff": {
+    "24": {
+      "outlined": "ic_s_s_danmuoff_24_outlined.svg"
+    }
+  },
+  "ic_s_s_danmuon": {
+    "24": {
+      "outlined": "ic_s_s_danmuon_24_outlined.svg"
+    }
+  },
+  "ic_s_s_sun": {
+    "20": {
+      "outlined": "ic_s_s_sun_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_sun_24_outlined.svg"
+    }
+  },
+  "ic_s_s_moon": {
+    "24": {
+      "outlined": "ic_s_s_moon_24_outlined.svg",
+      "filled": "ic_s_s_moon_24_filled.svg"
+    }
+  },
+  "ic_s_s_building": {
+    "24": {
+      "filled": "ic_s_s_building_24_filled.svg"
+    }
+  },
+  "ic_s_s_house": {
+    "24": {
+      "outlined": "ic_s_s_house_24_outlined.svg"
+    }
+  },
+  "ic_s_s_mask": {
+    "24": {
+      "outlined": "ic_s_s_mask_24_outlined.svg"
+    }
+  },
+  "ic_s_s_stethoscope": {
+    "24": {
+      "outlined": "ic_s_s_stethoscope_24_outlined.svg"
+    }
+  },
+  "ic_s_s_bulb": {
+    "24": {
+      "outlined": "ic_s_s_bulb_24_outlined.svg"
+    }
+  },
+  "ic_s_s_lightalert": {
+    "24": {
+      "outlined": "ic_s_s_lightalert_24_outlined.svg",
+      "filled": "ic_s_s_lightalert_24_filled.svg"
+    }
+  },
+  "ic_s_s_paintpalette": {
+    "20": {
+      "outlined": "ic_s_s_paintpalette_20_outlined.svg",
+      "filled": "ic_s_s_paintpalette_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_paintpalette_24_outlined.svg",
+      "filled": "ic_s_s_paintpalette_24_filled.svg"
+    }
+  },
+  "ic_s_s_magnifier": {
+    "16": {
+      "outlined": "ic_s_s_magnifier_16_outlined.svg",
+      "filled": "ic_s_s_magnifier_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_magnifier_20_outlined.svg",
+      "filled": "ic_s_s_magnifier_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_magnifier_24_outlined.svg",
+      "filled": "ic_s_s_magnifier_24_filled.svg"
+    }
+  },
+  "ic_s_s_magnifiertext": {
+    "20": {
+      "outlined": "ic_s_s_magnifiertext_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_magnifiertext_24_outlined.svg"
+    }
+  },
+  "ic_s_s_monitordata": {
+    "16": {
+      "outlined": "ic_s_s_monitordata_16_outlined.svg",
+      "filled": "ic_s_s_monitordata_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_monitordata_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_monitordata_24_outlined.svg",
+      "filled": "ic_s_s_monitordata_24_filled.svg"
+    }
+  },
+  "ic_s_s_monitordatamagnifier": {
+    "24": {
+      "outlined": "ic_s_s_monitordatamagnifier_24_outlined.svg"
+    }
+  },
+  "ic_s_s_equipment": {
+    "12": {
+      "outlined": "ic_s_s_equipment_12_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_equipment_20_outlined.svg",
+      "filled": "ic_s_s_equipment_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_equipment_24_outlined.svg",
+      "filled": "ic_s_s_equipment_24_filled.svg"
+    }
+  },
+  "ic_s_s_game": {
+    "20": {
+      "outlined": "ic_s_s_game_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_game_24_outlined.svg"
+    }
+  },
+  "ic_s_s_headphoneheadset": {
+    "20": {
+      "outlined": "ic_s_s_headphoneheadset_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_headphoneheadset_24_outlined.svg"
+    }
+  },
+  "ic_s_s_listening": {
+    "24": {
+      "filled": "ic_s_s_listening_24_filled.svg"
+    }
+  },
+  "ic_s_s_memorycard": {
+    "20": {
+      "outlined": "ic_s_s_memorycard_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_memorycard_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonearrowin": {
+    "20": {
+      "outlined": "ic_s_s_phonearrowin_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_phonearrowin_24_outlined.svg"
+    }
+  },
+  "ic_s_s_earth": {
+    "20": {
+      "outlined": "ic_s_s_earth_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_earth_24_outlined.svg"
+    }
+  },
+  "ic_s_s_card": {
+    "12": {
+      "outlined": "ic_s_s_card_12_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_card_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_card_24_outlined.svg",
+      "filled": "ic_s_s_card_24_filled.svg"
+    }
+  },
+  "ic_s_s_male": {
+    "20": {
+      "outlined": "ic_s_s_male_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_male_24_outlined.svg"
+    }
+  },
+  "ic_s_s_usermagnifie": {
+    "20": {
+      "outlined": "ic_s_s_usermagnifie_20_outlined.svg"
+    }
+  },
+  "ic_s_s_female": {
+    "20": {
+      "outlined": "ic_s_s_female_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_female_24_outlined.svg"
+    }
+  },
+  "ic_s_s_scan": {
+    "20": {
+      "outlined": "ic_s_s_scan_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_scan_24_outlined.svg"
+    }
+  },
+  "ic_s_s_emojiscan": {
+    "20": {
+      "outlined": "ic_s_s_emojiscan_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_emojiscan_24_outlined.svg"
+    }
+  },
+  "ic_s_s_calendar": {
+    "12": {
+      "outlined": "ic_s_s_calendar_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_calendar_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_calendar_20_outlined.svg",
+      "filled": "ic_s_s_calendar_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_calendar_24_outlined.svg",
+      "filled": "ic_s_s_calendar_24_filled.svg"
+    }
+  },
+  "ic_s_s_maillink": {
+    "20": {
+      "outlined": "ic_s_s_maillink_20_outlined.svg"
+    }
+  },
+  "ic_s_s_tray": {
+    "20": {
+      "outlined": "ic_s_s_tray_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_tray_24_outlined.svg"
+    }
+  },
+  "ic_s_s_baghandle": {
+    "20": {
+      "outlined": "ic_s_s_baghandle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_baghandle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_docborad": {
+    "16": {
+      "outlined": "ic_s_s_docborad_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_docborad_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_docborad_24_outlined.svg"
+    }
+  },
+  "ic_s_s_magnifieroutlined": {
+    "24": {
+      "outlined": "ic_s_s_magnifieroutlined_24_outlined.svg"
+    }
+  },
+  "ic_s_s_thumbsup": {
+    "12": {
+      "filled": "ic_s_s_thumbsup_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_thumbsup_16_filled.svg",
+      "outlined": "ic_s_s_thumbsup_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_thumbsup_20_outlined.svg",
+      "filled": "ic_s_s_thumbsup_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_thumbsup_24_outlined.svg",
+      "filled": "ic_s_s_thumbsup_24_filled.svg"
+    }
+  },
+  "ic_s_s_thumbsdown": {
+    "12": {
+      "filled": "ic_s_s_thumbsdown_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_thumbsdown_16_filled.svg",
+      "outlined": "ic_s_s_thumbsdown_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_thumbsdown_20_outlined.svg",
+      "filled": "ic_s_s_thumbsdown_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_thumbsdown_24_outlined.svg",
+      "filled": "ic_s_s_thumbsdown_24_filled.svg"
+    }
+  },
+  "ic_s_s_eyeslash": {
+    "16": {
+      "outlined": "ic_s_s_eyeslash_16_outlined.svg",
+      "filled": "ic_s_s_eyeslash_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_eyeslash_20_outlined.svg",
+      "filled": "ic_s_s_eyeslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_eyeslash_24_outlined.svg",
+      "filled": "ic_s_s_eyeslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_footprint": {
+    "16": {
+      "filled": "ic_s_s_footprint_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_footprint_20_outlined.svg",
+      "filled": "ic_s_s_footprint_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_footprint_24_outlined.svg",
+      "filled": "ic_s_s_footprint_24_filled.svg"
+    }
+  },
+  "ic_s_s_ear": {
+    "20": {
+      "outlined": "ic_s_s_ear_20_outlined.svg",
+      "filled": "ic_s_s_ear_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_ear_24_outlined.svg",
+      "filled": "ic_s_s_ear_24_filled.svg"
+    }
+  },
+  "ic_s_s_hamburgertriangle": {
+    "20": {
+      "outlined": "ic_s_s_hamburgertriangle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_hamburgertriangle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_cfcamera": {
+    "20": {
+      "outlined": "ic_s_s_cfcamera_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cfcamera_24_outlined.svg",
+      "filled": "ic_s_s_cfcamera_24_filled.svg"
+    }
+  },
+  "ic_s_s_gamelite": {
+    "20": {
+      "outlined": "ic_s_s_gamelite_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_gamelite_24_outlined.svg"
+    }
+  },
+  "ic_s_s_connection": {
+    "20": {
+      "outlined": "ic_s_s_connection_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_connection_24_outlined.svg"
+    }
+  },
+  "ic_s_s_program": {
+    "16": {
+      "filled": "ic_s_s_program_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_program_20_outlined.svg",
+      "filled": "ic_s_s_program_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_program_24_outlined.svg"
+    }
+  },
+  "ic_s_s_videodot": {
+    "20": {
+      "outlined": "ic_s_s_videodot_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_videodot_24_outlined.svg"
+    }
+  },
+  "ic_s_c_pauseshadow": {
+    "24": {
+      "light": "ic_s_c_pauseshadow_24_light.svg"
+    }
+  },
+  "ic_s_c_playshadow": {
+    "24": {
+      "light": "ic_s_c_playshadow_24_light.svg"
+    }
+  },
+  "ic_s_c_zoomoutshadow": {
+    "24": {
+      "light": "ic_s_c_zoomoutshadow_24_light.svg"
+    }
+  },
+  "ic_s_c_ratiozeropointfiveshadow": {
+    "24": {
+      "light": "ic_s_c_ratiozeropointfiveshadow_24_light.svg"
+    }
+  },
+  "ic_s_c_ratiooneshadow": {
+    "24": {
+      "light": "ic_s_c_ratiooneshadow_24_light.svg"
+    }
+  },
+  "ic_s_c_ratioonepointfiveshadow": {
+    "24": {
+      "light": "ic_s_c_ratioonepointfiveshadow_24_light.svg"
+    }
+  },
+  "ic_s_c_ratiotwoshadow": {
+    "24": {
+      "light": "ic_s_c_ratiotwoshadow_24_light.svg"
+    }
+  },
+  "ic_s_s_forkspoon": {
+    "20": {
+      "outlined": "ic_s_s_forkspoon_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_forkspoon_24_outlined.svg"
+    }
+  },
+  "ic_s_s_heartshield": {
+    "20": {
+      "outlined": "ic_s_s_heartshield_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_heartshield_24_outlined.svg"
+    }
+  },
+  "ic_s_s_docgear": {
+    "16": {
+      "filled": "ic_s_s_docgear_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_docgear_20_outlined.svg",
+      "filled": "ic_s_s_docgear_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_docgear_24_outlined.svg"
+    }
+  },
+  "ic_s_s_bin": {
+    "20": {
+      "outlined": "ic_s_s_bin_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bin_24_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleonarrowdownrightrectangle": {
+    "20": {
+      "outlined": "ic_s_s_rectangleonarrowdownrightrectangle_20_outlined.svg",
+      "filled": "ic_s_s_rectangleonarrowdownrightrectangle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_rectangleonarrowdownrightrectangle_24_outlined.svg",
+      "filled": "ic_s_s_rectangleonarrowdownrightrectangle_24_filled.svg"
+    }
+  },
+  "ic_s_s_playertime": {
+    "16": {
+      "outlined": "ic_s_s_playertime_16_outlined.svg",
+      "filled": "ic_s_s_playertime_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_playertime_20_outlined.svg",
+      "filled": "ic_s_s_playertime_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playertime_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playsquarestack": {
+    "20": {
+      "outlined": "ic_s_s_playsquarestack_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playsquarestack_24_outlined.svg",
+      "filled": "ic_s_s_playsquarestack_24_filled.svg"
+    }
+  },
+  "ic_s_s_handshake": {
+    "16": {
+      "outlined": "ic_s_s_handshake_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_handshake_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_handshake_24_outlined.svg",
+      "filled": "ic_s_s_handshake_24_filled.svg"
+    }
+  },
+  "ic_s_s_sofa": {
+    "20": {
+      "outlined": "ic_s_s_sofa_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_sofa_24_outlined.svg",
+      "filled": "ic_s_s_sofa_24_filled.svg"
+    }
+  },
+  "ic_s_s_foldarrowhalfrectangle": {
+    "20": {
+      "outlined": "ic_s_s_foldarrowhalfrectangle_20_outlined.svg",
+      "filled": "ic_s_s_foldarrowhalfrectangle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_foldarrowhalfrectangle_24_outlined.svg",
+      "filled": "ic_s_s_foldarrowhalfrectangle_24_filled.svg"
+    }
+  },
+  "ic_s_s_facerectangleonrectangle": {
+    "20": {
+      "outlined": "ic_s_s_facerectangleonrectangle_20_outlined.svg",
+      "filled": "ic_s_s_facerectangleonrectangle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_facerectangleonrectangle_24_outlined.svg",
+      "filled": "ic_s_s_facerectangleonrectangle_24_filled.svg"
+    }
+  },
+  "ic_s_s_adseal": {
+    "20": {
+      "outlined": "ic_s_s_adseal_20_outlined.svg",
+      "filled": "ic_s_s_adseal_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_adseal_24_outlined.svg",
+      "filled": "ic_s_s_adseal_24_filled.svg"
+    }
+  },
+  "ic_s_s_msgslash": {
+    "20": {
+      "outlined": "ic_s_s_msgslash_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_msgslash_24_outlined.svg",
+      "filled": "ic_s_s_msgslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_bug": {
+    "24": {
+      "outlined": "ic_s_s_bug_24_outlined.svg"
+    }
+  },
+  "ic_s_s_xiaodiansuixintui": {
+    "20": {
+      "outlined": "ic_s_s_xiaodiansuixintui_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_xiaodiansuixintui_24_outlined.svg",
+      "filled": "ic_s_s_xiaodiansuixintui_24_filled.svg"
+    }
+  },
+  "ic_s_s_rectanglepentriangle": {
+    "24": {
+      "outlined": "ic_s_s_rectanglepentriangle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_magic": {
+    "20": {
+      "outlined": "ic_s_s_magic_20_outlined.svg",
+      "filled": "ic_s_s_magic_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_magic_24_outlined.svg",
+      "filled": "ic_s_s_magic_24_filled.svg"
+    }
+  },
+  "ic_s_s_warningtriangledouyin": {
+    "20": {
+      "outlined": "ic_s_s_warningtriangledouyin_20_outlined.svg",
+      "filled": "ic_s_s_warningtriangledouyin_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_warningtriangledouyin_24_outlined.svg",
+      "filled": "ic_s_s_warningtriangledouyin_24_filled.svg"
+    }
+  },
+  "ic_s_s_enterpriseservice": {
+    "20": {
+      "outlined": "ic_s_s_enterpriseservice_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_enterpriseservice_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonehealthplan": {
+    "20": {
+      "outlined": "ic_s_s_phonehealthplan_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_phonehealthplan_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonelink": {
+    "20": {
+      "outlined": "ic_s_s_phonelink_20_outlined.svg"
+    }
+  },
+  "ic_s_s_phonelinkplus": {
+    "20": {
+      "outlined": "ic_s_s_phonelinkplus_20_outlined.svg"
+    }
+  },
+  "ic_s_s_douyincoin": {
+    "20": {
+      "outlined": "ic_s_s_douyincoin_20_outlined.svg",
+      "filled": "ic_s_s_douyincoin_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_douyincoin_24_outlined.svg",
+      "filled": "ic_s_s_douyincoin_24_filled.svg"
+    }
+  },
+  "ic_s_s_heji": {
+    "12": {
+      "filled": "ic_s_s_heji_12_filled.svg",
+      "outlined": "ic_s_s_heji_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_heji_16_filled.svg",
+      "outlined": "ic_s_s_heji_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_heji_20_outlined.svg",
+      "filled": "ic_s_s_heji_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_heji_24_outlined.svg",
+      "filled": "ic_s_s_heji_24_filled.svg"
+    }
+  },
+  "ic_s_s_douplus": {
+    "20": {
+      "outlined": "ic_s_s_douplus_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_douplus_24_outlined.svg"
+    }
+  },
+  "ic_s_s_duanju": {
+    "16": {
+      "filled": "ic_s_s_duanju_16_filled.svg"
+    }
+  },
+  "ic_s_s_sheetcross": {
+    "24": {
+      "filled": "ic_s_s_sheetcross_24_filled.svg"
+    }
+  },
+  "ic_s_s_briefcase": {
+    "12": {
+      "outlined": "ic_s_s_briefcase_12_outlined.svg"
+    }
+  },
+  "ic_s_s_xiaohe": {
+    "16": {
+      "filled": "ic_s_s_xiaohe_16_filled.svg"
+    }
+  },
+  "ic_s_s_threestars": {
+    "16": {
+      "filled": "ic_s_s_threestars_16_filled.svg"
+    }
+  },
+  "ic_s_s_douyin": {
+    "16": {
+      "filled": "ic_s_s_douyin_16_filled.svg"
+    }
+  },
+  "ic_s_s_rectangledouyin": {
+    "20": {
+      "filled": "ic_s_s_rectangledouyin_20_filled.svg"
+    }
+  },
+  "ic_s_s_fireplus": {
+    "16": {
+      "filled": "ic_s_s_fireplus_16_filled.svg"
+    }
+  },
+  "ic_s_s_doubao": {
+    "20": {
+      "outlined": "ic_s_s_doubao_20_outlined.svg"
+    }
+  },
+  "ic_s_s_aisearch": {
+    "20": {
+      "outlined": "ic_s_s_aisearch_20_outlined.svg"
+    }
+  },
+  "ic_s_s_usertwofoldarrow": {
+    "20": {
+      "filled": "ic_s_s_usertwofoldarrow_20_filled.svg",
+      "outlined": "ic_s_s_usertwofoldarrow_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_usertwofoldarrow_24_filled.svg",
+      "outlined": "ic_s_s_usertwofoldarrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_cartlogo": {
+    "12": {
+      "filled": "ic_s_s_cartlogo_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_cartlogo_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_cartlogo_20_outlined.svg",
+      "filled": "ic_s_s_cartlogo_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cartlogo_24_outlined.svg",
+      "filled": "ic_s_s_cartlogo_24_filled.svg"
+    }
+  },
+  "ic_s_s_doublearrowleft": {
+    "12": {
+      "outlined": "ic_s_s_doublearrowleft_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_doublearrowleft_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_doublearrowleft_20_outlined.svg"
+    }
+  },
+  "ic_s_s_doublearrowup": {
+    "12": {
+      "outlined": "ic_s_s_doublearrowup_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_doublearrowup_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_doublearrowup_20_outlined.svg"
+    }
+  },
+  "ic_s_s_circledown": {
+    "16": {
+      "filled": "ic_s_s_circledown_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_circledown_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circledown_24_outlined.svg"
+    }
+  },
+  "ic_s_s_circleleft": {
+    "16": {
+      "filled": "ic_s_s_circleleft_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_circleleft_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circleleft_24_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowuturnleft": {
+    "20": {
+      "filled": "ic_s_s_arrowuturnleft_20_filled.svg"
+    }
+  },
+  "ic_s_s_vertrianglesquareonsquare": {
+    "20": {
+      "outlined": "ic_s_s_vertrianglesquareonsquare_20_outlined.svg"
+    }
+  },
+  "ic_s_s_personsquare": {
+    "20": {
+      "outlined": "ic_s_s_personsquare_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_personsquare_24_outlined.svg"
+    }
+  },
+  "ic_s_s_doclock": {
+    "20": {
+      "outlined": "ic_s_s_doclock_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_doclock_24_outlined.svg"
+    }
+  },
+  "ic_s_s_docheart": {
+    "16": {
+      "filled": "ic_s_s_docheart_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_docheart_20_outlined.svg"
+    }
+  },
+  "ic_s_s_squaresplit": {
+    "20": {
+      "outlined": "ic_s_s_squaresplit_20_outlined.svg",
+      "filled": "ic_s_s_squaresplit_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_squaresplit_24_outlined.svg",
+      "filled": "ic_s_s_squaresplit_24_filled.svg"
+    }
+  },
+  "ic_s_s_subtitle": {
+    "20": {
+      "outlined": "ic_s_s_subtitle_20_outlined.svg"
+    }
+  },
+  "ic_s_s_linerectangleline": {
+    "20": {
+      "outlined": "ic_s_s_linerectangleline_20_outlined.svg",
+      "filled": "ic_s_s_linerectangleline_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_linerectangleline_24_outlined.svg",
+      "filled": "ic_s_s_linerectangleline_24_filled.svg"
+    }
+  },
+  "ic_s_s_bagmagnifier": {
+    "20": {
+      "filled": "ic_s_s_bagmagnifier_20_filled.svg"
+    }
+  },
+  "ic_s_s_shieldcheckmark": {
+    "16": {
+      "filled": "ic_s_s_shieldcheckmark_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_shieldcheckmark_20_outlined.svg",
+      "filled": "ic_s_s_shieldcheckmark_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_shieldcheckmark_24_outlined.svg"
+    }
+  },
+  "ic_s_s_personcirclecleanslash": {
+    "20": {
+      "outlined": "ic_s_s_personcirclecleanslash_20_outlined.svg"
+    }
+  },
+  "ic_s_s_personcirclecleandot": {
+    "20": {
+      "outlined": "ic_s_s_personcirclecleandot_20_outlined.svg"
+    }
+  },
+  "ic_s_s_eye": {
+    "20": {
+      "outlined": "ic_s_s_eye_20_outlined.svg"
+    }
+  },
+  "ic_s_s_shinyeye": {
+    "20": {
+      "outlined": "ic_s_s_shinyeye_20_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleportraittriangle": {
+    "20": {
+      "filled": "ic_s_s_rectangleportraittriangle_20_filled.svg",
+      "outlined": "ic_s_s_rectangleportraittriangle_20_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleportraitwater": {
+    "20": {
+      "outlined": "ic_s_s_rectangleportraitwater_20_outlined.svg"
+    }
+  },
+  "ic_s_s_headwavetwo": {
+    "20": {
+      "outlined": "ic_s_s_headwavetwo_20_outlined.svg"
+    }
+  },
+  "ic_s_s_coinfoldarrow": {
+    "20": {
+      "outlined": "ic_s_s_coinfoldarrow_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_coinfoldarrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonearrowup": {
+    "20": {
+      "outlined": "ic_s_s_phonearrowup_20_outlined.svg"
+    }
+  },
+  "ic_s_s_phonewave": {
+    "20": {
+      "outlined": "ic_s_s_phonewave_20_outlined.svg"
+    }
+  },
+  "ic_s_s_film": {
+    "20": {
+      "outlined": "ic_s_s_film_20_outlined.svg",
+      "filled": "ic_s_s_film_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_film_24_outlined.svg",
+      "filled": "ic_s_s_film_24_filled.svg"
+    }
+  },
+  "ic_s_s_msgwave": {
+    "20": {
+      "outlined": "ic_s_s_msgwave_20_outlined.svg",
+      "filled": "ic_s_s_msgwave_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_msgwave_24_outlined.svg",
+      "filled": "ic_s_s_msgwave_24_filled.svg"
+    }
+  },
+  "ic_s_s_magicslash": {
+    "20": {
+      "outlined": "ic_s_s_magicslash_20_outlined.svg"
+    }
+  },
+  "ic_s_s_flag": {
+    "12": {
+      "filled": "ic_s_s_flag_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_flag_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_flag_20_filled.svg",
+      "outlined": "ic_s_s_flag_20_outlined.svg"
+    }
+  },
+  "ic_s_s_personarrowtoright": {
+    "20": {
+      "outlined": "ic_s_s_personarrowtoright_20_outlined.svg"
+    }
+  },
+  "ic_s_s_speakercleanslash": {
+    "20": {
+      "outlined": "ic_s_s_speakercleanslash_20_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowupthreedot": {
+    "20": {
+      "outlined": "ic_s_s_arrowupthreedot_20_outlined.svg"
+    }
+  },
+  "ic_s_s_hd": {
+    "20": {
+      "outlined": "ic_s_s_hd_20_outlined.svg"
+    }
+  },
+  "ic_s_s_circlearrowrightup": {
+    "20": {
+      "outlined": "ic_s_s_circlearrowrightup_20_outlined.svg"
+    }
+  },
+  "ic_s_s_circlearrowin": {
+    "20": {
+      "outlined": "ic_s_s_circlearrowin_20_outlined.svg"
+    }
+  },
+  "ic_s_s_zoomout": {
+    "16": {
+      "outlined": "ic_s_s_zoomout_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_zoomout_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_zoomout_24_outlined.svg"
+    }
+  },
+  "ic_s_s_heartellipse": {
+    "20": {
+      "outlined": "ic_s_s_heartellipse_20_outlined.svg"
+    }
+  },
+  "ic_s_s_dongtai": {
+    "20": {
+      "outlined": "ic_s_s_dongtai_20_outlined.svg"
+    }
+  },
+  "ic_s_s_squaremsgarc": {
+    "20": {
+      "outlined": "ic_s_s_squaremsgarc_20_outlined.svg"
+    }
+  },
+  "ic_s_s_douyinxiaodian": {
+    "20": {
+      "outlined": "ic_s_s_douyinxiaodian_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_douyinxiaodian_24_outlined.svg"
+    }
+  },
+  "ic_s_s_heartwave": {
+    "20": {
+      "outlined": "ic_s_s_heartwave_20_outlined.svg"
+    }
+  },
+  "ic_s_s_userbag": {
+    "20": {
+      "outlined": "ic_s_s_userbag_20_outlined.svg",
+      "filled": "ic_s_s_userbag_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_userbag_24_filled.svg",
+      "outlined": "ic_s_s_userbag_24_outlined.svg"
+    }
+  },
+  "ic_s_s_monitordatauptrend": {
+    "20": {
+      "outlined": "ic_s_s_monitordatauptrend_20_outlined.svg"
+    }
+  },
+  "ic_s_s_scissors": {
+    "20": {
+      "outlined": "ic_s_s_scissors_20_outlined.svg",
+      "filled": "ic_s_s_scissors_20_filled.svg"
+    }
+  },
+  "ic_s_s_hammer": {
+    "20": {
+      "outlined": "ic_s_s_hammer_20_outlined.svg"
+    }
+  },
+  "ic_s_s_xiaoanprotectioncenter": {
+    "20": {
+      "outlined": "ic_s_s_xiaoanprotectioncenter_20_outlined.svg",
+      "filled": "ic_s_s_xiaoanprotectioncenter_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_xiaoanprotectioncenter_24_outlined.svg",
+      "filled": "ic_s_s_xiaoanprotectioncenter_24_filled.svg"
+    }
+  },
+  "ic_s_s_lemonflash": {
+    "20": {
+      "outlined": "ic_s_s_lemonflash_20_outlined.svg",
+      "filled": "ic_s_s_lemonflash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_lemonflash_24_outlined.svg",
+      "filled": "ic_s_s_lemonflash_24_filled.svg"
+    }
+  },
+  "ic_s_s_jianying": {
+    "24": {
+      "filled": "ic_s_s_jianying_24_filled.svg"
+    }
+  },
+  "ic_s_s_linearrowright": {
+    "20": {
+      "outlined": "ic_s_s_linearrowright_20_outlined.svg"
+    }
+  },
+  "ic_s_s_textscan": {
+    "16": {
+      "outlined": "ic_s_s_textscan_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_textscan_20_outlined.svg"
+    }
+  },
+  "ic_s_s_fullscreen": {
+    "16": {
+      "outlined": "ic_s_s_fullscreen_16_outlined.svg"
+    }
+  },
+  "ic_s_s_minus": {
+    "12": {
+      "outlined": "ic_s_s_minus_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_minus_16_outlined.svg"
+    }
+  },
+  "ic_s_s_checkmarkmini": {
+    "12": {
+      "outlined": "ic_s_s_checkmarkmini_12_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowrightmini": {
+    "12": {
+      "outlined": "ic_s_s_arrowrightmini_12_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowdownmini": {
+    "12": {
+      "outlined": "ic_s_s_arrowdownmini_12_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowupmini": {
+    "12": {
+      "outlined": "ic_s_s_arrowupmini_12_outlined.svg"
+    }
+  },
+  "ic_s_s_triangledowncycle": {
+    "12": {
+      "outlined": "ic_s_s_triangledowncycle_12_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowaledowncycle": {
+    "12": {
+      "outlined": "ic_s_s_arrowaledowncycle_12_outlined.svg"
+    }
+  },
+  "ic_s_s_arrowrightcircle": {
+    "24": {
+      "outlined": "ic_s_s_arrowrightcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_xmarkthin": {
+    "16": {
+      "outlined": "ic_s_s_xmarkthin_16_outlined.svg"
+    }
+  },
+  "ic_s_s_docdiamond": {
+    "16": {
+      "outlined": "ic_s_s_docdiamond_16_outlined.svg"
+    }
+  },
+  "ic_s_s_speakerslash": {
+    "16": {
+      "filled": "ic_s_s_speakerslash_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_speakerslash_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_speakerslash_24_filled.svg",
+      "outlined": "ic_s_s_speakerslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_squaremsgstar": {
+    "16": {
+      "outlined": "ic_s_s_squaremsgstar_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_squaremsgstar_20_outlined.svg"
+    }
+  },
+  "ic_s_s_mcn": {
+    "16": {
+      "outlined": "ic_s_s_mcn_16_outlined.svg"
+    }
+  },
+  "ic_s_s_versquaretriangledot": {
+    "16": {
+      "filled": "ic_s_s_versquaretriangledot_16_filled.svg"
+    }
+  },
+  "ic_s_s_bookmagnifier": {
+    "16": {
+      "outlined": "ic_s_s_bookmagnifier_16_outlined.svg"
+    }
+  },
+  "ic_s_s_crown": {
+    "16": {
+      "outlined": "ic_s_s_crown_16_outlined.svg"
+    }
+  },
+  "ic_s_s_medel": {
+    "16": {
+      "outlined": "ic_s_s_medel_16_outlined.svg"
+    }
+  },
+  "ic_s_s_usercard": {
+    "16": {
+      "outlined": "ic_s_s_usercard_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_usercard_20_outlined.svg",
+      "filled": "ic_s_s_usercard_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_usercard_24_outlined.svg",
+      "filled": "ic_s_s_usercard_24_filled.svg"
+    }
+  },
+  "ic_s_s_doctorpeople": {
+    "24": {
+      "filled": "ic_s_s_doctorpeople_24_filled.svg"
+    }
+  },
+  "ic_s_s_institution": {
+    "16": {
+      "outlined": "ic_s_s_institution_16_outlined.svg"
+    }
+  },
+  "ic_s_s_xigua": {
+    "16": {
+      "filled": "ic_s_s_xigua_16_filled.svg"
+    }
+  },
+  "ic_s_s_kesong": {
+    "24": {
+      "filled": "ic_s_s_kesong_24_filled.svg"
+    }
+  },
+  "ic_s_c_aiassistant": {
+    "20": {
+      "light": "ic_s_c_aiassistant_20_light.svg"
+    }
+  },
+  "ic_s_s_playarrowcircleleft": {
+    "12": {
+      "outlined": "ic_s_s_playarrowcircleleft_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_playarrowcircleleft_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_playarrowcircleleft_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playarrowcircleleft_24_outlined.svg"
+    }
+  },
+  "ic_s_s_benditui": {
+    "20": {
+      "outlined": "ic_s_s_benditui_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_benditui_24_outlined.svg",
+      "filled": "ic_s_s_benditui_24_filled.svg"
+    }
+  },
+  "ic_s_s_cameralogoflash": {
+    "24": {
+      "filled": "ic_s_s_cameralogoflash_24_filled.svg",
+      "outlined": "ic_s_s_cameralogoflash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_douyinketang": {
+    "20": {
+      "outlined": "ic_s_s_douyinketang_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_douyinketang_24_outlined.svg"
+    }
+  },
+  "ic_s_s_scanmagnifier": {
+    "12": {
+      "outlined": "ic_s_s_scanmagnifier_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_scanmagnifier_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_scanmagnifier_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_scanmagnifier_24_outlined.svg"
+    }
+  },
+  "ic_s_s_bellcheckmarkcirclefilled": {
+    "20": {
+      "outlined": "ic_s_s_bellcheckmarkcirclefilled_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bellcheckmarkcirclefilled_24_outlined.svg",
+      "filled": "ic_s_s_bellcheckmarkcirclefilled_24_filled.svg"
+    }
+  },
+  "ic_s_s_foldarrowcircle": {
+    "20": {
+      "outlined": "ic_s_s_foldarrowcircle_20_outlined.svg",
+      "filled": "ic_s_s_foldarrowcircle_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_foldarrowcircle_24_outlined.svg",
+      "filled": "ic_s_s_foldarrowcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_shopsmile": {
+    "16": {
+      "outlined": "ic_s_s_shopsmile_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_shopsmile_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_shopsmile_24_outlined.svg"
+    }
+  },
+  "ic_s_s_shopround": {
+    "16": {
+      "outlined": "ic_s_s_shopround_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_shopround_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_shopround_24_outlined.svg"
+    }
+  },
+  "ic_s_s_redenvelop": {
+    "20": {
+      "outlined": "ic_s_s_redenvelop_20_outlined.svg",
+      "filled": "ic_s_s_redenvelop_20_filled.svg"
+    }
+  },
+  "ic_s_s_liveline": {
+    "12": {
+      "filled": "ic_s_s_liveline_12_filled.svg"
+    }
+  },
+  "ic_s_s_medicalkit": {
+    "20": {
+      "outlined": "ic_s_s_medicalkit_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_medicalkit_24_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleportraittrianglepen": {
+    "24": {
+      "outlined": "ic_s_s_rectangleportraittrianglepen_24_outlined.svg"
+    }
+  },
+  "ic_s_s_dansquare": {
+    "20": {
+      "outlined": "ic_s_s_dansquare_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_dansquare_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonearrowdown": {
+    "20": {
+      "outlined": "ic_s_s_phonearrowdown_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_phonearrowdown_24_outlined.svg"
+    }
+  },
+  "ic_s_s_circlearrowpathplay": {
+    "20": {
+      "outlined": "ic_s_s_circlearrowpathplay_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circlearrowpathplay_24_outlined.svg"
+    }
+  },
+  "ic_s_s_circlearrowpathpause": {
+    "20": {
+      "outlined": "ic_s_s_circlearrowpathpause_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_circlearrowpathpause_24_outlined.svg"
+    }
+  },
+  "ic_s_s_fingerpoint": {
+    "20": {
+      "outlined": "ic_s_s_fingerpoint_20_outlined.svg"
+    }
+  },
+  "ic_s_s_pet": {
+    "24": {
+      "outlined": "ic_s_s_pet_24_outlined.svg"
+    }
+  },
+  "ic_s_s_gift": {
+    "16": {
+      "filled": "ic_s_s_gift_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_gift_20_filled.svg"
+    }
+  },
+  "ic_s_s_shielddouyin": {
+    "20": {
+      "outlined": "ic_s_s_shielddouyin_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_shielddouyin_24_filled.svg"
+    }
+  },
+  "ic_s_s_shieldmoney": {
+    "20": {
+      "outlined": "ic_s_s_shieldmoney_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_shieldmoney_24_outlined.svg",
+      "filled": "ic_s_s_shieldmoney_24_filled.svg"
+    }
+  },
+  "ic_s_c_phonearrowdown": {
+    "24": {
+      "dark": "ic_s_c_phonearrowdown_24_dark.svg"
+    }
+  },
+  "ic_s_s_dansquarenut": {
+    "20": {
+      "outlined": "ic_s_s_dansquarenut_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_dansquarenut_24_outlined.svg"
+    }
+  },
+  "ic_s_s_squaremsgtwolines": {
+    "20": {
+      "outlined": "ic_s_s_squaremsgtwolines_20_outlined.svg"
+    }
+  },
+  "ic_s_s_mygroup": {
+    "20": {
+      "outlined": "ic_s_s_mygroup_20_outlined.svg",
+      "filled": "ic_s_s_mygroup_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_mygroup_24_outlined.svg",
+      "filled": "ic_s_s_mygroup_24_filled.svg"
+    }
+  },
+  "ic_s_s_wodemanhua": {
+    "20": {
+      "outlined": "ic_s_s_wodemanhua_20_outlined.svg",
+      "filled": "ic_s_s_wodemanhua_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_wodemanhua_24_outlined.svg",
+      "filled": "ic_s_s_wodemanhua_24_filled.svg"
+    }
+  },
+  "ic_s_s_questionshield": {
+    "20": {
+      "outlined": "ic_s_s_questionshield_20_outlined.svg",
+      "filled": "ic_s_s_questionshield_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_questionshield_24_outlined.svg",
+      "filled": "ic_s_s_questionshield_24_filled.svg"
+    }
+  },
+  "ic_s_s_keyboard": {
+    "20": {
+      "outlined": "ic_s_s_keyboard_20_outlined.svg",
+      "filled": "ic_s_s_keyboard_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_keyboard_24_outlined.svg",
+      "filled": "ic_s_s_keyboard_24_filled.svg"
+    }
+  },
+  "ic_s_s_horizontalbook": {
+    "20": {
+      "outlined": "ic_s_s_horizontalbook_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_horizontalbook_24_outlined.svg",
+      "filled": "ic_s_s_horizontalbook_24_filled.svg"
+    }
+  },
+  "ic_s_s_zai": {
+    "20": {
+      "outlined": "ic_s_s_zai_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_zai_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hejipluscircle": {
+    "20": {
+      "outlined": "ic_s_s_hejipluscircle_20_outlined.svg",
+      "filled": "ic_s_s_hejipluscircle_20_filled.svg"
+    }
+  },
+  "ic_s_s_tagminus": {
+    "20": {
+      "outlined": "ic_s_s_tagminus_20_outlined.svg"
+    }
+  },
+  "ic_s_s_squarebaronelinepen": {
+    "16": {
+      "outlined": "ic_s_s_squarebaronelinepen_16_outlined.svg"
+    }
+  },
+  "ic_s_s_trayline": {
+    "16": {
+      "outlined": "ic_s_s_trayline_16_outlined.svg"
+    }
+  },
+  "ic_s_s_folderbar": {
+    "16": {
+      "outlined": "ic_s_s_folderbar_16_outlined.svg"
+    }
+  },
+  "ic_s_s_squaremsgtwobar": {
+    "16": {
+      "outlined": "ic_s_s_squaremsgtwobar_16_outlined.svg"
+    }
+  },
+  "ic_s_s_dashrectangle": {
+    "16": {
+      "outlined": "ic_s_s_dashrectangle_16_outlined.svg"
+    }
+  },
+  "ic_s_s_checkmrkrectanglebookmark": {
+    "16": {
+      "outlined": "ic_s_s_checkmrkrectanglebookmark_16_outlined.svg"
+    }
+  },
+  "ic_s_s_operatorplane": {
+    "16": {
+      "outlined": "ic_s_s_operatorplane_16_outlined.svg"
+    }
+  },
+  "ic_s_s_meteormsg": {
+    "20": {
+      "filled": "ic_s_s_meteormsg_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_meteormsg_24_filled.svg"
+    }
+  },
+  "ic_s_s_douyinchengjiu": {
+    "20": {
+      "outlined": "ic_s_s_douyinchengjiu_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_douyinchengjiu_24_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleportraitmagic": {
+    "20": {
+      "outlined": "ic_s_s_rectangleportraitmagic_20_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleportraitmagicslash": {
+    "20": {
+      "outlined": "ic_s_s_rectangleportraitmagicslash_20_outlined.svg"
+    }
+  },
+  "ic_s_s_chuangzuozhezhongxin": {
+    "20": {
+      "filled": "ic_s_s_chuangzuozhezhongxin_20_filled.svg",
+      "outlined": "ic_s_s_chuangzuozhezhongxin_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_chuangzuozhezhongxin_24_outlined.svg"
+    }
+  },
+  "ic_s_s_chuangzuozhezhongxinda": {
+    "24": {
+      "outlined": "ic_s_s_chuangzuozhezhongxinda_24_outlined.svg"
+    }
+  },
+  "ic_s_s_speedonex": {
+    "20": {
+      "outlined": "ic_s_s_speedonex_20_outlined.svg"
+    }
+  },
+  "ic_s_s_diamondv": {
+    "20": {
+      "outlined": "ic_s_s_diamondv_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_diamondv_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ipadiphone": {
+    "20": {
+      "outlined": "ic_s_s_ipadiphone_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_ipadiphone_24_outlined.svg",
+      "filled": "ic_s_s_ipadiphone_24_filled.svg"
+    }
+  },
+  "ic_s_s_xiaoxihuazhonghua": {
+    "20": {
+      "outlined": "ic_s_s_xiaoxihuazhonghua_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_xiaoxihuazhonghua_24_outlined.svg"
+    }
+  },
+  "ic_s_s_filledheartcircle": {
+    "20": {
+      "outlined": "ic_s_s_filledheartcircle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_filledheartcircle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_volumeslash": {
+    "24": {
+      "outlined": "ic_s_s_volumeslash_24_outlined.svg"
+    }
+  },
+  "ic_s_s_cloudarrowdown": {
+    "20": {
+      "outlined": "ic_s_s_cloudarrowdown_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_cloudarrowdown_24_outlined.svg",
+      "filled": "ic_s_s_cloudarrowdown_24_filled.svg"
+    }
+  },
+  "ic_s_s_bulbflash": {
+    "16": {
+      "filled": "ic_s_s_bulbflash_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_bulbflash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bulbflash_24_outlined.svg",
+      "filled": "ic_s_s_bulbflash_24_filled.svg"
+    }
+  },
+  "ic_s_s_pin": {
+    "16": {
+      "outlined": "ic_s_s_pin_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_pin_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_pin_24_outlined.svg"
+    }
+  },
+  "ic_s_s_textbubble": {
+    "20": {
+      "outlined": "ic_s_s_textbubble_20_outlined.svg"
+    }
+  },
+  "ic_s_s_linetext": {
+    "24": {
+      "outlined": "ic_s_s_linetext_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonenotification": {
+    "20": {
+      "outlined": "ic_s_s_phonenotification_20_outlined.svg"
+    }
+  },
+  "ic_s_s_roaming": {
+    "20": {
+      "outlined": "ic_s_s_roaming_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_roaming_24_outlined.svg"
+    }
+  },
+  "ic_s_s_shopmark": {
+    "24": {
+      "outlined": "ic_s_s_shopmark_24_outlined.svg"
+    }
+  },
+  "ic_s_s_househeart": {
+    "20": {
+      "outlined": "ic_s_s_househeart_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_househeart_24_outlined.svg"
+    }
+  },
+  "ic_s_s_douyingongyi": {
+    "24": {
+      "outlined": "ic_s_s_douyingongyi_24_outlined.svg"
+    }
+  },
+  "ic_s_s_connectionhexagon": {
+    "16": {
+      "outlined": "ic_s_s_connectionhexagon_16_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_connectionhexagon_24_outlined.svg"
+    }
+  },
+  "ic_s_s_hexagonv": {
+    "20": {
+      "outlined": "ic_s_s_hexagonv_20_outlined.svg"
+    }
+  },
+  "ic_s_s_rectangleai": {
+    "20": {
+      "outlined": "ic_s_s_rectangleai_20_outlined.svg"
+    }
+  },
+  "ic_s_s_doccurrency": {
+    "24": {
+      "outlined": "ic_s_s_doccurrency_24_outlined.svg"
+    }
+  },
+  "ic_s_s_coding": {
+    "20": {
+      "outlined": "ic_s_s_coding_20_outlined.svg"
+    }
+  },
+  "ic_s_s_pcphone": {
+    "20": {
+      "outlined": "ic_s_s_pcphone_20_outlined.svg",
+      "filled": "ic_s_s_pcphone_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_pcphone_24_outlined.svg",
+      "filled": "ic_s_s_pcphone_24_filled.svg"
+    }
+  },
+  "ic_s_s_atcirlce": {
+    "24": {
+      "filled": "ic_s_s_atcirlce_24_filled.svg"
+    }
+  },
+  "ic_s_s_airplane": {
+    "12": {
+      "filled": "ic_s_s_airplane_12_filled.svg",
+      "outlined": "ic_s_s_airplane_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_airplane_16_filled.svg",
+      "outlined": "ic_s_s_airplane_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_airplane_20_outlined.svg",
+      "filled": "ic_s_s_airplane_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_airplane_24_filled.svg",
+      "outlined": "ic_s_s_airplane_24_outlined.svg"
+    }
+  },
+  "ic_s_s_imentrance": {
+    "12": {
+      "filled": "ic_s_s_imentrance_12_filled.svg",
+      "outlined": "ic_s_s_imentrance_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_imentrance_16_filled.svg",
+      "outlined": "ic_s_s_imentrance_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_imentrance_20_outlined.svg",
+      "filled": "ic_s_s_imentrance_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_imentrance_24_filled.svg",
+      "outlined": "ic_s_s_imentrance_24_outlined.svg"
+    }
+  },
+  "ic_s_c_airplane": {
+    "24": {
+      "light": "ic_s_c_airplane_24_light.svg"
+    }
+  },
+  "ic_s_s_airplaneround": {
+    "24": {
+      "outlined": "ic_s_s_airplaneround_24_outlined.svg"
+    }
+  },
+  "ic_s_s_translate": {
+    "20": {
+      "outlined": "ic_s_s_translate_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_translate_24_outlined.svg"
+    }
+  },
+  "ic_s_s_bubbletwo": {
+    "12": {
+      "outlined": "ic_s_s_bubbletwo_12_outlined.svg",
+      "filled": "ic_s_s_bubbletwo_12_filled.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_bubbletwo_16_outlined.svg",
+      "filled": "ic_s_s_bubbletwo_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_bubbletwo_20_outlined.svg",
+      "filled": "ic_s_s_bubbletwo_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_bubbletwo_24_outlined.svg",
+      "filled": "ic_s_s_bubbletwo_24_filled.svg"
+    }
+  },
+  "ic_s_s_airplanenut": {
+    "12": {
+      "filled": "ic_s_s_airplanenut_12_filled.svg",
+      "outlined": "ic_s_s_airplanenut_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_airplanenut_16_filled.svg",
+      "outlined": "ic_s_s_airplanenut_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_airplanenut_20_outlined.svg",
+      "filled": "ic_s_s_airplanenut_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_airplanenut_24_filled.svg",
+      "outlined": "ic_s_s_airplanenut_24_outlined.svg"
+    }
+  },
+  "ic_s_s_msgcircle": {
+    "20": {
+      "filled": "ic_s_s_msgcircle_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_msgcircle_24_filled.svg"
+    }
+  },
+  "ic_s_s_docarrowup": {
+    "24": {
+      "outlined": "ic_s_s_docarrowup_24_outlined.svg",
+      "filled": "ic_s_s_docarrowup_24_filled.svg"
+    }
+  },
+  "ic_s_s_faceplus": {
+    "24": {
+      "outlined": "ic_s_s_faceplus_24_outlined.svg",
+      "filled": "ic_s_s_faceplus_24_filled.svg"
+    }
+  },
+  "ic_s_s_heartslash": {
+    "24": {
+      "outlined": "ic_s_s_heartslash_24_outlined.svg",
+      "filled": "ic_s_s_heartslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_flower": {
+    "12": {
+      "filled": "ic_s_s_flower_12_filled.svg",
+      "outlined": "ic_s_s_flower_12_outlined.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_flower_16_filled.svg",
+      "outlined": "ic_s_s_flower_16_outlined.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_flower_20_filled.svg",
+      "outlined": "ic_s_s_flower_20_outlined.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_flower_24_filled.svg",
+      "outlined": "ic_s_s_flower_24_outlined.svg"
+    }
+  },
+  "ic_s_s_shang": {
+    "16": {
+      "filled": "ic_s_s_shang_16_filled.svg"
+    }
+  },
+  "ic_s_s_douplusjingying": {
+    "24": {
+      "outlined": "ic_s_s_douplusjingying_24_outlined.svg"
+    }
+  },
+  "ic_s_s_ip": {
+    "12": {
+      "outlined": "ic_s_s_ip_12_outlined.svg"
+    }
+  },
+  "ic_s_s_msgheart": {
+    "20": {
+      "outlined": "ic_s_s_msgheart_20_outlined.svg"
+    }
+  },
+  "ic_s_s_dataanalysis": {
+    "16": {
+      "filled": "ic_s_s_dataanalysis_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_dataanalysis_20_filled.svg"
+    }
+  },
+  "ic_s_s_unlocknew": {
+    "20": {
+      "outlined": "ic_s_s_unlocknew_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_unlocknew_24_outlined.svg"
+    }
+  },
+  "ic_s_s_graphicworks": {
+    "24": {
+      "outlined": "ic_s_s_graphicworks_24_outlined.svg"
+    }
+  },
+  "ic_s_s_scanround": {
+    "20": {
+      "outlined": "ic_s_s_scanround_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_scanround_24_outlined.svg"
+    }
+  },
+  "ic_s_s_comment": {
+    "16": {
+      "outlined": "ic_s_s_comment_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_comment_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_comment_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playfeedback": {
+    "24": {
+      "filled": "ic_s_s_playfeedback_24_filled.svg"
+    }
+  },
+  "ic_s_s_chaptergeneration": {
+    "20": {
+      "filled": "ic_s_s_chaptergeneration_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_chaptergeneration_24_filled.svg"
+    }
+  },
+  "ic_s_s_arrowupexpansion": {
+    "24": {
+      "outlined": "ic_s_s_arrowupexpansion_24_outlined.svg"
+    }
+  },
+  "ic_s_s_xingtu": {
+    "20": {
+      "outlined": "ic_s_s_xingtu_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_xingtu_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playlater": {
+    "16": {
+      "filled": "ic_s_s_playlater_16_filled.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_playlater_20_outlined.svg"
+    }
+  },
+  "ic_s_s_savetraffic": {
+    "20": {
+      "outlined": "ic_s_s_savetraffic_20_outlined.svg"
+    }
+  },
+  "ic_s_s_playback": {
+    "20": {
+      "outlined": "ic_s_s_playback_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playback_24_outlined.svg"
+    }
+  },
+  "ic_s_s_cloudarrowup": {
+    "16": {
+      "filled": "ic_s_s_cloudarrowup_16_filled.svg"
+    },
+    "20": {
+      "filled": "ic_s_s_cloudarrowup_20_filled.svg"
+    },
+    "24": {
+      "filled": "ic_s_s_cloudarrowup_24_filled.svg"
+    }
+  },
+  "ic_s_s_liveactivitynotification": {
+    "20": {
+      "outlined": "ic_s_s_liveactivitynotification_20_outlined.svg"
+    }
+  },
+  "ic_s_s_redpoint": {
+    "20": {
+      "outlined": "ic_s_s_redpoint_20_outlined.svg"
+    }
+  },
+  "ic_s_s_subscription": {
+    "20": {
+      "outlined": "ic_s_s_subscription_20_outlined.svg"
+    }
+  },
+  "ic_s_s_clue": {
+    "24": {
+      "outlined": "ic_s_s_clue_24_outlined.svg"
+    }
+  },
+  "ic_s_s_singlecolumn": {
+    "20": {
+      "outlined": "ic_s_s_singlecolumn_20_outlined.svg"
+    }
+  },
+  "ic_s_s_rectanglenumber": {
+    "20": {
+      "outlined": "ic_s_s_rectanglenumber_20_outlined.svg"
+    }
+  },
+  "ic_s_s_thumbsupslash": {
+    "12": {
+      "filled": "ic_s_s_thumbsupslash_12_filled.svg"
+    },
+    "16": {
+      "filled": "ic_s_s_thumbsupslash_16_filled.svg",
+      "outlined": "ic_s_s_thumbsupslash_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_thumbsupslash_20_outlined.svg",
+      "filled": "ic_s_s_thumbsupslash_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_thumbsupslash_24_outlined.svg",
+      "filled": "ic_s_s_thumbsupslash_24_filled.svg"
+    }
+  },
+  "ic_s_s_repost": {
+    "16": {
+      "filled": "ic_s_s_repost_16_filled.svg",
+      "outlined": "ic_s_s_repost_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_repost_20_outlined.svg",
+      "filled": "ic_s_s_repost_20_filled.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_repost_24_outlined.svg",
+      "filled": "ic_s_s_repost_24_filled.svg"
+    }
+  },
+  "ic_s_s_fivearrowcircleright": {
+    "12": {
+      "outlined": "ic_s_s_fivearrowcircleright_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_fivearrowcircleright_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_fivearrowcircleright_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_fivearrowcircleright_24_outlined.svg"
+    }
+  },
+  "ic_s_s_fivearrowcircleleft": {
+    "12": {
+      "outlined": "ic_s_s_fivearrowcircleleft_12_outlined.svg"
+    },
+    "16": {
+      "outlined": "ic_s_s_fivearrowcircleleft_16_outlined.svg"
+    },
+    "20": {
+      "outlined": "ic_s_s_fivearrowcircleleft_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_fivearrowcircleleft_24_outlined.svg"
+    }
+  },
+  "ic_s_s_speedarrow": {
+    "20": {
+      "outlined": "ic_s_s_speedarrow_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_speedarrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_zoomoutrectangle": {
+    "20": {
+      "outlined": "ic_s_s_zoomoutrectangle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_zoomoutrectangle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_zoominrectangle": {
+    "20": {
+      "outlined": "ic_s_s_zoominrectangle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_zoominrectangle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playerarrow": {
+    "20": {
+      "outlined": "ic_s_s_playerarrow_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playerarrow_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playermusic": {
+    "20": {
+      "outlined": "ic_s_s_playermusic_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playermusic_24_outlined.svg"
+    }
+  },
+  "ic_s_s_totvline": {
+    "20": {
+      "outlined": "ic_s_s_totvline_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_totvline_24_outlined.svg"
+    }
+  },
+  "ic_s_s_alarmtime": {
+    "20": {
+      "outlined": "ic_s_s_alarmtime_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_alarmtime_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playgear": {
+    "20": {
+      "outlined": "ic_s_s_playgear_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playgear_24_outlined.svg"
+    }
+  },
+  "ic_s_s_phonewindowrectangle": {
+    "20": {
+      "outlined": "ic_s_s_phonewindowrectangle_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_phonewindowrectangle_24_outlined.svg"
+    }
+  },
+  "ic_s_s_playbackquaver": {
+    "20": {
+      "outlined": "ic_s_s_playbackquaver_20_outlined.svg"
+    },
+    "24": {
+      "outlined": "ic_s_s_playbackquaver_24_outlined.svg"
+    }
+  }
+}

@@ -1,0 +1,87 @@
+/**
+ * ActionBar — Douyin Delight UI Kit
+ * Right-side vertical interaction buttons (点赞/评论/收藏/分享)
+ */
+
+/* ─── Container ─────────────────────────────────────────────────────────── */
+.dux-action-bar {
+  display:     flex;
+  align-items: center;
+}
+
+.dux-action-bar--vertical {
+  flex-direction: column;
+  gap:            var(--dux-spacing-5); /* 20px */
+}
+
+.dux-action-bar--horizontal {
+  flex-direction: row;
+  gap:            var(--dux-spacing-6); /* 24px */
+}
+
+/* ─── Item button ───────────────────────────────────────────────────────── */
+.dux-action-bar__item {
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  gap:             4px;
+  background:      none;
+  border:          none;
+  padding:         0;
+  cursor:          pointer;
+  color:           var(--dux-color-text-inverse);
+  -webkit-tap-highlight-color: transparent;
+  user-select:     none;
+  transition:      transform var(--dux-duration-fast) var(--dux-ease-standard),
+                   opacity   var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+.dux-action-bar__item:active {
+  transform: scale(0.92);
+  opacity:   0.8;
+}
+
+/* ─── Active states ─────────────────────────────────────────────────────── */
+.dux-action-bar__item--liked .dux-action-bar__icon {
+  animation: dux-action-pop var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+.dux-action-bar__item--collected .dux-action-bar__icon {
+  animation: dux-action-pop var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+/* ─── Icon & count ──────────────────────────────────────────────────────── */
+.dux-action-bar__icon {
+  display:     flex;
+  align-items: center;
+  width:       48px;
+  height:      48px;
+  border-radius: var(--dux-radius-full);
+  background:  rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background-color var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+.dux-action-bar__item:hover .dux-action-bar__icon {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.dux-action-bar__count {
+  font-family:  var(--dux-font-sans);
+  font-size:    var(--dux-font-size-xs);
+  font-weight:  var(--dux-font-weight-medium);
+  color:        var(--dux-color-text-inverse);
+  text-shadow:  0 1px 4px rgba(0, 0, 0, 0.4);
+  line-height:  1;
+  white-space:  nowrap;
+}
+
+/* ─── Pop animation ─────────────────────────────────────────────────────── */
+@keyframes dux-action-pop {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.3); }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}

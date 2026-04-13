@@ -1,0 +1,137 @@
+/**
+ * Badge & Tag — Douyin Delight UI Kit
+ */
+
+/* ─── Badge wrapper ─────────────────────────────────────────────────────── */
+.dux-badge-wrapper {
+  position: relative;
+  display:  inline-flex;
+}
+
+/* ─── Badge base ────────────────────────────────────────────────────────── */
+.dux-badge {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  font-family:     var(--dux-font-sans);
+  font-weight:     var(--dux-font-weight-medium);
+  line-height:     1;
+  white-space:     nowrap;
+  pointer-events:  none;
+  user-select:     none;
+}
+
+/* Positional — when wrapping a child */
+.dux-badge-wrapper > .dux-badge {
+  position:   absolute;
+  top:        0;
+  right:      0;
+  transform:  translate(50%, -50%);
+  z-index:    var(--dux-z-raised, 10);
+}
+
+/* ─── Count badge ───────────────────────────────────────────────────────── */
+.dux-badge--count {
+  min-width:     18px;
+  height:        18px;
+  padding:       0 5px;
+  border-radius: var(--dux-radius-full);
+  font-size:     var(--dux-font-size-xs);
+}
+
+/* ─── Dot badge ─────────────────────────────────────────────────────────── */
+.dux-badge--dot {
+  width:         8px;
+  height:        8px;
+  border-radius: var(--dux-radius-full);
+  padding:       0;
+}
+
+/* ─── Badge colors ──────────────────────────────────────────────────────── */
+.dux-badge--danger  { background: var(--dux-color-status-error);   color: var(--dux-color-text-inverse); }
+.dux-badge--primary { background: var(--dux-color-brand-primary);  color: var(--dux-color-text-inverse); }
+.dux-badge--success { background: var(--dux-color-status-success); color: var(--dux-color-text-inverse); }
+.dux-badge--warning { background: var(--dux-color-status-warning); color: var(--dux-color-text-inverse); }
+.dux-badge--neutral { background: var(--dux-color-text-secondary); color: var(--dux-color-text-inverse); }
+
+/* ─── Tag base ──────────────────────────────────────────────────────────── */
+.dux-tag {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--dux-spacing-1);
+  border-radius:   var(--dux-radius-xs);
+  font-family:     var(--dux-font-sans);
+  font-weight:     var(--dux-font-weight-medium);
+  white-space:     nowrap;
+  user-select:     none;
+  vertical-align:  middle;
+  border:          1px solid transparent;
+  transition:      opacity var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+/* ─── Tag sizes ─────────────────────────────────────────────────────────── */
+.dux-tag--sm {
+  height:    20px;
+  padding:   0 var(--dux-spacing-1);
+  font-size: var(--dux-font-size-xs);
+}
+.dux-tag--md {
+  height:    24px;
+  padding:   0 var(--dux-spacing-2);
+  font-size: var(--dux-font-size-sm);
+}
+
+/* ─── Tag colors (ghost variant — default) ──────────────────────────────── */
+.dux-tag--default.dux-tag--ghost  { background: var(--dux-color-bg-subtle);          color: var(--dux-color-text-secondary); border-color: var(--dux-color-border-light); }
+.dux-tag--primary.dux-tag--ghost  { background: var(--dux-color-brand-primary-surface); color: var(--dux-color-brand-primary); border-color: var(--dux-color-brand-primary); }
+.dux-tag--success.dux-tag--ghost  { background: var(--dux-color-status-success-surface); color: var(--dux-color-status-success); border-color: var(--dux-color-status-success); }
+.dux-tag--warning.dux-tag--ghost  { background: var(--dux-color-status-warning-surface); color: var(--dux-color-status-warning); border-color: var(--dux-color-status-warning); }
+.dux-tag--danger.dux-tag--ghost   { background: var(--dux-color-status-error-surface);   color: var(--dux-color-status-error);   border-color: var(--dux-color-status-error); }
+.dux-tag--purple.dux-tag--ghost   { background: #F3EEFF; color: #7B3FF2; border-color: #7B3FF2; }
+.dux-tag--cyan.dux-tag--ghost     { background: #E0F7FA; color: #0097A7; border-color: #0097A7; }
+
+/* ─── Tag filled variant ────────────────────────────────────────────────── */
+.dux-tag--default.dux-tag--filled  { background: var(--dux-color-bg-subtle);           color: var(--dux-color-text-primary); }
+.dux-tag--primary.dux-tag--filled  { background: var(--dux-color-brand-primary);       color: var(--dux-color-text-inverse); }
+.dux-tag--success.dux-tag--filled  { background: var(--dux-color-status-success);      color: var(--dux-color-text-inverse); }
+.dux-tag--warning.dux-tag--filled  { background: var(--dux-color-status-warning);      color: var(--dux-color-text-inverse); }
+.dux-tag--danger.dux-tag--filled   { background: var(--dux-color-status-error);        color: var(--dux-color-text-inverse); }
+.dux-tag--purple.dux-tag--filled   { background: #7B3FF2; color: #FFFFFF; }
+.dux-tag--cyan.dux-tag--filled     { background: #0097A7; color: #FFFFFF; }
+
+/* ─── Tag outlined variant ──────────────────────────────────────────────── */
+.dux-tag--default.dux-tag--outlined  { background: transparent; color: var(--dux-color-text-secondary); border-color: var(--dux-color-border-light); }
+.dux-tag--primary.dux-tag--outlined  { background: transparent; color: var(--dux-color-brand-primary);  border-color: var(--dux-color-brand-primary); }
+.dux-tag--success.dux-tag--outlined  { background: transparent; color: var(--dux-color-status-success); border-color: var(--dux-color-status-success); }
+.dux-tag--warning.dux-tag--outlined  { background: transparent; color: var(--dux-color-status-warning); border-color: var(--dux-color-status-warning); }
+.dux-tag--danger.dux-tag--outlined   { background: transparent; color: var(--dux-color-status-error);   border-color: var(--dux-color-status-error); }
+.dux-tag--purple.dux-tag--outlined   { background: transparent; color: #7B3FF2; border-color: #7B3FF2; }
+.dux-tag--cyan.dux-tag--outlined     { background: transparent; color: #0097A7; border-color: #0097A7; }
+
+/* ─── Tag disabled ──────────────────────────────────────────────────────── */
+.dux-tag--disabled { opacity: 0.4; pointer-events: none; }
+
+/* ─── Tag icon ──────────────────────────────────────────────────────────── */
+.dux-tag__icon {
+  display:     inline-flex;
+  align-items: center;
+  font-size:   1em;
+}
+
+/* ─── Tag close button ──────────────────────────────────────────────────── */
+.dux-tag__close {
+  display:          inline-flex;
+  align-items:      center;
+  justify-content:  center;
+  background:       none;
+  border:           none;
+  padding:          0;
+  margin-left:      2px;
+  cursor:           pointer;
+  color:            currentColor;
+  opacity:          0.6;
+  transition:       opacity var(--dux-duration-fast) var(--dux-ease-standard);
+  line-height:      1;
+}
+
+.dux-tag__close:hover { opacity: 1; }

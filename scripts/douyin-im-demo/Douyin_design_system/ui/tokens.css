@@ -1,0 +1,146 @@
+/**
+ * Douyin Delight UI Kit — CSS Custom Properties
+ * Auto-generated from tokens.json (DTCG format)
+ * Source: https://www.figma.com/design/4clg3rdsyoyTbuZVVEMnUx
+ *
+ * Import this file once at your app root (e.g. main.tsx / _app.tsx).
+ */
+
+:root {
+  /* ─── Brand ─────────────────────────────────────────────── */
+  --dux-color-brand-primary:          #2B79FF;
+  --dux-color-brand-secondary:        #FE2C55;
+  --dux-color-brand-primary-hover:    #1465E0;
+  --dux-color-brand-primary-active:   #0F4FBA;
+  --dux-color-brand-primary-disabled: #A3C3FF;
+  --dux-color-brand-primary-surface:  #EBF1FF;
+
+  /* ─── Text ──────────────────────────────────────────────── */
+  --dux-color-text-primary:   #161823;
+  --dux-color-text-secondary: #8A8B94;
+  --dux-color-text-tertiary:  #C4C5CB;
+  --dux-color-text-inverse:   #FFFFFF;
+  --dux-color-text-link:      #2B79FF;
+  --dux-color-text-danger:    #FE2C55;
+
+  /* ─── Background ────────────────────────────────────────── */
+  --dux-color-bg-page:    #F4F4F4;
+  --dux-color-bg-surface: #FFFFFF;
+  --dux-color-bg-overlay: rgba(22, 24, 35, 0.60);
+  --dux-color-bg-subtle:  #FAFAFA;
+
+  /* ─── Border ────────────────────────────────────────────── */
+  --dux-color-border-light:   #E3E3E4;
+  --dux-color-border-medium:  #C4C5CB;
+  --dux-color-border-focused: #2B79FF;
+
+  /* ─── Status ────────────────────────────────────────────── */
+  --dux-color-status-success:         #25C685;
+  --dux-color-status-success-surface: #E6F9F1;
+  --dux-color-status-warning:         #FF8800;
+  --dux-color-status-warning-surface: #FFF3E0;
+  --dux-color-status-error:           #FE2C55;
+  --dux-color-status-error-surface:   #FFEBEE;
+  --dux-color-status-info:            #2B79FF;
+  --dux-color-status-info-surface:    #EBF1FF;
+
+  /* ─── Typography ────────────────────────────────────────── */
+  --dux-font-sans: "PingFang SC", "SF Pro Display", -apple-system,
+                   BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --dux-font-mono: "SF Mono", "Cascadia Code", Menlo, monospace;
+
+  --dux-font-size-xs:   10px;
+  --dux-font-size-sm:   12px;
+  --dux-font-size-base: 14px;
+  --dux-font-size-md:   15px;
+  --dux-font-size-lg:   16px;
+  --dux-font-size-xl:   17px;
+  --dux-font-size-2xl:  18px;
+  --dux-font-size-3xl:  20px;
+  --dux-font-size-4xl:  22px;
+  --dux-font-size-5xl:  24px;
+  --dux-font-size-6xl:  28px;
+  --dux-font-size-7xl:  32px;
+  --dux-font-size-8xl:  36px;
+
+  --dux-font-weight-regular:  400;
+  --dux-font-weight-medium:   500;
+  --dux-font-weight-semibold: 600;
+  --dux-font-weight-bold:     700;
+
+  --dux-line-height-tight:   1.2;
+  --dux-line-height-snug:    1.375;
+  --dux-line-height-normal:  1.5;
+  --dux-line-height-relaxed: 1.625;
+
+  /* ─── Spacing ───────────────────────────────────────────── */
+  --dux-spacing-0:  0px;
+  --dux-spacing-1:  4px;
+  --dux-spacing-2:  8px;
+  --dux-spacing-3:  12px;
+  --dux-spacing-4:  16px;
+  --dux-spacing-5:  20px;
+  --dux-spacing-6:  24px;
+  --dux-spacing-7:  28px;
+  --dux-spacing-8:  32px;
+  --dux-spacing-10: 40px;
+  --dux-spacing-12: 48px;
+  --dux-spacing-14: 56px;
+  --dux-spacing-16: 64px;
+
+  /* ─── Border Radius ─────────────────────────────────────── */
+  --dux-radius-none: 0px;
+  --dux-radius-xs:   4px;
+  --dux-radius-sm:   8px;
+  --dux-radius-md:   12px;
+  --dux-radius-lg:   16px;
+  --dux-radius-xl:   20px;
+  --dux-radius-2xl:  24px;
+  --dux-radius-full: 9999px;
+
+  /* ─── Shadows ───────────────────────────────────────────── */
+  --dux-shadow-sm:    0 1px  4px  0 rgba(22, 24, 35, 0.08);
+  --dux-shadow-md:    0 4px  12px 0 rgba(22, 24, 35, 0.12);
+  --dux-shadow-lg:    0 8px  24px 0 rgba(22, 24, 35, 0.16);
+  --dux-shadow-xl:    0 16px 40px 0 rgba(22, 24, 35, 0.20);
+  --dux-shadow-focus: 0 0    0    3px rgba(43, 121, 255, 0.24);
+
+  /* ─── Motion ────────────────────────────────────────────── */
+  --dux-duration-fast:   100ms;
+  --dux-duration-normal: 200ms;
+  --dux-duration-slow:   300ms;
+  --dux-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dux-ease-enter:    cubic-bezier(0, 0, 0.2, 1);
+  --dux-ease-exit:     cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* ─── Dark Mode overrides ──────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dux-color-text-primary:   #F4F4F4;
+    --dux-color-text-secondary: #8A8B94;
+    --dux-color-text-tertiary:  #4D4E58;
+    --dux-color-text-inverse:   #161823;
+
+    --dux-color-bg-page:    #161823;
+    --dux-color-bg-surface: #1F2030;
+    --dux-color-bg-subtle:  #2E2F3A;
+
+    --dux-color-border-light:  #2E2F3A;
+    --dux-color-border-medium: #4D4E58;
+  }
+}
+
+.dark {
+  --dux-color-text-primary:   #F4F4F4;
+  --dux-color-text-secondary: #8A8B94;
+  --dux-color-text-tertiary:  #4D4E58;
+  --dux-color-text-inverse:   #161823;
+
+  --dux-color-bg-page:    #161823;
+  --dux-color-bg-surface: #1F2030;
+  --dux-color-bg-subtle:  #2E2F3A;
+
+  --dux-color-border-light:  #2E2F3A;
+  --dux-color-border-medium: #4D4E58;
+}

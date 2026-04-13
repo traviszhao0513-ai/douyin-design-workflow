@@ -1,0 +1,148 @@
+/**
+ * Tabs — Douyin Delight UI Kit
+ */
+
+/* ─── Wrapper ───────────────────────────────────────────────────────────── */
+.dux-tabs {
+  display:        flex;
+  flex-direction: column;
+  width:          100%;
+}
+
+/* ─── Tab bar ───────────────────────────────────────────────────────────── */
+.dux-tabs__bar {
+  display:     flex;
+  align-items: stretch;
+  gap:         0;
+  flex-shrink: 0;
+}
+
+.dux-tabs__bar--stretch .dux-tabs__tab { flex: 1; }
+
+/* ─── Variant: line (default) ───────────────────────────────────────────── */
+.dux-tabs__bar--line {
+  border-bottom: 1px solid var(--dux-color-border-light);
+  gap:           var(--dux-spacing-1);
+}
+
+.dux-tabs__bar--line .dux-tabs__tab {
+  padding-bottom: var(--dux-spacing-3);
+  border-bottom:  2px solid transparent;
+  margin-bottom:  -1px;
+  color:          var(--dux-color-text-secondary);
+  background:     none;
+  border-top:     none;
+  border-left:    none;
+  border-right:   none;
+}
+
+.dux-tabs__bar--line .dux-tabs__tab--active {
+  color:        var(--dux-color-brand-primary);
+  border-color: var(--dux-color-brand-primary);
+  font-weight:  var(--dux-font-weight-semibold);
+}
+
+/* ─── Variant: pill ─────────────────────────────────────────────────────── */
+.dux-tabs__bar--pill {
+  background:    var(--dux-color-bg-subtle);
+  border-radius: var(--dux-radius-full);
+  padding:       3px;
+  gap:           2px;
+}
+
+.dux-tabs__bar--pill .dux-tabs__tab {
+  border-radius: var(--dux-radius-full);
+  border:        none;
+  color:         var(--dux-color-text-secondary);
+  background:    none;
+}
+
+.dux-tabs__bar--pill .dux-tabs__tab--active {
+  background:  var(--dux-color-bg-surface);
+  color:       var(--dux-color-text-primary);
+  box-shadow:  var(--dux-shadow-sm);
+  font-weight: var(--dux-font-weight-medium);
+}
+
+/* ─── Variant: card ─────────────────────────────────────────────────────── */
+.dux-tabs__bar--card {
+  border-bottom: 1px solid var(--dux-color-border-light);
+  gap:           var(--dux-spacing-1);
+}
+
+.dux-tabs__bar--card .dux-tabs__tab {
+  border:        1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--dux-radius-sm) var(--dux-radius-sm) 0 0;
+  margin-bottom: -1px;
+  color:         var(--dux-color-text-secondary);
+  background:    none;
+}
+
+.dux-tabs__bar--card .dux-tabs__tab--active {
+  background:   var(--dux-color-bg-surface);
+  border-color: var(--dux-color-border-light);
+  color:        var(--dux-color-text-primary);
+  font-weight:  var(--dux-font-weight-medium);
+}
+
+/* ─── Tab button base ───────────────────────────────────────────────────── */
+.dux-tabs__tab {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--dux-spacing-1);
+  font-family:     var(--dux-font-sans);
+  cursor:          pointer;
+  white-space:     nowrap;
+  transition:
+    color            var(--dux-duration-fast) var(--dux-ease-standard),
+    background-color var(--dux-duration-fast) var(--dux-ease-standard),
+    border-color     var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+.dux-tabs__tab--disabled {
+  opacity:        0.4;
+  cursor:         not-allowed;
+  pointer-events: none;
+}
+
+.dux-tabs__tab:not(.dux-tabs__tab--disabled):hover {
+  color: var(--dux-color-text-primary);
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-tabs__bar--sm .dux-tabs__tab { padding: var(--dux-spacing-1) var(--dux-spacing-3); font-size: var(--dux-font-size-sm); }
+.dux-tabs__bar--md .dux-tabs__tab { padding: var(--dux-spacing-2) var(--dux-spacing-4); font-size: var(--dux-font-size-base); }
+.dux-tabs__bar--lg .dux-tabs__tab { padding: var(--dux-spacing-3) var(--dux-spacing-5); font-size: var(--dux-font-size-lg); }
+
+/* ─── Icon & badge ──────────────────────────────────────────────────────── */
+.dux-tabs__tab-icon {
+  display:     inline-flex;
+  align-items: center;
+  font-size:   1em;
+}
+
+.dux-tabs__tab-badge {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  min-width:       16px;
+  height:          16px;
+  padding:         0 4px;
+  background:      var(--dux-color-status-error);
+  color:           var(--dux-color-text-inverse);
+  font-size:       var(--dux-font-size-xs);
+  border-radius:   var(--dux-radius-full);
+  font-weight:     var(--dux-font-weight-medium);
+  line-height:     1;
+}
+
+/* ─── Panel ─────────────────────────────────────────────────────────────── */
+.dux-tabs__panels {
+  flex: 1;
+}
+
+.dux-tabs__panel {
+  padding: var(--dux-spacing-4) 0;
+}

@@ -1,0 +1,101 @@
+/**
+ * Toast — Douyin Delight UI Kit
+ */
+
+/* ─── Container ─────────────────────────────────────────────────────────── */
+.dux-toast-container {
+  position:        fixed;
+  left:            50%;
+  transform:       translateX(-50%);
+  z-index:         500;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  gap:             var(--dux-spacing-2);
+  pointer-events:  none;
+  width:           max-content;
+  max-width:       min(400px, calc(100vw - 32px));
+}
+
+.dux-toast-container--top    { top:    var(--dux-spacing-4); }
+.dux-toast-container--bottom { bottom: calc(var(--dux-spacing-4) + env(safe-area-inset-bottom, 0px)); }
+
+/* ─── Single toast ──────────────────────────────────────────────────────── */
+.dux-toast {
+  display:         flex;
+  align-items:     center;
+  gap:             var(--dux-spacing-2);
+  padding:         var(--dux-spacing-2) var(--dux-spacing-3);
+  border-radius:   var(--dux-radius-lg);
+  background:      var(--dux-color-text-primary);
+  color:           var(--dux-color-text-inverse);
+  font-family:     var(--dux-font-sans);
+  font-size:       var(--dux-font-size-base);
+  box-shadow:      var(--dux-shadow-lg);
+  pointer-events:  all;
+  animation:       dux-toast-in var(--dux-duration-normal) var(--dux-ease-enter);
+  min-width:       240px;
+  max-width:       400px;
+}
+
+/* ─── Type variants ─────────────────────────────────────────────────────── */
+.dux-toast--success .dux-toast__icon { color: var(--dux-color-status-success); }
+.dux-toast--error   .dux-toast__icon { color: var(--dux-color-status-error); }
+.dux-toast--warning .dux-toast__icon { color: var(--dux-color-status-warning); }
+.dux-toast--info    .dux-toast__icon { color: var(--dux-color-brand-primary); }
+.dux-toast--default .dux-toast__icon { display: none; }
+
+/* ─── Icon ──────────────────────────────────────────────────────────────── */
+.dux-toast__icon {
+  display:     inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── Message ───────────────────────────────────────────────────────────── */
+.dux-toast__message {
+  flex:        1;
+  line-height: var(--dux-line-height-snug);
+}
+
+/* ─── Action button ─────────────────────────────────────────────────────── */
+.dux-toast__action {
+  background:      none;
+  border:          none;
+  padding:         var(--dux-spacing-1) var(--dux-spacing-2);
+  color:           var(--dux-color-brand-primary-surface);
+  font-family:     var(--dux-font-sans);
+  font-size:       var(--dux-font-size-sm);
+  font-weight:     var(--dux-font-weight-medium);
+  cursor:          pointer;
+  border-radius:   var(--dux-radius-xs);
+  white-space:     nowrap;
+  flex-shrink:     0;
+}
+
+.dux-toast__action:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ─── Dismiss button ────────────────────────────────────────────────────── */
+.dux-toast__dismiss {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  background:      none;
+  border:          none;
+  padding:         var(--dux-spacing-1);
+  cursor:          pointer;
+  color:           rgba(255, 255, 255, 0.5);
+  border-radius:   var(--dux-radius-xs);
+  flex-shrink:     0;
+  transition:      color var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+.dux-toast__dismiss:hover { color: var(--dux-color-text-inverse); }
+
+/* ─── Animation ─────────────────────────────────────────────────────────── */
+@keyframes dux-toast-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}

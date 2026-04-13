@@ -1,0 +1,107 @@
+/**
+ * Tooltip — Douyin Delight UI Kit
+ */
+
+/* ─── Wrapper ───────────────────────────────────────────────────────────── */
+.dux-tooltip-wrapper {
+  position: relative;
+  display:  inline-flex;
+}
+
+/* ─── Tooltip box ───────────────────────────────────────────────────────── */
+.dux-tooltip {
+  position:      absolute;
+  z-index:       300;
+  background:    var(--dux-color-text-primary);
+  color:         var(--dux-color-text-inverse);
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-sm);
+  line-height:   var(--dux-line-height-normal);
+  padding:       var(--dux-spacing-1) var(--dux-spacing-2);
+  border-radius: var(--dux-radius-sm);
+  white-space:   pre-wrap;
+  word-break:    break-word;
+  pointer-events: none;
+  animation:     dux-tooltip-in var(--dux-duration-fast) var(--dux-ease-enter);
+  box-shadow:    var(--dux-shadow-md);
+  width:         max-content;
+}
+
+/* ─── Arrow ─────────────────────────────────────────────────────────────── */
+.dux-tooltip__arrow {
+  position: absolute;
+  width:    0;
+  height:   0;
+}
+
+/* ─── Placements ────────────────────────────────────────────────────────── */
+
+/* Top */
+.dux-tooltip--top {
+  bottom:    calc(100% + 8px);
+  left:      50%;
+  transform: translateX(-50%);
+}
+
+.dux-tooltip--top .dux-tooltip__arrow {
+  top:        100%;
+  left:       50%;
+  transform:  translateX(-50%);
+  border-left:  5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top:   5px solid var(--dux-color-text-primary);
+}
+
+/* Bottom */
+.dux-tooltip--bottom {
+  top:       calc(100% + 8px);
+  left:      50%;
+  transform: translateX(-50%);
+}
+
+.dux-tooltip--bottom .dux-tooltip__arrow {
+  bottom:       100%;
+  left:         50%;
+  transform:    translateX(-50%);
+  border-left:  5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--dux-color-text-primary);
+}
+
+/* Left */
+.dux-tooltip--left {
+  right:     calc(100% + 8px);
+  top:       50%;
+  transform: translateY(-50%);
+}
+
+.dux-tooltip--left .dux-tooltip__arrow {
+  left:         100%;
+  top:          50%;
+  transform:    translateY(-50%);
+  border-top:    5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left:   5px solid var(--dux-color-text-primary);
+}
+
+/* Right */
+.dux-tooltip--right {
+  left:      calc(100% + 8px);
+  top:       50%;
+  transform: translateY(-50%);
+}
+
+.dux-tooltip--right .dux-tooltip__arrow {
+  right:        100%;
+  top:          50%;
+  transform:    translateY(-50%);
+  border-top:    5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right:  5px solid var(--dux-color-text-primary);
+}
+
+/* ─── Animation ─────────────────────────────────────────────────────────── */
+@keyframes dux-tooltip-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

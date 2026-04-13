@@ -1,0 +1,99 @@
+/**
+ * BottomNav — Douyin Delight UI Kit
+ * Mobile bottom tab bar with safe-area inset support (iPhone home indicator)
+ */
+
+/* ─── Nav wrapper ───────────────────────────────────────────────────────── */
+.dux-bottom-nav {
+  position:   fixed;
+  bottom:     0;
+  left:       0;
+  right:      0;
+  z-index:    var(--dux-z-sticky, 200);
+  background: var(--dux-color-bg-surface);
+  border-top: 1px solid var(--dux-color-border-light);
+  /* iOS safe area inset */
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ─── Inner row ─────────────────────────────────────────────────────────── */
+.dux-bottom-nav__inner {
+  display:     flex;
+  align-items: stretch;
+  height:      50px;
+}
+
+/* ─── Item ──────────────────────────────────────────────────────────────── */
+.dux-bottom-nav__item {
+  flex:            1;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  justify-content: center;
+  gap:             2px;
+  background:      none;
+  border:          none;
+  padding:         var(--dux-spacing-1) 0;
+  cursor:          pointer;
+  color:           var(--dux-color-text-secondary);
+  position:        relative;
+  -webkit-tap-highlight-color: transparent;
+  transition:      color var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+.dux-bottom-nav__item--active {
+  color: var(--dux-color-text-primary);
+}
+
+.dux-bottom-nav__item--disabled {
+  opacity:        0.35;
+  cursor:         not-allowed;
+  pointer-events: none;
+}
+
+.dux-bottom-nav__item:not(.dux-bottom-nav__item--active):not(.dux-bottom-nav__item--disabled):active {
+  opacity: 0.6;
+}
+
+/* ─── Icon ──────────────────────────────────────────────────────────────── */
+.dux-bottom-nav__icon {
+  display:     inline-flex;
+  align-items: center;
+  font-size:   24px;
+  line-height: 1;
+}
+
+/* ─── Label ─────────────────────────────────────────────────────────────── */
+.dux-bottom-nav__label {
+  font-family:  var(--dux-font-sans);
+  font-size:    var(--dux-font-size-xs); /* 10px */
+  font-weight:  var(--dux-font-weight-medium);
+  line-height:  1;
+  white-space:  nowrap;
+}
+
+.dux-bottom-nav__item--active .dux-bottom-nav__label {
+  font-weight: var(--dux-font-weight-semibold);
+}
+
+/* ─── Badge ─────────────────────────────────────────────────────────────── */
+.dux-bottom-nav__badge {
+  position:      absolute;
+  top:           4px;
+  left:          50%;
+  margin-left:   6px;
+  min-width:     16px;
+  height:        16px;
+  padding:       0 4px;
+  background:    var(--dux-color-status-error);
+  color:         #FFFFFF;
+  font-family:   var(--dux-font-sans);
+  font-size:     var(--dux-font-size-xs);
+  font-weight:   var(--dux-font-weight-medium);
+  border-radius: var(--dux-radius-full);
+  display:       inline-flex;
+  align-items:   center;
+  justify-content: center;
+  line-height:   1;
+  border:        2px solid var(--dux-color-bg-surface);
+}

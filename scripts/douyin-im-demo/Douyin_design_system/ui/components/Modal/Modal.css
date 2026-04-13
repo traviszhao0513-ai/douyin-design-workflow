@@ -1,0 +1,121 @@
+/**
+ * Modal — Douyin Delight UI Kit
+ */
+
+/* ─── Root / Backdrop ───────────────────────────────────────────────────── */
+.dux-modal-root {
+  position:        fixed;
+  inset:           0;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         var(--dux-spacing-4);
+}
+
+.dux-modal-backdrop {
+  position:   absolute;
+  inset:      0;
+  background: var(--dux-color-bg-overlay);
+  animation:  dux-fade-in var(--dux-duration-normal) var(--dux-ease-enter);
+}
+
+/* ─── Panel ─────────────────────────────────────────────────────────────── */
+.dux-modal-panel {
+  position:         relative;
+  background:       var(--dux-color-bg-surface);
+  border-radius:    var(--dux-radius-lg);
+  box-shadow:       var(--dux-shadow-xl);
+  display:          flex;
+  flex-direction:   column;
+  max-height:       calc(100vh - var(--dux-spacing-8));
+  width:            100%;
+  animation:        dux-modal-slide-up var(--dux-duration-normal) var(--dux-ease-enter);
+  overflow:         hidden;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-modal-panel--sm         { max-width: 360px; }
+.dux-modal-panel--md         { max-width: 480px; }
+.dux-modal-panel--lg         { max-width: 720px; }
+.dux-modal-panel--fullscreen {
+  max-width:     none;
+  width:         100%;
+  height:        100%;
+  max-height:    100%;
+  border-radius: 0;
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────── */
+.dux-modal__header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  padding:         var(--dux-spacing-4) var(--dux-spacing-5);
+  border-bottom:   1px solid var(--dux-color-border-light);
+  flex-shrink:     0;
+}
+
+.dux-modal__title {
+  margin:      0;
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-lg);
+  font-weight: var(--dux-font-weight-semibold);
+  color:       var(--dux-color-text-primary);
+  line-height: var(--dux-line-height-tight);
+}
+
+/* ─── Close button ──────────────────────────────────────────────────────── */
+.dux-modal__close {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  width:           32px;
+  height:          32px;
+  background:      none;
+  border:          none;
+  border-radius:   var(--dux-radius-sm);
+  cursor:          pointer;
+  color:           var(--dux-color-text-secondary);
+  transition:
+    background-color var(--dux-duration-fast) var(--dux-ease-standard),
+    color            var(--dux-duration-fast) var(--dux-ease-standard);
+  flex-shrink:     0;
+}
+
+.dux-modal__close:hover {
+  background: var(--dux-color-bg-subtle);
+  color:      var(--dux-color-text-primary);
+}
+
+/* ─── Body ──────────────────────────────────────────────────────────────── */
+.dux-modal__body {
+  padding:    var(--dux-spacing-5);
+  overflow-y: auto;
+  flex:       1;
+  font-family: var(--dux-font-sans);
+  font-size:   var(--dux-font-size-base);
+  color:       var(--dux-color-text-primary);
+  line-height: var(--dux-line-height-normal);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────── */
+.dux-modal__footer {
+  display:         flex;
+  align-items:     center;
+  justify-content: flex-end;
+  gap:             var(--dux-spacing-2);
+  padding:         var(--dux-spacing-4) var(--dux-spacing-5);
+  border-top:      1px solid var(--dux-color-border-light);
+  flex-shrink:     0;
+}
+
+/* ─── Animations ────────────────────────────────────────────────────────── */
+@keyframes dux-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes dux-modal-slide-up {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}

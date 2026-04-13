@@ -1,0 +1,86 @@
+/**
+ * Checkbox — Douyin Delight UI Kit
+ */
+
+/* ─── Wrapper ───────────────────────────────────────────────────────────── */
+.dux-checkbox {
+  display:     inline-flex;
+  align-items: center;
+  gap:         var(--dux-spacing-2);
+  cursor:      pointer;
+  user-select: none;
+  font-family: var(--dux-font-sans);
+  color:       var(--dux-color-text-primary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dux-checkbox--disabled {
+  opacity: 0.4;
+  cursor:  not-allowed;
+  pointer-events: none;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-checkbox--sm .dux-checkbox__box { width: 14px; height: 14px; border-radius: 3px; }
+.dux-checkbox--sm .dux-checkbox__label { font-size: var(--dux-font-size-sm); }
+.dux-checkbox--md .dux-checkbox__box { width: 18px; height: 18px; border-radius: var(--dux-radius-xs); }
+.dux-checkbox--md .dux-checkbox__label { font-size: var(--dux-font-size-base); }
+
+/* ─── Control ───────────────────────────────────────────────────────────── */
+.dux-checkbox__control {
+  position:    relative;
+  display:     inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.dux-checkbox__native {
+  position: absolute;
+  opacity:  0;
+  width:    0;
+  height:   0;
+  margin:   0;
+}
+
+/* ─── Visual box ────────────────────────────────────────────────────────── */
+.dux-checkbox__box {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  background:      var(--dux-color-bg-surface);
+  border:          1.5px solid var(--dux-color-border-medium);
+  color:           var(--dux-color-text-inverse);
+  transition:
+    background-color var(--dux-duration-fast) var(--dux-ease-standard),
+    border-color     var(--dux-duration-fast) var(--dux-ease-standard);
+}
+
+/* ─── Checked & Indeterminate ───────────────────────────────────────────── */
+.dux-checkbox--checked .dux-checkbox__box,
+.dux-checkbox--indeterminate .dux-checkbox__box {
+  background:   var(--dux-color-brand-primary);
+  border-color: var(--dux-color-brand-primary);
+}
+
+/* Hide checkmark icon when unchecked */
+.dux-checkbox:not(.dux-checkbox--checked):not(.dux-checkbox--indeterminate) .dux-checkbox__box svg {
+  opacity: 0;
+}
+
+/* ─── Focus ring ────────────────────────────────────────────────────────── */
+.dux-checkbox__native:focus-visible ~ .dux-checkbox__box {
+  box-shadow: var(--dux-shadow-focus);
+}
+
+/* ─── Hover ─────────────────────────────────────────────────────────────── */
+.dux-checkbox:not(.dux-checkbox--disabled):hover .dux-checkbox__box {
+  border-color: var(--dux-color-brand-primary);
+}
+
+/* ─── Group ─────────────────────────────────────────────────────────────── */
+.dux-checkbox-group {
+  display: flex;
+}
+
+.dux-checkbox-group--vertical   { flex-direction: column; gap: var(--dux-spacing-2); }
+.dux-checkbox-group--horizontal { flex-direction: row;    gap: var(--dux-spacing-4); flex-wrap: wrap; }

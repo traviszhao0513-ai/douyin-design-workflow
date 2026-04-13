@@ -1,0 +1,684 @@
+/**
+ * Douyin IM message list
+ * 1:1 mobile layout based on the supplied Figma node.
+ */
+
+.msg-page {
+  --BGPage: rgba(22, 24, 35, 0.03);
+  --BGSurface: #ffffff;
+  --BGPrimary: #ffffff;
+  --BGBottom: #ffffff;
+  --BGInput2: rgba(22, 24, 35, 0.05);
+  --BGPlaceholder: rgba(22, 24, 35, 0.05);
+  --TextPrimary: #161823;
+  --TextSecondary: rgba(22, 24, 35, 0.45);
+  --TextTertiary: rgba(22, 24, 35, 0.6);
+  --TextQuaternary: rgba(22, 24, 35, 0.34);
+  --ConstTextInverse: #ffffff;
+  --LinePrimary: rgba(22, 24, 35, 0.12);
+  --Primary: #fe2c55;
+  --Success: #25c685;
+  --PressedMask: rgba(22, 24, 35, 0.05);
+  --Streak: #9662ff;
+  color-scheme: light;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--BGPage);
+  color: var(--TextPrimary);
+  font-family: var(--dux-font-sans, "PingFang SC", "SF Pro Display", -apple-system, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.msg-status-bar,
+.msg-title-bar {
+  flex-shrink: 0;
+  background: var(--BGSurface);
+}
+
+.msg-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 24px;
+}
+
+.msg-status-bar__time {
+  color: var(--TextPrimary);
+  font-family: "SF Pro Text", "SF Pro Display", -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+}
+
+.msg-status-bar__icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.msg-status-bar__cellular {
+  width: 17px;
+  height: 11px;
+}
+
+.msg-status-bar__wifi {
+  width: 15.27px;
+  height: 10.97px;
+}
+
+.msg-status-bar__battery {
+  width: 24.33px;
+  height: 11.33px;
+}
+
+.msg-title-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+}
+
+.msg-title-bar__title {
+  margin: 0;
+  color: var(--TextPrimary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.msg-title-bar__actions,
+.msg-title-bar__touch {
+  display: flex;
+  align-items: center;
+}
+
+.msg-title-bar__touch {
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--TextPrimary);
+  border-radius: 12px;
+}
+
+.msg-title-bar__touch:active {
+  background: var(--BGInput2);
+}
+
+.msg-title-bar > .msg-title-bar__touch:first-child {
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+
+.msg-title-bar__actions {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  gap: 6px;
+}
+
+.msg-title-bar__menu-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.msg-title-bar__menu-icon img {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  display: block;
+  width: 18px;
+  height: 14px;
+}
+
+.msg-title-bar__search-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+.msg-title-bar__add-icon-shell {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.msg-title-bar__add-icon {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.msg-story-rail {
+  display: flex;
+  gap: 8px;
+  min-height: 132px;
+  padding: 16px 0 20px 7px;
+  background: var(--BGSurface);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.msg-story-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.msg-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 82px;
+  flex: 0 0 auto;
+}
+
+.msg-story__pressable {
+  display: block;
+  width: 74px;
+  height: 74px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  transition: transform 120ms ease-out;
+  transform: scale(1);
+  transform-origin: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.msg-story__pressable:active {
+  transform: scale(0.97);
+}
+
+.msg-story__pressable:focus-visible {
+  outline: 2px solid rgba(22, 24, 35, 0.18);
+  outline-offset: 2px;
+}
+
+.msg-story__avatar-shell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+}
+
+.msg-story__ring {
+  position: absolute;
+  inset: 0;
+  width: 74px;
+  height: 74px;
+}
+
+.msg-story__avatar.dux-avatar {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  background: var(--BGPlaceholder);
+}
+
+.msg-story__name {
+  width: 82px;
+  color: var(--TextPrimary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.msg-story__online-indicator,
+.msg-cell__online-indicator {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.msg-story__online-image,
+.msg-cell__online-image {
+  position: absolute;
+  top: -3.5px;
+  left: -3.5px;
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
+.msg-story__online-indicator {
+  right: 6px;
+  bottom: 6px;
+}
+
+.msg-story__add {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  z-index: 3;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.msg-story__add-bg,
+.msg-story__add-icon {
+  position: absolute;
+  display: block;
+}
+
+.msg-story__add-bg {
+  top: -3.5px;
+  left: -3.5px;
+  width: 25px;
+  height: 25px;
+}
+
+.msg-story__add-icon {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+}
+
+.msg-list {
+  flex: 1;
+  background: var(--BGPage);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.msg-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 72.5px;
+  padding: 8px 16px;
+  gap: 12px;
+  border: 0;
+  background: var(--BGSurface);
+  text-align: left;
+}
+
+.msg-cell:active {
+  background: var(--BGInput2);
+}
+
+.msg-cell + .msg-cell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 86px;
+  right: 0;
+  height: 0.5px;
+  background: var(--LinePrimary);
+}
+
+.msg-cell__avatar-shell {
+  position: relative;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+}
+
+.msg-cell__avatar.dux-avatar {
+  width: 56px !important;
+  height: 56px !important;
+  background: var(--BGPlaceholder);
+}
+
+.msg-cell__online-indicator {
+  right: 0;
+  bottom: 0;
+}
+
+.msg-cell__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  height: 48px;
+}
+
+.msg-cell__header,
+.msg-cell__preview-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.msg-cell__name-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  flex: 1;
+}
+
+.msg-cell__name {
+  color: var(--TextPrimary);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.msg-cell__streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+
+.msg-cell__streak-icon {
+  position: relative;
+  display: block;
+  width: 15.555px;
+  height: 20px;
+  overflow: hidden;
+  flex: 0 0 15.555px;
+}
+
+.msg-cell__streak-base {
+  position: absolute;
+  top: 35.84%;
+  right: 9.65%;
+  bottom: 5.71%;
+  left: 21.99%;
+}
+
+.msg-cell__streak-top-shell {
+  position: absolute;
+  top: 4.78%;
+  right: 24.04%;
+  bottom: 9.07%;
+  left: 8.34%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msg-cell__streak-top-mask {
+  position: relative;
+  display: block;
+  width: 10.221px;
+  height: 17.054px;
+  transform: rotate(-1deg);
+}
+
+.msg-cell__streak-base-fill,
+.msg-cell__streak-top-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.msg-cell__streak-count {
+  color: var(--Streak);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.msg-cell__meta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.msg-cell__mute {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+
+.msg-cell__mute-glyph {
+  position: absolute;
+  top: 2.19px;
+  left: 2.17px;
+  display: block;
+  width: 10.14px;
+  height: 10.06px;
+}
+
+.msg-cell__time {
+  color: var(--TextQuaternary);
+  font-family: "PingFang SC", "SF Pro Display", -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.msg-cell__preview-row {
+  gap: 4px;
+}
+
+.msg-cell__reaction {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  padding-right: 2px;
+}
+
+.msg-cell__reaction-emoji {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.msg-cell__reaction-emoji img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.msg-cell__reaction-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--LinePrimary);
+}
+
+.msg-cell__preview {
+  font-family: "PingFang SC", "SF Pro Display", -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.msg-cell__preview--muted {
+  color: var(--TextSecondary);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.msg-cell__preview--accent {
+  color: var(--Primary);
+  flex: 0 0 auto;
+}
+
+.msg-cell__mixed-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  flex: 1;
+}
+
+.msg-cell__badge.dux-badge--count {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background: var(--Primary);
+  color: #ffffff;
+  font-family: "PingFang SC", "SF Pro Display", -apple-system, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16px;
+  flex: 0 0 auto;
+}
+
+.msg-bottom-bar {
+  position: relative;
+  flex: 0 0 83px;
+  height: 83px;
+  background: var(--BGBottom);
+}
+
+.msg-bottom-bar__divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.5px;
+  background: var(--LinePrimary);
+}
+
+.msg-bottom-bar__nav-shell {
+  position: absolute;
+  inset: 0 7.5px 34px 7.5px;
+}
+
+.msg-bottom-nav.dux-bottom-nav {
+  position: static;
+  height: 49px;
+  padding-bottom: 0;
+  background: transparent;
+  border-top: 0;
+}
+
+.msg-bottom-nav .dux-bottom-nav__inner {
+  height: 49px;
+}
+
+.msg-bottom-nav .dux-bottom-nav__item {
+  gap: 0;
+  padding: 0;
+  color: var(--TextTertiary);
+}
+
+.msg-bottom-nav .dux-bottom-nav__item--active {
+  color: var(--TextPrimary);
+}
+
+.msg-bottom-nav .dux-bottom-nav__icon {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+}
+
+.msg-bottom-nav__text {
+  color: currentColor;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.msg-bottom-nav__capture-image {
+  display: block;
+  width: 75px;
+  height: 49px;
+}
+
+.msg-bottom-nav .dux-bottom-nav__badge {
+  top: 6px;
+  left: 50%;
+  min-width: 18px;
+  height: 18px;
+  margin-left: 7px;
+  padding: 0 4px;
+  border: 0;
+  background: var(--Primary);
+}
+
+.msg-bottom-nav__badge-number {
+  color: var(--ConstTextInverse);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.msg-bottom-bar__home-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.msg-bottom-bar__home-pill {
+  width: 133px;
+  height: 5px;
+  border-radius: 999px;
+  background: #000000;
+}
+
+.theme-dark .msg-page,
+[data-theme="dark"] .msg-page,
+.phone-frame--dark .msg-page {
+  --BGPage: #161823;
+  --BGSurface: #161823;
+  --BGPrimary: #161823;
+  --BGBottom: #161616;
+  --BGInput2: rgba(255, 255, 255, 0.03);
+  --BGPlaceholder: rgba(255, 255, 255, 0.06);
+  --TextPrimary: rgba(255, 255, 255, 0.9);
+  --TextSecondary: rgba(255, 255, 255, 0.75);
+  --TextTertiary: rgba(255, 255, 255, 0.5);
+  --TextQuaternary: rgba(255, 255, 255, 0.34);
+  --LinePrimary: rgba(255, 255, 255, 0.08);
+  color-scheme: dark;
+}
+
+.theme-dark .msg-story__add,
+[data-theme="dark"] .msg-story__add,
+.phone-frame--dark .msg-story__add {
+  border-color: var(--BGSurface);
+}
+
+.theme-dark .msg-bottom-bar__home-pill,
+[data-theme="dark"] .msg-bottom-bar__home-pill,
+.phone-frame--dark .msg-bottom-bar__home-pill {
+  background: rgba(255, 255, 255, 0.9);
+}

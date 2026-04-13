@@ -1,0 +1,164 @@
+/**
+ * Card — Douyin Delight UI Kit
+ * Figma: 83293:121654  (📦 卡片 Cards)
+ *
+ * All color/size values reference CSS Custom Properties from tokens.css.
+ * Zero hardcoded color values.
+ */
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+.dux-card {
+  display:          flex;
+  flex-direction:   column;
+  background-color: var(--dux-color-bg-surface);
+  border-radius:    var(--dux-radius-lg);         /* 16px */
+  overflow:         hidden;
+  font-family:      var(--dux-font-sans);
+  transition:
+    box-shadow  var(--dux-duration-normal) var(--dux-ease-standard),
+    transform   var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+.dux-card--block {
+  width: 100%;
+}
+
+/* ─── Variants ──────────────────────────────────────────────────────────── */
+.dux-card--elevated {
+  box-shadow: var(--dux-shadow-sm);
+}
+
+.dux-card--outlined {
+  border:     1px solid var(--dux-color-border-light);
+  box-shadow: none;
+}
+
+.dux-card--filled {
+  background-color: var(--dux-color-bg-subtle);
+  box-shadow:       none;
+}
+
+/* ─── Clickable ─────────────────────────────────────────────────────────── */
+.dux-card--clickable {
+  cursor: pointer;
+}
+
+.dux-card--clickable:hover {
+  box-shadow: var(--dux-shadow-md);
+  transform:  translateY(-2px);
+}
+
+.dux-card--clickable:active {
+  box-shadow: var(--dux-shadow-sm);
+  transform:  translateY(0);
+}
+
+.dux-card--clickable:focus-visible {
+  outline:    none;
+  box-shadow: var(--dux-shadow-focus);
+}
+
+/* ─── Cover image ───────────────────────────────────────────────────────── */
+.dux-card__cover {
+  width:    100%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.dux-card__cover > img,
+.dux-card__cover > video {
+  display: block;
+  width:   100%;
+  height:  100%;
+  object-fit: cover;
+}
+
+/* ─── Sizes (affects internal padding) ─────────────────────────────────── */
+.dux-card--sm .dux-card__header,
+.dux-card--sm .dux-card__body,
+.dux-card--sm .dux-card__footer {
+  padding: var(--dux-spacing-2) var(--dux-spacing-3); /* 8px 12px */
+}
+
+.dux-card--md .dux-card__header,
+.dux-card--md .dux-card__body,
+.dux-card--md .dux-card__footer {
+  padding: var(--dux-spacing-3) var(--dux-spacing-4); /* 12px 16px */
+}
+
+.dux-card--lg .dux-card__header,
+.dux-card--lg .dux-card__body,
+.dux-card--lg .dux-card__footer {
+  padding: var(--dux-spacing-4) var(--dux-spacing-5); /* 16px 20px */
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────── */
+.dux-card__header {
+  display:     flex;
+  align-items: flex-start;
+  gap:         var(--dux-spacing-2);
+  border-bottom: 1px solid var(--dux-color-border-light);
+}
+
+.dux-card__header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.dux-card__title {
+  font-size:   var(--dux-font-size-lg);   /* 16px */
+  font-weight: var(--dux-font-weight-semibold);
+  line-height: var(--dux-line-height-snug);
+  color:       var(--dux-color-text-primary);
+  overflow:    hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dux-card__subtitle {
+  margin-top:  var(--dux-spacing-1);
+  font-size:   var(--dux-font-size-sm);   /* 12px */
+  line-height: var(--dux-line-height-normal);
+  color:       var(--dux-color-text-secondary);
+  overflow:    hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dux-card__header-extra {
+  flex-shrink: 0;
+  color:       var(--dux-color-text-link);
+  font-size:   var(--dux-font-size-base); /* 14px */
+  line-height: var(--dux-line-height-normal);
+  cursor:      pointer;
+}
+
+/* ─── Body ──────────────────────────────────────────────────────────────── */
+.dux-card__body {
+  flex:      1;
+  font-size: var(--dux-font-size-base);   /* 14px */
+  color:     var(--dux-color-text-primary);
+  line-height: var(--dux-line-height-normal);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────── */
+.dux-card__footer {
+  border-top: 1px solid var(--dux-color-border-light);
+  color:      var(--dux-color-text-secondary);
+  font-size:  var(--dux-font-size-sm);   /* 12px */
+}
+
+/* ─── Card.Grid ─────────────────────────────────────────────────────────── */
+.dux-card-grid {
+  display: grid;
+  width:   100%;
+}
+
+.dux-card-grid--cols-1 { grid-template-columns: 1fr; }
+.dux-card-grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+.dux-card-grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.dux-card-grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+.dux-card-grid--gap-sm { gap: var(--dux-spacing-2); }   /* 8px  */
+.dux-card-grid--gap-md { gap: var(--dux-spacing-3); }   /* 12px */
+.dux-card-grid--gap-lg { gap: var(--dux-spacing-4); }   /* 16px */

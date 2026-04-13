@@ -1,0 +1,563 @@
+/**
+ * BubblePreview — 气泡走查页样式
+ * Prefix: bp-
+ *
+ * 复用与 Chat.css 完全相同的气泡 token，
+ * 仅添加走查页专属的布局和标注样式。
+ */
+
+/* ─────────────────────────────────────────
+   Design tokens (identical to Chat.css)
+   ───────────────────────────────────────── */
+.bp-page {
+  --bp-bubble-recv:     #ffffff;
+  --bp-bubble-sent:     #168ef9;
+  --bp-bubble-radius:   8px;
+  --bp-quote-recv:      rgba(22, 24, 35, 0.06);
+  --bp-quote-sent:      rgba(255, 255, 255, 0.22);
+  --bp-wave-recv:       rgba(22, 24, 35, 0.45);
+  --bp-wave-sent:       rgba(255, 255, 255, 0.75);
+  --bp-call-icon-recv:  rgba(22, 24, 35, 0.06);
+  --bp-call-icon-sent:  rgba(255, 255, 255, 0.22);
+  --bp-text-primary:    #161823;
+  --bp-text-secondary:  rgba(22, 24, 35, 0.60);
+  --bp-text-tertiary:   rgba(22, 24, 35, 0.34);
+  --bp-text-sent:       #ffffff;
+  --bp-text-link:       #168ef9;
+  --bp-text-mention:    #168ef9;
+  --bp-line:            rgba(22, 24, 35, 0.10);
+  --bp-primary:         #fe2c55;
+  --bp-bg:              #f5f5f5;
+  --bp-surface:         #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bp-bg);
+  font-family: "PingFang SC", "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--bp-text-primary);
+}
+
+/* ─────────────────────────────────────────
+   Top bar
+   ───────────────────────────────────────── */
+.bp-topbar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 52px;
+  padding: 0 16px;
+  background: var(--bp-surface);
+  border-bottom: 0.5px solid var(--bp-line);
+}
+
+.bp-topbar__back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--bp-text-primary);
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bp-topbar__center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bp-topbar__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--bp-text-primary);
+  line-height: 1;
+}
+
+.bp-topbar__sub {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--bp-text-tertiary);
+  line-height: 1;
+}
+
+.bp-topbar__progress {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--bp-primary);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────
+   Legend
+   ───────────────────────────────────────── */
+.bp-legend {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: var(--bp-surface);
+  border-bottom: 0.5px solid var(--bp-line);
+}
+
+.bp-legend__item {
+  font-size: 11px;
+  color: var(--bp-text-tertiary);
+}
+
+.bp-legend__chips {
+  display: flex;
+  gap: 6px;
+}
+
+.bp-chip {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.bp-chip--none   { background: rgba(22,24,35,0.07); color: var(--bp-text-secondary); }
+.bp-chip--ok     { background: rgba(7,193,96,0.10);  color: #07c160; }
+.bp-chip--issue  { background: rgba(254,44,85,0.08); color: var(--bp-primary); }
+
+/* ─────────────────────────────────────────
+   Progress bar
+   ───────────────────────────────────────── */
+.bp-progress {
+  flex-shrink: 0;
+  height: 3px;
+  background: rgba(22,24,35,0.08);
+}
+
+.bp-progress__bar {
+  height: 100%;
+  background: #07c160;
+  border-radius: 0 2px 2px 0;
+  transition: width 0.3s ease;
+}
+
+/* ─────────────────────────────────────────
+   Scrollable content
+   ───────────────────────────────────────── */
+.bp-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.bp-content::-webkit-scrollbar { display: none; }
+.bp-content { scrollbar-width: none; }
+
+.bp-safe-bottom {
+  flex-shrink: 0;
+  height: 34px;
+  background: var(--bp-bg);
+}
+
+/* ─────────────────────────────────────────
+   Section
+   ───────────────────────────────────────── */
+.bp-section {
+  border-bottom: 0.5px solid var(--bp-line);
+}
+
+.bp-section__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--bp-surface);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bp-section__index {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--bp-text-tertiary);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  width: 20px;
+}
+
+.bp-section__meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.bp-section__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bp-text-primary);
+  line-height: 1;
+}
+
+.bp-section__desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--bp-text-tertiary);
+  line-height: 1;
+}
+
+.bp-section__status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bp-section__status--none  { background: rgba(22,24,35,0.07); color: var(--bp-text-secondary); }
+.bp-section__status--ok    { background: rgba(7,193,96,0.12);  color: #07c160; }
+.bp-section__status--issue { background: rgba(254,44,85,0.08); color: var(--bp-primary); }
+
+.bp-section__chevron {
+  font-size: 14px;
+  color: var(--bp-text-tertiary);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.bp-section__body {
+  padding: 12px 16px 16px;
+  background: var(--bp-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ─────────────────────────────────────────
+   Pair — groups related rows with a label
+   ───────────────────────────────────────── */
+.bp-pair {
+  margin-bottom: 12px;
+}
+
+.bp-pair:last-of-type { margin-bottom: 0; }
+
+.bp-pair__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--bp-text-tertiary);
+  margin-bottom: 6px;
+  padding-left: 2px;
+}
+
+/* ─────────────────────────────────────────
+   Spec row — token annotations
+   ───────────────────────────────────────── */
+.bp-spec {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: rgba(22,24,35,0.03);
+  border-radius: 8px;
+  border: 0.5px solid rgba(22,24,35,0.08);
+}
+
+.bp-spec span {
+  font-size: 10px;
+  color: var(--bp-text-secondary);
+  line-height: 1.4;
+}
+
+.bp-spec code {
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 10px;
+  color: var(--bp-text-primary);
+  background: rgba(22,24,35,0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ─────────────────────────────────────────
+   Bubble rows  (avatar + bubble)
+   ───────────────────────────────────────── */
+.bp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.bp-row--recv { justify-content: flex-start; }
+.bp-row--sent { justify-content: flex-end; }
+
+.bp-row:last-child { margin-bottom: 0; }
+
+.bp-row__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.bp-row__bubble-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: min(282px, 360px);
+}
+
+
+.bp-row__label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--bp-text-tertiary);
+  margin-bottom: 3px;
+}
+
+.bp-row__label--recv { text-align: left; }
+.bp-row__label--sent { text-align: right; }
+
+/* ─────────────────────────────────────────
+   Bubble atoms — same as Chat.css
+   ───────────────────────────────────────── */
+
+/* Base */
+.bp-bbl {
+  border-radius: var(--bp-bubble-radius);
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ── Text / Link / Mention ── */
+.bp-bbl--text { padding: 8px 12px; }
+
+.bp-bbl--recv.bp-bbl--text { background: var(--bp-bubble-recv); }
+.bp-bbl--sent.bp-bbl--text { background: var(--bp-bubble-sent); }
+
+.bp-bbl__text {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+}
+
+.bp-bbl--recv .bp-bbl__text { color: var(--bp-text-primary); }
+.bp-bbl--sent .bp-bbl__text { color: var(--bp-text-sent); }
+
+.bp-bbl__link {
+  color: var(--bp-text-link);
+  text-decoration: none;
+}
+
+.bp-bbl--sent .bp-bbl__link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bp-bbl__mention { font-weight: 500; }
+.bp-bbl__mention--recv { color: var(--bp-text-mention); }
+.bp-bbl__mention--sent { color: #ffffff; font-weight: 600; }
+
+/* ── Quote — two-card vertical stack matching Chat.css ── */
+.bp-bbl__quote-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.bp-bbl__quote-ref {
+  background: rgba(22, 24, 35, 0.05);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.bp-bbl__quote-ref-text {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--bp-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Voice ── */
+.bp-bbl--voice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  min-width: 100px;
+  max-width: 220px;
+}
+
+.bp-bbl--recv.bp-bbl--voice { background: var(--bp-bubble-recv); }
+.bp-bbl--sent.bp-bbl--voice { background: var(--bp-bubble-sent); }
+
+.bp-bbl__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; height: 28px;
+  padding: 0; border: none;
+  border-radius: 50%;
+  cursor: pointer; flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bp-bbl__play--recv {
+  color: var(--bp-text-primary);
+  background: rgba(22, 24, 35, 0.05);
+}
+.bp-bbl__play--sent {
+  color: var(--bp-bubble-sent);
+  background: rgba(255, 255, 255, 0.90);
+}
+
+/* Force SVG icon to inherit currentColor */
+.bp-bbl__play svg path { fill: currentColor; }
+
+.bp-wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex: 1;
+  height: 20px;
+}
+
+.bp-wave__bar {
+  display: block;
+  width: 3px;
+  border-radius: 2px;
+  min-height: 3px;
+  flex-shrink: 0;
+}
+
+.bp-wave--recv .bp-wave__bar { background: var(--bp-wave-recv); }
+.bp-wave--sent .bp-wave__bar { background: var(--bp-wave-sent); }
+
+.bp-bbl__duration {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.bp-bbl__duration--recv { color: var(--bp-text-primary); }
+.bp-bbl__duration--sent { color: #ffffff; }
+
+/* ── Image ── */
+.bp-bbl--image {
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--bp-bubble-radius);
+}
+
+.bp-bbl__img {
+  display: block;
+  max-width: 218px;
+  max-height: 260px;
+  border-radius: var(--bp-bubble-radius);
+  object-fit: cover;
+}
+
+/* ── Call ── */
+.bp-bbl--call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  min-width: 160px;
+}
+
+.bp-bbl--recv.bp-bbl--call { background: var(--bp-bubble-recv); }
+.bp-bbl--sent.bp-bbl--call { background: var(--bp-bubble-sent); }
+
+.bp-bbl__call-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.bp-bbl__call-icon--recv { background: var(--bp-call-icon-recv); color: var(--bp-text-primary); }
+.bp-bbl__call-icon--sent { background: var(--bp-call-icon-sent); color: #ffffff; }
+
+.bp-bbl__call-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bp-bbl__call-status {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.bp-bbl--recv .bp-bbl__call-status { color: var(--bp-text-primary); }
+.bp-bbl--sent .bp-bbl__call-status { color: #ffffff; }
+
+.bp-bbl__call-sub {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.bp-bbl__call-sub--recv { color: var(--bp-text-secondary); }
+.bp-bbl__call-sub--sent { color: rgba(255, 255, 255, 0.70); }
+
+/* ─────────────────────────────────────────
+   System / Time standalone messages
+   ───────────────────────────────────────── */
+.bp-system {
+  display: flex;
+  justify-content: center;
+  padding: 8px 24px;
+  margin-bottom: 8px;
+}
+
+.bp-system__text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--bp-text-tertiary);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.bp-time {
+  display: flex;
+  justify-content: center;
+  padding: 6px 0;
+  margin-bottom: 8px;
+}
+
+.bp-time__text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--bp-text-tertiary);
+  line-height: 1;
+}

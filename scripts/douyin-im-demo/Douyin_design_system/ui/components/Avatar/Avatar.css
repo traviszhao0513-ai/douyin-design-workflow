@@ -1,0 +1,87 @@
+/**
+ * Avatar — Douyin Delight UI Kit
+ * All color/size values reference CSS Custom Properties from tokens.css.
+ */
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+.dux-avatar {
+  position:        relative;
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  overflow:        hidden;
+  background:      var(--dux-color-brand-primary-surface);
+  color:           var(--dux-color-brand-primary);
+  font-family:     var(--dux-font-sans);
+  font-weight:     var(--dux-font-weight-medium);
+  flex-shrink:     0;
+  user-select:     none;
+}
+
+/* ─── Sizes ─────────────────────────────────────────────────────────────── */
+.dux-avatar--xs  { width: 20px; height: 20px; font-size: var(--dux-font-size-xs); }
+.dux-avatar--sm  { width: 28px; height: 28px; font-size: var(--dux-font-size-xs); }
+.dux-avatar--md  { width: 40px; height: 40px; font-size: var(--dux-font-size-sm); }
+.dux-avatar--lg  { width: 48px; height: 48px; font-size: var(--dux-font-size-base); }
+.dux-avatar--xl  { width: 64px; height: 64px; font-size: var(--dux-font-size-lg); }
+
+/* ─── Shapes ────────────────────────────────────────────────────────────── */
+.dux-avatar--circle { border-radius: var(--dux-radius-full); }
+.dux-avatar--square { border-radius: var(--dux-radius-sm); }
+
+/* ─── Image ─────────────────────────────────────────────────────────────── */
+.dux-avatar__img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+  display:    block;
+}
+
+/* ─── Initials / Icon ───────────────────────────────────────────────────── */
+.dux-avatar__initials,
+.dux-avatar__icon {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  line-height:     1;
+}
+
+/* ─── Status dot ────────────────────────────────────────────────────────── */
+.dux-avatar__status {
+  position:      absolute;
+  bottom:        0;
+  right:         0;
+  width:         30%;
+  height:        30%;
+  min-width:     6px;
+  min-height:    6px;
+  border-radius: var(--dux-radius-full);
+  border:        2px solid var(--dux-color-bg-surface);
+}
+
+.dux-avatar__status--online  { background: var(--dux-color-status-success); }
+.dux-avatar__status--offline { background: var(--dux-color-text-tertiary); }
+.dux-avatar__status--busy    { background: var(--dux-color-status-error); }
+.dux-avatar__status--away    { background: var(--dux-color-status-warning); }
+
+/* ─── Avatar Group ──────────────────────────────────────────────────────── */
+.dux-avatar-group {
+  display:     inline-flex;
+  align-items: center;
+}
+
+.dux-avatar-group .dux-avatar {
+  margin-left: -8px;
+  border:      2px solid var(--dux-color-bg-surface);
+  box-shadow:  none;
+}
+
+.dux-avatar-group .dux-avatar:first-child {
+  margin-left: 0;
+}
+
+.dux-avatar__overflow {
+  background: var(--dux-color-bg-subtle);
+  color:      var(--dux-color-text-secondary);
+  font-size:  var(--dux-font-size-xs);
+}

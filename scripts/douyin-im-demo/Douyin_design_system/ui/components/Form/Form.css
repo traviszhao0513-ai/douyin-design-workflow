@@ -1,0 +1,84 @@
+/* ─── Form container ───────────────────────────────────────────────────────── */
+.dux-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+}
+
+.dux-form__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.dux-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dux-form--inline .dux-form__fields {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+/* ─── FormField ────────────────────────────────────────────────────────────── */
+.dux-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dux-form--horizontal .dux-form-field {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ─── Label ────────────────────────────────────────────────────────────────── */
+.dux-form-field__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.dux-form--horizontal .dux-form-field__label {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: right;
+}
+
+.dux-form-field__required {
+  color: #fe2c55;
+  margin-right: 4px;
+}
+
+/* ─── Control ──────────────────────────────────────────────────────────────── */
+.dux-form-field__control {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Hint ─────────────────────────────────────────────────────────────────── */
+.dux-form-field__hint {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* ─── Error ────────────────────────────────────────────────────────────────── */
+.dux-form-field__error {
+  font-size: 12px;
+  color: #fe2c55;
+  line-height: 1.4;
+}
+
+.dux-form-field--error .dux-form-field__label {
+  color: #fe2c55;
+}

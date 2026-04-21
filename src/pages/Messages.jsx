@@ -1,6 +1,6 @@
 import Avatar from '../../Douyin_design_system/ui/components/Avatar/Avatar'
-import Badge from '../../Douyin_design_system/ui/components/Badge/Badge'
 import BottomNav from '../../Douyin_design_system/ui/components/BottomNav/BottomNav'
+import ConversationRow from '../components/im/ConversationRow'
 import './Messages.css'
 
 /* ── Figma cut assets (fresh URLs, valid 7 days from session) ── */
@@ -71,25 +71,8 @@ const CONVERSATIONS = [
 ]
 
 /* ── Online indicator — Figma cut image ── */
-function OnlineIndicator({ kind }) {
-  const src = kind === 'story' ? ASSETS.onlineStory : ASSETS.onlineCell
-  const cls = kind === 'story' ? 'msg-story__online-image' : 'msg-cell__online-image'
-  return <img className={cls} src={src} alt="" aria-hidden="true" />
-}
-
-/* ── Streak badge — flame image + count ── */
-function StreakBadge({ count }) {
-  return (
-    <span className="msg-cell__streak" aria-label={`${count} 连续互动`}>
-      <img
-        className="msg-cell__streak-icon"
-        src="/assets/streak-flame.png"
-        alt=""
-        aria-hidden="true"
-      />
-      <span className="msg-cell__streak-count">{count}</span>
-    </span>
-  )
+function OnlineIndicator() {
+  return <img className="msg-story__online-image" src={ASSETS.onlineStory} alt="" aria-hidden="true" />
 }
 
 /* ── Status bar ── */
@@ -147,7 +130,7 @@ function StoryItem({ name, avatar, ring, online, add }) {
             <img className="msg-story__ring" src={ASSETS.ringMuted} alt="" aria-hidden="true" />
           )}
           <Avatar className="msg-story__avatar" size="xl" src={avatar} alt={name} />
-          {online && <OnlineIndicator kind="story" />}
+          {online && <OnlineIndicator />}
           {add && (
             <>
               <img className="msg-story__add-bg"   src={ASSETS.storyAddBg}   alt="" aria-hidden="true" />
@@ -168,61 +151,6 @@ function StoryRail() {
         <StoryItem key={story.id} {...story} />
       ))}
     </section>
-  )
-}
-
-/* ── Conversation row ── */
-function ConversationRow({ name, avatar, preview, time, unread, online, muted, reaction, streak, redPreview, grayPreview, onTap }) {
-  return (
-    <button className="msg-cell" type="button" onClick={onTap}>
-      <div className="msg-cell__avatar-shell">
-        <Avatar className="msg-cell__avatar" size="56" src={avatar} alt={name} />
-        {online && <OnlineIndicator kind="cell" />}
-      </div>
-
-      <div className="msg-cell__content">
-        <div className="msg-cell__header">
-          <div className="msg-cell__name-wrap">
-            <span className="msg-cell__name">{name}</span>
-            {streak && <StreakBadge count={streak} />}
-          </div>
-          <div className="msg-cell__meta">
-            {muted && (
-              <span className="msg-cell__mute" aria-label="已静音">
-                <img className="msg-cell__mute-glyph" src={ASSETS.muteIcon} alt="" aria-hidden="true" />
-              </span>
-            )}
-            <span className="msg-cell__time">{time}</span>
-          </div>
-        </div>
-
-        <div className="msg-cell__preview-row">
-          {reaction && (
-            <span className="msg-cell__reaction" aria-hidden="true">
-              <img className="msg-cell__reaction-emoji" src={ASSETS.reactionLaugh} alt="" />
-              <span className="msg-cell__reaction-divider" />
-            </span>
-          )}
-
-          {redPreview && grayPreview && (
-            <span className="msg-cell__mixed-preview">
-              <span className="msg-cell__preview msg-cell__preview--accent">{redPreview}</span>
-              <span className="msg-cell__preview msg-cell__preview--muted">{grayPreview}</span>
-            </span>
-          )}
-
-          {redPreview && !grayPreview && (
-            <span className="msg-cell__preview msg-cell__preview--accent">{redPreview}</span>
-          )}
-
-          {!redPreview && (
-            <span className="msg-cell__preview msg-cell__preview--muted">{preview}</span>
-          )}
-
-          {unread && <Badge count={unread} color="danger" className="msg-cell__badge" />}
-        </div>
-      </div>
-    </button>
   )
 }
 

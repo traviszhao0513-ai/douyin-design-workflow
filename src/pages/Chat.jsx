@@ -2,15 +2,9 @@ import { useState, useRef, useEffect } from 'react'
 import './Chat.css'
 import Bubble from '../components/im/Bubble'
 import Avatar from '../../Douyin_design_system/ui/components/Avatar/Avatar'
+import ChatTopBar from '../components/im/ChatTopBar'
+import InputBar from '../components/im/InputBar'
 
-/* ── Figma SVG icons (exported from IM UI Kit 2.0) ── */
-import IcBack    from '../icons/chat/ic_titlebar_back.svg?react'
-import IcVideo   from '../icons/chat/ic_titlebar_video.svg?react'
-import IcMore    from '../icons/chat/ic_titlebar_more.svg?react'
-import IcModule  from '../icons/chat/ic_im_module.svg?react'
-import IcVoice   from '../icons/chat/ic_im_voice.svg?react'
-import IcSticker from '../icons/chat/ic_im_sticker.svg?react'
-import IcPlus    from '../icons/chat/ic_im_plus.svg?react'
 /* ── Bubble-specific icons (from system icon library) ── */
 import IcPlay      from '../icons/svg/ic_s_s_play_16_filled.svg?react'
 import IcVideoCall from '../icons/svg/ic_s_s_video_20_filled.svg?react'
@@ -543,45 +537,6 @@ function ChatStatusBar() {
   )
 }
 
-function ChatNavBar({ contactName, contactAvatar, onBack, onPreview }) {
-  return (
-    <header className="cht-nav">
-      <div className="cht-nav__left">
-        <button className="cht-nav__back" type="button" aria-label="返回" onClick={onBack}>
-          <IcBack width={24} height={24} />
-        </button>
-        <div className="cht-nav__contact">
-          <Avatar className="cht-nav__avatar" size="36" src={contactAvatar} alt="" />
-          <div className="cht-nav__name-row">
-            <span className="cht-nav__name">{contactName}</span>
-            <span className="cht-nav__badge" aria-label="红火等级 3">
-              <span className="cht-nav__badge-icon">🔥</span>
-              <span className="cht-nav__badge-count">3</span>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="cht-nav__right">
-        <button
-          className="cht-nav__action cht-nav__preview-btn"
-          type="button"
-          aria-label="组件走查"
-          title="气泡组件走查"
-          onClick={onPreview}
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="M21 21l-4.35-4.35"/>
-          </svg>
-        </button>
-        <button className="cht-nav__action" type="button" aria-label="视频通话"><IcVideo width={24} height={24} /></button>
-        <button className="cht-nav__action" type="button" aria-label="更多"><IcMore width={24} height={24} /></button>
-      </div>
-      <div className="cht-nav__divider" />
-    </header>
-  )
-}
-
 function ConversationFlow({ contactAvatar, myAvatar }) {
   return (
     <section className="cht-flow" aria-label="对话内容">
@@ -614,38 +569,6 @@ function QuickReplyChips() {
   )
 }
 
-function ChatInputBar({ showKeyboard, onToggleKeyboard }) {
-  const inputRef = useRef(null)
-
-  const handleFieldClick = () => {
-    onToggleKeyboard(true)
-    setTimeout(() => inputRef.current?.focus(), 50)
-  }
-
-  return (
-    <div className="cht-input-bar">
-      <div className="cht-input-bar__row">
-        <button className="cht-input-bar__icon-btn" type="button" aria-label="更多功能"><IcModule width={24} height={24} /></button>
-        <div className="cht-input-bar__field" onClick={handleFieldClick}>
-          {!showKeyboard && <span className="cht-input-bar__placeholder">发消息</span>}
-          <input
-            ref={inputRef}
-            className="cht-input-bar__input"
-            type="text"
-            enterKeyHint="send"
-            onBlur={() => onToggleKeyboard(false)}
-          />
-        </div>
-        <div className="cht-input-bar__actions">
-          <button className="cht-input-bar__icon-btn" type="button" aria-label="语音消息"><IcVoice width={24} height={24} /></button>
-          <button className="cht-input-bar__icon-btn" type="button" aria-label="表情"><IcSticker width={24} height={24} /></button>
-          <button className="cht-input-bar__icon-btn" type="button" aria-label="展开"><IcPlus width={24} height={24} /></button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function HomeIndicator() {
   return (
     <div className="cht-home-indicator" aria-hidden="true">
@@ -669,7 +592,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
   return (
     <div className="cht-page">
       <ChatStatusBar />
-      <ChatNavBar
+      <ChatTopBar
         contactName={displayName}
         contactAvatar={displayAvatar}
         onBack={handleBack}
@@ -680,7 +603,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
         myAvatar={ASSETS.avatarRight}
       />
       <QuickReplyChips />
-      <ChatInputBar showKeyboard={showKeyboard} onToggleKeyboard={setShowKeyboard} />
+      <InputBar showKeyboard={showKeyboard} onToggleKeyboard={setShowKeyboard} />
       <HomeIndicator />
     </div>
   )

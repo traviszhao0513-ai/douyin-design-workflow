@@ -345,3 +345,50 @@ npm run build
 共享组件：`src/shared/` (NavBar, StatusBar, TabBar)
 
 **后续需求应基于该基座扩展，不要重复搭建。**
+
+---
+
+## Component-First Decision Tree / 组件优先决策树
+
+**任何新 UI 落地前，按顺序回答以下问题。**
+目标：页面层（L4）只做组装和业务串联，可视部分尽量来自复用，而不是手写。
+
+```
+新需求来了
+   │
+   ▼
+1. L3 是否已有现成的 IM 分子可以直接用？
+   └── 是 → import from src/components/im/*, 直接用，结束
+   └── 否 ↓
+2. 能否通过组合 ≥1 个 L2 原子件（Douyin_design_system/ui/components/*）实现？
+   └── 能 → 在 src/components/im/ 新建一个 L3 分子
+           ·内部组合 L2 原子件
+           ·不要把业务逻辑耦合进 L2
+           ·命名用业务语义（ConversationRow / ChatTopBar，不要叫 IMCard）
+   └── 不能 ↓
+3. 是否需要一个全新的、和业务无关的通用能力？
+   └── 是 → 先和设计师确认是否纳入设计系统（L2）
+           ·确认后在 Douyin_design_system/ui/components/ 新增原子件
+           ·提供 light + dark token 映射
+   └── 否 ↓
+4. 业务高度特化、短期不会复用？
+   └── 作为内联实现留在页面（L4），但：
+       ·颜色/尺寸必须走 --dux-* / --cht-* token，不允许 hex
+       ·在 docs/design-system-audit.md 新增一行记录，便于后续整合
+```
+
+### 四层约束
+
+| 层 | 路径 | 允许 | 禁止 |
+|----|------|------|------|
+| **L1 · Tokens** | `Douyin_design_system/ui/tokens.css` | 定义 `--dux-*` 原始值 | 业务色/页面变量 |
+| **L2 · Atoms** | `Douyin_design_system/ui/components/*` | 通用、无业务语义 | 依赖具体业务 prop、写死文案 |
+| **L3 · IM Molecules** | `src/components/im/*` | 组合 L2，业务语义命名 | 直接写死颜色 hex、绕过 L2 |
+| **L4 · Pages** | `src/pages/*` | 布局 + 业务串联 + 调 L3/L2 | 实现新的纯视觉原子件 |
+
+### 审查清单（PR 或出图前）
+
+- [ ] 新加的 JSX 里有 `<img>` / 原生 `<button>` 做头像或状态点吗？→ 应该用 `<Avatar>` / `<Badge>`
+- [ ] 新加的 CSS 有 hex 颜色字面量吗？→ 应该引用 `var(--dux-*)` 或 `var(--cht-*)`
+- [ ] 新增的页面级组件函数超过 80 行？→ 考虑是否是一个 L3 分子，拆到 `src/components/im/`
+- [ ] 新能力 dark 模式已覆盖？→ `[data-theme="dark"]` 切换时所有颜色都应该自动适配

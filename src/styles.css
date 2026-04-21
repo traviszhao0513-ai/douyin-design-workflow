@@ -94,8 +94,73 @@ button {
 
 .screen-content--flush {
   padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── iOS-style stacked page layers ── */
+.ios-page {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
+  will-change: transform;
+}
+
+.ios-page--base {
+  z-index: 0;
+}
+
+.ios-page--overlay {
+  z-index: 1;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Keep mounted but invisible — no repaint, preserves scroll & resources */
+.ios-page--hidden {
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Push: chat enters from right */
+.ios-slide-enter {
+  animation: ios-enter 350ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Push: messages shifts left ~30% */
+.ios-slide-back {
+  animation: ios-back 350ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Pop: chat exits to right */
+.ios-slide-exit {
+  animation: ios-exit 350ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+/* Pop: messages shifts back from left */
+.ios-slide-forward {
+  animation: ios-forward 350ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@keyframes ios-enter {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes ios-back {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-30%); }
+}
+
+@keyframes ios-exit {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100%); }
+}
+
+@keyframes ios-forward {
+  from { transform: translateX(-30%); }
+  to   { transform: translateX(0); }
 }
 
 .section-card {

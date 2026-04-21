@@ -3,129 +3,96 @@ import Badge from '../../Douyin_design_system/ui/components/Badge/Badge'
 import BottomNav from '../../Douyin_design_system/ui/components/BottomNav/BottomNav'
 import './Messages.css'
 
+/* ── Figma cut assets (fresh URLs, valid 7 days from session) ── */
 const ASSETS = {
-  battery: 'https://www.figma.com/api/mcp/asset/24dd205d-8f20-485f-b4c4-a44741a72ca3',
-  wifi: 'https://www.figma.com/api/mcp/asset/66d3a09b-2f12-4e49-b7ac-242aca472358',
-  cellular: 'https://www.figma.com/api/mcp/asset/ab89c1ef-0974-4e6a-9d22-0ca4902df618',
-  titleMenu: 'https://www.figma.com/api/mcp/asset/58494da4-9e95-4305-bc9c-703874f7caa0',
-  titleSearch: 'https://www.figma.com/api/mcp/asset/a2048319-7098-462b-b6b6-43b14583251e',
-  titleAdd: 'https://www.figma.com/api/mcp/asset/83e26fac-3e74-44ff-8e02-26877a09206e',
-  ringActive: 'https://www.figma.com/api/mcp/asset/9d463d53-ee82-4700-a993-4007ae43be36',
-  ringMuted: 'https://www.figma.com/api/mcp/asset/66c481a8-0f5b-409f-9380-98e1a1f9e5c8',
-  storyAddBg: 'https://www.figma.com/api/mcp/asset/e266aa4a-0dbd-488b-83d8-def120d33020',
-  storyAddIcon: 'https://www.figma.com/api/mcp/asset/fcea8c78-079b-40ef-bfb7-b90985ba9bbe',
-  avatarStoryMine: 'https://www.figma.com/api/mcp/asset/294a595d-c9a6-44e6-9703-b055d830cc1d',
-  avatarStoryAnka: 'https://www.figma.com/api/mcp/asset/ddb06e4a-2838-4098-a857-55eaf9730abd',
-  avatarStoryWeiyi: 'https://www.figma.com/api/mcp/asset/d8ac4e4b-44cc-4006-a3c8-8a0160200727',
-  avatarStoryZoe: 'https://www.figma.com/api/mcp/asset/94989453-28c1-4f23-8dc7-5cd7f35406ca',
-  avatarStoryYezi: 'https://www.figma.com/api/mcp/asset/b28813a1-fac9-4de3-a36b-bab728cef347',
-  avatarHudong: 'https://www.figma.com/api/mcp/asset/7da4938f-932d-4eb1-ba9d-7b5c9f52f876',
-  avatarSliva: 'https://www.figma.com/api/mcp/asset/1b9e8248-68a1-4b0f-beeb-d2ee4afa7d68',
-  avatarJianzhao: 'https://www.figma.com/api/mcp/asset/4df42ff3-80ad-4289-acec-415f3879a814',
-  avatarF3: 'https://www.figma.com/api/mcp/asset/db6678bc-aed6-43d2-abf5-984ec1bb9987',
-  avatarHuohuo: 'https://www.figma.com/api/mcp/asset/8ea22de8-af43-4ebb-9a2a-ad8e8d836cdd',
-  avatarChengzi: 'https://www.figma.com/api/mcp/asset/857ffd04-51b9-4522-9154-5a35a6f5267c',
-  avatarSimin: 'https://www.figma.com/api/mcp/asset/6ba502d0-35d1-4e6b-8874-b9be89810f70',
-  avatarGoususu: 'https://www.figma.com/api/mcp/asset/e0ff9a84-645d-4e8a-9c63-5c2d788938dd',
-  avatarXuyuan: 'https://www.figma.com/api/mcp/asset/e0ff9a84-645d-4e8a-9c63-5c2d788938dd',
-  mute: 'https://www.figma.com/api/mcp/asset/f5a6eeae-432d-41d3-89df-95bd982b418c',
-  storyOnline: 'https://www.figma.com/api/mcp/asset/8b9c8105-cf0e-499e-9ea4-bba8f46d87cd',
-  cellOnline: 'https://www.figma.com/api/mcp/asset/eef5af1a-2332-4251-b9ec-723f09fcc17a',
-  streakMask: 'https://www.figma.com/api/mcp/asset/5655c009-7516-4549-ab14-65bd217b1d26',
-  streakBase: 'https://www.figma.com/api/mcp/asset/4bcfd1c6-ed16-41f8-a7b6-f53c286daf39',
-  streakTop: 'https://www.figma.com/api/mcp/asset/37a15f1b-3a56-4469-8f55-5d0b5087d3b8',
-  reactionLaugh: 'https://www.figma.com/api/mcp/asset/c1dac7e6-603c-4c5a-8ec3-1dc5e9cfa576',
-  centerTab: 'https://www.figma.com/api/mcp/asset/a318f80b-d838-4ab3-a804-19090adb8c17',
+  // Status bar
+  cellular:       'https://www.figma.com/api/mcp/asset/e6ad5e36-4e95-4927-9c96-5ac3892ea296',
+  wifi:           'https://www.figma.com/api/mcp/asset/01f395b2-3bbb-4c41-bcfd-e501a7855330',
+  batteryOutline: 'https://www.figma.com/api/mcp/asset/62e9da0d-bf30-4c33-9ebf-03e7ea0afbca',
+  batteryCap:     'https://www.figma.com/api/mcp/asset/abb0e133-33b9-4230-87ce-84d1f852c6c1',
+  batteryFill:    'https://www.figma.com/api/mcp/asset/495a70fd-feb3-4b2e-ac43-21e0ea0f30f4',
+  // Title bar
+  menuIcon:       'https://www.figma.com/api/mcp/asset/3cd67837-ec94-4ad1-a00e-8a3751644923',
+  searchIcon:     'https://www.figma.com/api/mcp/asset/c7d6ef42-4cd7-4e3b-af60-8bc368fb4c63',
+  addIcon:        'https://www.figma.com/api/mcp/asset/f8c78cf1-2dc9-4c09-b366-4d8e2b2f0e95',
+  // Story rings (Figma gradient ring images)
+  ringActive:     'https://www.figma.com/api/mcp/asset/b617a970-6788-4fae-8216-ceae7a9fbe1d',
+  ringMuted:      'https://www.figma.com/api/mcp/asset/583f82b8-5ed2-4cd0-8bd2-04966a841ec9',
+  // Story add button (two-layer: bg circle + plus icon)
+  storyAddBg:     'https://www.figma.com/api/mcp/asset/845195e2-8ff6-45d5-aa43-e1d1392070d2',
+  storyAddIcon:   'https://www.figma.com/api/mcp/asset/e23cac87-06c2-4e34-b6fa-c8ab03b5f0e8',
+  // Online indicators
+  onlineStory:    'https://www.figma.com/api/mcp/asset/5fbc7d09-96c9-4ab7-9a30-63e77e9d2f2b',
+  onlineCell:     'https://www.figma.com/api/mcp/asset/1f7a4396-c715-4f85-97c4-0f3f760c1c5b',
+  // Story avatars (Figma photos)
+  avatarMine:     'https://www.figma.com/api/mcp/asset/8cdbe76b-4142-4da0-95fb-40ff08cab7e9',
+  avatarAnka:     'https://www.figma.com/api/mcp/asset/7a15bf86-b693-4ead-afd0-375cb937a941',
+  avatarWeiyi:    'https://www.figma.com/api/mcp/asset/a6cb7859-b6ec-435f-bfa7-d9d569a6cc2f',
+  avatarZoe:      'https://www.figma.com/api/mcp/asset/0c86a603-8908-454d-909b-50ed25d4ef4f',
+  avatarYezi:     'https://www.figma.com/api/mcp/asset/9e946d7b-1a7b-4eee-831f-8254e78ec4df',
+  // Conversation avatars
+  avatarHudong:   'https://www.figma.com/api/mcp/asset/55f86530-9f64-4eab-9787-8602a1cbaaf8',
+  avatarSliva:    'https://www.figma.com/api/mcp/asset/69f6571f-6575-48b3-a780-06c25f4c71c6',
+  avatarJianzhao: 'https://www.figma.com/api/mcp/asset/647ff3d3-f34e-4ec0-ba55-f6cb5e1c27b4',
+  avatarF3:       'https://www.figma.com/api/mcp/asset/e8d2e757-b505-4c4d-9bac-926ba8e92127',
+  avatarHuohuo:   'https://www.figma.com/api/mcp/asset/9091b541-b1a7-4056-8ed0-2ca07f18ae80',
+  avatarChengzi:  'https://www.figma.com/api/mcp/asset/4f320bcd-1704-40b9-918e-40af07ef93a0',
+  avatarSimin:    'https://www.figma.com/api/mcp/asset/7331803f-6d54-4719-b372-1ddd7b6d7e63',
+  avatarGoususu:  'https://www.figma.com/api/mcp/asset/e70ec2b4-398e-4517-8601-5008f729ff06',
+  avatarXuyuan:   'https://www.figma.com/api/mcp/asset/2147c95a-c4b2-4904-897e-bd909f7868c1',
+  // Cell decoration assets
+  muteIcon:       'https://www.figma.com/api/mcp/asset/c43e4a4b-8faf-4224-b8a9-efe9a5d9412f',
+  reactionLaugh:  'https://www.figma.com/api/mcp/asset/5e265c06-9983-4cbb-99f9-ac2f0d7e8fae',
+  streakMask:     'https://www.figma.com/api/mcp/asset/53bb9b78-b450-4568-97ed-55d07788db7b',
+  streakBase:     'https://www.figma.com/api/mcp/asset/253cf483-6897-4dea-92a6-738b6437d68c',
+  streakTop:      'https://www.figma.com/api/mcp/asset/db40e93d-dcf0-49f3-8c44-da3ae8f75009',
+  // Bottom nav center tab
+  centerTab:      'https://www.figma.com/api/mcp/asset/634790b7-8f77-426f-ad9e-93f9a51539c7',
 }
 
 const STORIES = [
-  { id: 'mine', name: '我的日常', avatar: ASSETS.avatarStoryMine, ring: 'active', add: true },
-  { id: 'anka', name: '安卡', avatar: ASSETS.avatarStoryAnka, ring: 'active', online: true },
-  { id: 'weiyi', name: '为益', avatar: ASSETS.avatarStoryWeiyi, ring: 'active' },
-  { id: 'zoe', name: 'Zoe', avatar: ASSETS.avatarStoryZoe, ring: 'muted' },
-  { id: 'yezi', name: '椰子🥥', avatar: ASSETS.avatarStoryYezi, online: true },
+  { id: 'mine',  name: '我的日常', avatar: ASSETS.avatarMine,  ring: 'active', add: true },
+  { id: 'anka',  name: '安卡',     avatar: ASSETS.avatarAnka,  ring: 'active', online: true },
+  { id: 'weiyi', name: '为益',     avatar: ASSETS.avatarWeiyi, ring: 'active' },
+  { id: 'zoe',   name: 'Zoe',      avatar: ASSETS.avatarZoe,   ring: 'muted' },
+  { id: 'yezi',  name: '椰子🥥',  avatar: ASSETS.avatarYezi,  online: true },
 ]
 
 const CONVERSATIONS = [
-  { id: 'hudong', name: '互动消息', avatar: ASSETS.avatarHudong, preview: '小YY 赞了你的作品', time: '11:12' },
-  { id: 'sliva', name: 'Sliva', avatar: ASSETS.avatarSliva, preview: '明天去干嘛', time: '11:12', unread: 9 },
-  { id: 'jianzhao', name: '建昭', avatar: ASSETS.avatarJianzhao, preview: '30 分钟内在线', time: '11:12', unread: 1 },
-  { id: 'f3', name: 'F3 缺一', avatar: ASSETS.avatarF3, preview: '今晚豆角胡同？大跃啤酒走起？？？', time: '11:12', muted: true },
-  {
-    id: 'huohuo',
-    name: '火火',
-    avatar: ASSETS.avatarHuohuo,
-    preview: '今晚豆角胡同？大跃啤酒走起？？？',
-    time: '11:12',
-    online: true,
-    reaction: ASSETS.reactionLaugh,
-  },
-  { id: 'chengzi', name: '橙子味大叔', avatar: ASSETS.avatarChengzi, preview: '[分享视频]', time: '11:12' },
-  {
-    id: 'simin',
-    name: 'simin',
-    avatar: ASSETS.avatarSimin,
-    preview: '已读 · 这个天气热死了，想在空调里吃西瓜啦啦啦啦',
-    time: '11:12',
-    streak: 3,
-  },
-  { id: 'goususu', name: '狗酥酥', avatar: ASSETS.avatarGoususu, redPreview: "[语音] 2''", time: '11:12' },
-  { id: 'xuyuan', name: '徐圆圆在这里', avatar: ASSETS.avatarXuyuan, redPreview: '[红包]', grayPreview: '[分享视频]', time: '11:12' },
+  { id: 'hudong',   name: '互动消息',     avatar: ASSETS.avatarHudong,   preview: '小YY 赞了你的作品', time: '11:12' },
+  { id: 'sliva',    name: 'Sliva',        avatar: ASSETS.avatarSliva,    preview: '明天去干嘛', time: '11:12', unread: 9 },
+  { id: 'jianzhao', name: '建昭',         avatar: ASSETS.avatarJianzhao, preview: '30 分钟内在线', time: '11:12', unread: 1 },
+  { id: 'f3',       name: 'F3 缺一',      avatar: ASSETS.avatarF3,       preview: '今晚豆角胡同？大跃啤酒走起？？？', time: '11:12', muted: true },
+  { id: 'huohuo',   name: '火火',         avatar: ASSETS.avatarHuohuo,   preview: '今晚豆角胡同？大跃啤酒走起？？？', time: '11:12', online: true, reaction: true },
+  { id: 'chengzi',  name: '橙子味大叔',   avatar: ASSETS.avatarChengzi,  preview: '[分享视频]', time: '11:12' },
+  { id: 'simin',    name: 'simin',        avatar: ASSETS.avatarSimin,    preview: '已读 · 这个天气热死了，想在空调里吃西瓜啦啦啦啦', time: '11:12', streak: 3 },
+  { id: 'goususu',  name: '狗酥酥',       avatar: ASSETS.avatarGoususu,  redPreview: "[语音] 2''", time: '11:12' },
+  { id: 'xuyuan',   name: '徐圆圆在这里', avatar: ASSETS.avatarXuyuan,   redPreview: '[红包]', grayPreview: '[分享视频]', time: '11:12' },
 ]
 
+/* ── Online indicator — Figma cut image ── */
 function OnlineIndicator({ kind }) {
-  const src = kind === 'story' ? ASSETS.storyOnline : ASSETS.cellOnline
-  const className = kind === 'story' ? 'msg-story__online-indicator' : 'msg-cell__online-indicator'
-  const imageClassName = kind === 'story' ? 'msg-story__online-image' : 'msg-cell__online-image'
-
-  return (
-    <span className={className} aria-hidden="true">
-      <img className={imageClassName} src={src} alt="" />
-    </span>
-  )
+  const src = kind === 'story' ? ASSETS.onlineStory : ASSETS.onlineCell
+  const cls = kind === 'story' ? 'msg-story__online-image' : 'msg-cell__online-image'
+  return <img className={cls} src={src} alt="" aria-hidden="true" />
 }
 
+/* ── Streak badge — flame image + count ── */
 function StreakBadge({ count }) {
-  const maskStyle = {
-    WebkitMaskImage: `url(${ASSETS.streakMask})`,
-    maskImage: `url(${ASSETS.streakMask})`,
-    WebkitMaskRepeat: 'no-repeat',
-    maskRepeat: 'no-repeat',
-    WebkitMaskSize: '12.584px 16.782px',
-    maskSize: '12.584px 16.782px',
-  }
-
   return (
     <span className="msg-cell__streak" aria-label={`${count} 连续互动`}>
-      <span className="msg-cell__streak-icon" aria-hidden="true">
-        <span
-          className="msg-cell__streak-base"
-          style={{
-            ...maskStyle,
-            WebkitMaskPosition: '-1.945px -6.365px',
-            maskPosition: '-1.945px -6.365px',
-          }}
-        >
-          <img className="msg-cell__streak-base-fill" src={ASSETS.streakBase} alt="" />
-        </span>
-        <span className="msg-cell__streak-top-shell">
-          <span
-            className="msg-cell__streak-top-mask"
-            style={{
-              ...maskStyle,
-              WebkitMaskPosition: '0.178px -0.153px',
-              maskPosition: '0.178px -0.153px',
-            }}
-          >
-            <img className="msg-cell__streak-top-fill" src={ASSETS.streakTop} alt="" />
-          </span>
-        </span>
-      </span>
+      <img
+        className="msg-cell__streak-icon"
+        src="/assets/streak-flame.png"
+        alt=""
+        aria-hidden="true"
+      />
       <span className="msg-cell__streak-count">{count}</span>
     </span>
   )
 }
 
+/* ── Status bar ── */
 function MessageStatusBar() {
   return (
     <div className="msg-status-bar" aria-hidden="true">
@@ -133,51 +100,60 @@ function MessageStatusBar() {
       <div className="msg-status-bar__icons">
         <img className="msg-status-bar__cellular" src={ASSETS.cellular} alt="" />
         <img className="msg-status-bar__wifi" src={ASSETS.wifi} alt="" />
-        <img className="msg-status-bar__battery" src={ASSETS.battery} alt="" />
+        <div className="msg-status-bar__battery">
+          <img className="msg-status-bar__battery-outline" src={ASSETS.batteryOutline} alt="" />
+          <img className="msg-status-bar__battery-fill"    src={ASSETS.batteryFill}    alt="" />
+          <img className="msg-status-bar__battery-cap"     src={ASSETS.batteryCap}     alt="" />
+        </div>
       </div>
     </div>
   )
 }
 
+/* ── Title bar ── */
 function MessageTitleBar() {
   return (
     <header className="msg-title-bar">
       <button className="msg-title-bar__touch msg-title-bar__touch--menu" type="button" aria-label="打开菜单">
-        <span className="msg-title-bar__menu-icon" aria-hidden="true">
-          <img src={ASSETS.titleMenu} alt="" />
-        </span>
+        <div className="msg-title-bar__menu-icon">
+          <img src={ASSETS.menuIcon} alt="" />
+        </div>
       </button>
       <h1 className="msg-title-bar__title">消息</h1>
       <div className="msg-title-bar__actions">
         <button className="msg-title-bar__touch msg-title-bar__touch--search" type="button" aria-label="搜索">
-          <img className="msg-title-bar__search-icon" src={ASSETS.titleSearch} alt="" />
+          <img className="msg-title-bar__search-icon" src={ASSETS.searchIcon} alt="" />
         </button>
         <button className="msg-title-bar__touch msg-title-bar__touch--add" type="button" aria-label="新建会话">
-          <span className="msg-title-bar__add-icon-shell" aria-hidden="true">
-            <img className="msg-title-bar__add-icon" src={ASSETS.titleAdd} alt="" />
-          </span>
+          <div className="msg-title-bar__add-icon-shell">
+            <img className="msg-title-bar__add-icon" src={ASSETS.addIcon} alt="" />
+          </div>
         </button>
       </div>
     </header>
   )
 }
 
+/* ── Story item — Figma ring image + Figma avatar ── */
 function StoryItem({ name, avatar, ring, online, add }) {
-  const ringSrc = ring === 'muted' ? ASSETS.ringMuted : ASSETS.ringActive
-
   return (
     <div className="msg-story">
       <button className="msg-story__pressable" type="button" aria-label={name}>
-        <div className={`msg-story__avatar-shell${ring ? '' : ' msg-story__avatar-shell--plain'}`}>
-          {ring ? <img className="msg-story__ring" src={ringSrc} alt="" /> : null}
+        <div className="msg-story__avatar-shell">
+          {ring === 'active' && (
+            <img className="msg-story__ring" src={ASSETS.ringActive} alt="" aria-hidden="true" />
+          )}
+          {ring === 'muted' && (
+            <img className="msg-story__ring" src={ASSETS.ringMuted} alt="" aria-hidden="true" />
+          )}
           <Avatar className="msg-story__avatar" size="xl" src={avatar} alt={name} />
-          {online ? <OnlineIndicator kind="story" /> : null}
-          {add ? (
-            <span className="msg-story__add" aria-hidden="true">
-              <img className="msg-story__add-bg" src={ASSETS.storyAddBg} alt="" />
-              <img className="msg-story__add-icon" src={ASSETS.storyAddIcon} alt="" />
-            </span>
-          ) : null}
+          {online && <OnlineIndicator kind="story" />}
+          {add && (
+            <>
+              <img className="msg-story__add-bg"   src={ASSETS.storyAddBg}   alt="" aria-hidden="true" />
+              <img className="msg-story__add-icon" src={ASSETS.storyAddIcon} alt="" aria-hidden="true" />
+            </>
+          )}
         </div>
       </button>
       <span className="msg-story__name">{name}</span>
@@ -195,93 +171,89 @@ function StoryRail() {
   )
 }
 
-function ConversationRow({
-  name,
-  avatar,
-  preview,
-  time,
-  unread,
-  online,
-  muted,
-  reaction,
-  streak,
-  redPreview,
-  grayPreview,
-}) {
+/* ── Conversation row ── */
+function ConversationRow({ name, avatar, preview, time, unread, online, muted, reaction, streak, redPreview, grayPreview, onTap }) {
   return (
-    <button className="msg-cell" type="button">
+    <button className="msg-cell" type="button" onClick={onTap}>
       <div className="msg-cell__avatar-shell">
         <Avatar className="msg-cell__avatar" size="xl" style={{ width: 56, height: 56 }} src={avatar} alt={name} />
-        {online ? <OnlineIndicator kind="cell" /> : null}
+        {online && <OnlineIndicator kind="cell" />}
       </div>
 
       <div className="msg-cell__content">
         <div className="msg-cell__header">
           <div className="msg-cell__name-wrap">
             <span className="msg-cell__name">{name}</span>
-            {streak ? <StreakBadge count={streak} /> : null}
+            {streak && <StreakBadge count={streak} />}
           </div>
-
           <div className="msg-cell__meta">
-            {muted ? (
-              <span className="msg-cell__mute" aria-hidden="true">
-                <img className="msg-cell__mute-glyph" src={ASSETS.mute} alt="" />
+            {muted && (
+              <span className="msg-cell__mute" aria-label="已静音">
+                <img className="msg-cell__mute-glyph" src={ASSETS.muteIcon} alt="" aria-hidden="true" />
               </span>
-            ) : null}
+            )}
             <span className="msg-cell__time">{time}</span>
           </div>
         </div>
 
         <div className="msg-cell__preview-row">
-          {reaction ? (
+          {reaction && (
             <span className="msg-cell__reaction" aria-hidden="true">
-              <span className="msg-cell__reaction-emoji">
-                <img src={reaction} alt="" />
-              </span>
+              <img className="msg-cell__reaction-emoji" src={ASSETS.reactionLaugh} alt="" />
               <span className="msg-cell__reaction-divider" />
             </span>
-          ) : null}
+          )}
 
-          {redPreview && grayPreview ? (
+          {redPreview && grayPreview && (
             <span className="msg-cell__mixed-preview">
               <span className="msg-cell__preview msg-cell__preview--accent">{redPreview}</span>
               <span className="msg-cell__preview msg-cell__preview--muted">{grayPreview}</span>
             </span>
-          ) : null}
+          )}
 
-          {redPreview && !grayPreview ? (
+          {redPreview && !grayPreview && (
             <span className="msg-cell__preview msg-cell__preview--accent">{redPreview}</span>
-          ) : null}
+          )}
 
-          {!redPreview ? (
+          {!redPreview && (
             <span className="msg-cell__preview msg-cell__preview--muted">{preview}</span>
-          ) : null}
+          )}
 
-          {unread ? <Badge count={unread} color="danger" className="msg-cell__badge" /> : null}
+          {unread && <Badge count={unread} color="danger" className="msg-cell__badge" />}
         </div>
       </div>
     </button>
   )
 }
 
-function MessageList() {
+function MessageList({ onChange }) {
   return (
     <section className="msg-list" aria-label="会话列表">
       {CONVERSATIONS.map((item) => (
-        <ConversationRow key={item.id} {...item} />
+        <ConversationRow
+          key={item.id}
+          {...item}
+          onTap={() => onChange?.('chat', { contactName: item.name, contactAvatar: item.avatar })}
+        />
       ))}
     </section>
   )
 }
 
+/* ── Bottom bar with Figma capture tab image ── */
 function MessageBottomBar({ onChange }) {
   const items = [
-    { key: 'feed', icon: <span className="msg-bottom-nav__text">首页</span> },
-    { key: 'friends', icon: <span className="msg-bottom-nav__text">朋友</span> },
+    { key: 'feed',     icon: <span className="msg-bottom-nav__text">首页</span> },
+    { key: 'friends',  icon: <span className="msg-bottom-nav__text">朋友</span> },
     {
       key: 'capture',
       icon: (
-        <img className="msg-bottom-nav__capture-image" src={ASSETS.centerTab} alt="" />
+        <img
+          className="msg-bottom-nav__capture-image"
+          src={ASSETS.centerTab}
+          alt="拍摄"
+          aria-hidden="true"
+        />
       ),
     },
     {
@@ -294,10 +266,7 @@ function MessageBottomBar({ onChange }) {
 
   const handleChange = (key) => {
     if (!onChange) return
-    if (key === 'friends') {
-      onChange('feed')
-      return
-    }
+    if (key === 'friends') { onChange('feed'); return }
     onChange(key)
   }
 
@@ -320,7 +289,7 @@ export default function Messages({ onChange }) {
       <MessageStatusBar />
       <MessageTitleBar />
       <StoryRail />
-      <MessageList />
+      <MessageList onChange={onChange} />
       <MessageBottomBar onChange={onChange} />
     </div>
   )

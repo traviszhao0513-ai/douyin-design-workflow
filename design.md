@@ -396,6 +396,100 @@ Available component families (22):
 
 ---
 
+## Icon Library / 图标库
+
+> Source: Figma「Douyin Delight Icons」
+> File key: `ARvYQu8qBDaMF3312hSym3`
+> URL: https://www.figma.com/design/ARvYQu8qBDaMF3312hSym3/Douyin-Delight-Icons
+
+### 使用原则
+
+1. **优先使用图标库** — 凡需要 icon 的场景，先在 Douyin Delight Icons 中查找，不要自造。
+2. **语义命名** — 引用图标时使用 Figma 中的图标名（如 `icon/home-fill`、`icon/search-line`），不要描述形状。
+3. **尺寸规范**
+
+   | 尺寸 | 用途 |
+   |------|------|
+   | 16px | 行内图标、标签、辅助说明 |
+   | 20px | 列表条目、表单前缀 |
+   | 24px | 导航栏、标题栏操作区（主规格） |
+   | 28px | 底部主导航 Tab 图标 |
+   | 32px+ | 空状态插画、功能入口大图标 |
+
+4. **颜色规范** — 图标颜色必须使用 Text 或 Const 语义 token，不要硬编码 hex：
+
+   | 场景 | Token |
+   |------|-------|
+   | 默认/一级图标 | `TextPrimary` |
+   | 二级/辅助图标 | `TextSecondary` |
+   | 三级/提示图标 | `TextTertiary` |
+   | 置灰/禁用图标 | `TextQuaternary` |
+   | 视频页叠加图标 | `ConstTextInverse` |
+   | 品牌/选中状态 | `Primary` (#FE2C55) |
+
+5. **Fill vs Line** — 选中/激活状态用 `-fill` 变体，默认/未选中状态用 `-line` 变体（与 Figma 图标命名规则保持一致）。
+
+### 在出图中引用图标
+
+每次出图中涉及图标的位置，输出格式为：
+
+```
+[icon: {名称} | {尺寸}px | {颜色 token}]
+示例: [icon: home-fill | 28px | Primary]
+       [icon: search-line | 24px | TextPrimary]
+       [icon: more-horizontal-line | 24px | ConstTextInverse]
+```
+
+### 代码中的调用方式（推荐）
+
+SVG 已通过 `scripts/export-icons.mjs` 导出到本地，团队成员无需 Figma 权限即可使用：
+
+```jsx
+import { Icon } from '@/icons'  // 或 import Icon from 'src/icons/Icon'
+
+// 基础用法
+<Icon name="ic_s_s_home" size={24} variant="filled" />
+
+// 带颜色 token（使用 CSS 变量）
+<Icon name="ic_s_s_search" size={24} variant="outlined" color="var(--text-primary)" />
+
+// 视频页叠加图标
+<Icon name="ic_s_s_like" size={24} variant="filled" color="var(--const-text-inverse)" />
+```
+
+**Props 说明：**
+
+| Prop | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| `name` | string | 必填 | 图标名，参考 `src/icons/index.js` 速查表或 `src/icons/manifest.json` |
+| `size` | 12\|16\|20\|24 | 24 | 尺寸（px），自动降级到最近可用尺寸 |
+| `variant` | outlined\|filled\|light | outlined | 形态，自动降级 |
+| `color` | string | currentColor | CSS color 或 CSS 变量 |
+
+**本地文件结构：**
+```
+src/icons/
+├── Icon.jsx          ← 统一调用组件
+├── index.js          ← 导出 + 常用图标名速查
+├── manifest.json     ← 完整图标索引（export 后生成）
+└── svg/              ← 所有 SVG 文件（export 后生成）
+    ├── ic_s_s_home_24_filled.svg
+    ├── ic_s_s_home_24_outlined.svg
+    └── ...
+```
+
+**首次导出 / 同步更新：**
+```bash
+FIGMA_TOKEN=your_token node scripts/export-icons.mjs
+```
+Token 获取：Figma → Settings → Security → Personal access tokens（免费账号可用）
+
+### Figma MCP 调用方式（AI 出图时）
+
+在 Figma MCP 中引用图标库时，优先使用 `search_design_system` 搜索图标名称，或通过 `get_design_context` 读取 file key `ARvYQu8qBDaMF3312hSym3` 下的组件。
+
+---
+
 ## Screen Composition Patterns / 页面构成模式
 
 ### Feed / 首页 Feed
@@ -486,6 +580,7 @@ When generating a page or screen, Claude should state:
 - which parts were composed from existing components
 - which parts required fallback beyond the current library
 - **which color tokens were applied (by semantic name)**
+- **which icons were used (by name, size, color token) — format: `[icon: {名称} | {尺寸}px | {token}]`**
 
 ---
 
@@ -518,4 +613,5 @@ When generating a page or screen, Claude should state:
 
 | Date | Change |
 |------|--------|
+| 2026-04-01 | 纳入 Douyin Delight Icons 图标库（file key `ARvYQu8qBDaMF3312hSym3`）；新增 Icon Library section，定义图标命名规范、尺寸体系、颜色 token 映射和出图引用格式 |
 | 2026-03-31 | SP1: 重构 design.md，新增完整 Figma token 体系、IM 页面模式、自学习协议、风格定义调整为「克制/简洁/iOS-native」 |

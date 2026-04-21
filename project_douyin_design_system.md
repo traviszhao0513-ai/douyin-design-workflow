@@ -18,6 +18,7 @@ For visual work in this repository, the default reading order is:
 | 本地组件代码 | `./Douyin_design_system/ui/components/` |
 | Figma 组件库 | [Douyin Delight Variants](https://www.figma.com/design/lvq7nDFgdhswnLfCBRpNQF) |
 | Figma 样式库 | file key `YpbpN10qMQLTarfcjZti4H` (Douyin Delight Styles) |
+| **Figma 图标库** | file key `ARvYQu8qBDaMF3312hSym3` ([Douyin Delight Icons](https://www.figma.com/design/ARvYQu8qBDaMF3312hSym3/Douyin-Delight-Icons)) |
 
 ---
 

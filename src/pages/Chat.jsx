@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import './Chat.css'
 import Bubble from '../components/Bubble'
+import Avatar from '../../Douyin_design_system/ui/components/Avatar/Avatar'
 
 /* ── Figma SVG icons (exported from IM UI Kit 2.0) ── */
 import IcBack    from '../icons/chat/ic_titlebar_back.svg?react'
@@ -464,7 +465,7 @@ function MessageRow({ message, contactAvatar, myAvatar }) {
     const v2Avatar = v2IsSent ? myAvatar : contactAvatar
     return (
       <div className={`cht-row cht-row--${v2Dir}`}>
-        {!v2IsSent && <img className="cht-row__avatar" src={v2Avatar} alt="" />}
+        {!v2IsSent && <Avatar className="cht-row__avatar" size="36" src={v2Avatar} alt="" />}
         <div className="cht-row__body">
           <Bubble
             type={message.type}
@@ -475,7 +476,7 @@ function MessageRow({ message, contactAvatar, myAvatar }) {
             data={message.data}
           />
         </div>
-        {v2IsSent && <img className="cht-row__avatar" src={v2Avatar} alt="" />}
+        {v2IsSent && <Avatar className="cht-row__avatar" size="36" src={v2Avatar} alt="" />}
       </div>
     )
   }
@@ -500,11 +501,11 @@ function MessageRow({ message, contactAvatar, myAvatar }) {
 
   return (
     <div className={`cht-row cht-row--${dir}`}>
-      {!isSent && <img className="cht-row__avatar" src={avatar} alt="" />}
+      {!isSent && <Avatar className="cht-row__avatar" size="36" src={avatar} alt="" />}
       <div className="cht-row__body">
         {bubble}
       </div>
-      {isSent && <img className="cht-row__avatar" src={avatar} alt="" />}
+      {isSent && <Avatar className="cht-row__avatar" size="36" src={avatar} alt="" />}
     </div>
   )
 }
@@ -550,7 +551,7 @@ function ChatNavBar({ contactName, contactAvatar, onBack, onPreview }) {
           <IcBack width={24} height={24} />
         </button>
         <div className="cht-nav__contact">
-          <img className="cht-nav__avatar" src={contactAvatar} alt="" />
+          <Avatar className="cht-nav__avatar" size="36" src={contactAvatar} alt="" />
           <div className="cht-nav__name-row">
             <span className="cht-nav__name">{contactName}</span>
             <span className="cht-nav__badge" aria-label="红火等级 3">

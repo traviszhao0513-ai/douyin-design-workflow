@@ -271,8 +271,6 @@
 .msg-story__avatar.dux-avatar {
   position: relative;
   z-index: 1;
-  width: 64px;
-  height: 64px;
   background: var(--BGPlaceholder);
   box-shadow: 0 0 0 2px var(--BGSurface);
 }
@@ -367,8 +365,6 @@
 }
 
 .msg-cell__avatar.dux-avatar {
-  width: 56px !important;
-  height: 56px !important;
   background: var(--BGPlaceholder);
 }
 

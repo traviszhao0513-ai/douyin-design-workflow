@@ -114,33 +114,29 @@
   --dux-ease-exit:     cubic-bezier(0.4, 0, 1, 1);
 }
 
-/* ─── Dark Mode overrides ──────────────────────────────────── */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --dux-color-text-primary:   #F4F4F4;
-    --dux-color-text-secondary: #8A8B94;
-    --dux-color-text-tertiary:  #4D4E58;
-    --dux-color-text-inverse:   #161823;
-
-    --dux-color-bg-page:    #161823;
-    --dux-color-bg-surface: #1F2030;
-    --dux-color-bg-subtle:  #2E2F3A;
-
-    --dux-color-border-light:  #2E2F3A;
-    --dux-color-border-medium: #4D4E58;
-  }
-}
-
-.dark {
-  --dux-color-text-primary:   #F4F4F4;
-  --dux-color-text-secondary: #8A8B94;
-  --dux-color-text-tertiary:  #4D4E58;
+/* ─── Dark Mode overrides ──────────────────────────────────────────
+ * 显式控制：只通过 .dark 类 或 [data-theme="dark"] 属性触发。
+ * 不挂 @media (prefers-color-scheme)，避免 OS 设置污染设计预览。
+ * ─────────────────────────────────────────────────────────────── */
+.dark,
+[data-theme="dark"] {
+  --dux-color-text-primary:   #E6E6E6;
+  --dux-color-text-secondary: rgba(255, 255, 255, 0.60);
+  --dux-color-text-tertiary:  rgba(255, 255, 255, 0.40);
   --dux-color-text-inverse:   #161823;
+  --dux-color-text-link:      #4A9EFF;
 
-  --dux-color-bg-page:    #161823;
-  --dux-color-bg-surface: #1F2030;
-  --dux-color-bg-subtle:  #2E2F3A;
+  --dux-color-bg-page:    #0F0F12;
+  --dux-color-bg-surface: #1C1C1F;
+  --dux-color-bg-subtle:  #2A2A2E;
 
-  --dux-color-border-light:  #2E2F3A;
-  --dux-color-border-medium: #4D4E58;
+  --dux-color-border-light:  rgba(255, 255, 255, 0.10);
+  --dux-color-border-medium: rgba(255, 255, 255, 0.16);
+
+  --dux-color-brand-primary-surface: rgba(43, 121, 255, 0.16);
+
+  --dux-color-status-success-surface: rgba(37, 198, 133, 0.16);
+  --dux-color-status-warning-surface: rgba(255, 136, 0, 0.16);
+  --dux-color-status-error-surface:   rgba(254, 44, 85, 0.16);
+  --dux-color-status-info-surface:    rgba(43, 121, 255, 0.16);
 }

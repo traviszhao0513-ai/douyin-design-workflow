@@ -176,7 +176,7 @@ function ConversationRow({ name, avatar, preview, time, unread, online, muted, r
   return (
     <button className="msg-cell" type="button" onClick={onTap}>
       <div className="msg-cell__avatar-shell">
-        <Avatar className="msg-cell__avatar" size="xl" style={{ width: 56, height: 56 }} src={avatar} alt={name} />
+        <Avatar className="msg-cell__avatar" size="56" src={avatar} alt={name} />
         {online && <OnlineIndicator kind="cell" />}
       </div>
 

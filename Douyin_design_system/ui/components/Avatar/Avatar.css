@@ -25,6 +25,11 @@
 .dux-avatar--lg  { width: 48px; height: 48px; font-size: var(--dux-font-size-base); }
 .dux-avatar--xl  { width: 64px; height: 64px; font-size: var(--dux-font-size-lg); }
 
+/* IM-specific numeric sizes — 抖音 IM 会话头像 36，列表项 56 */
+.dux-avatar--36  { width: 36px; height: 36px; font-size: var(--dux-font-size-sm); }
+.dux-avatar--44  { width: 44px; height: 44px; font-size: var(--dux-font-size-base); }
+.dux-avatar--56  { width: 56px; height: 56px; font-size: var(--dux-font-size-base); }
+
 /* ─── Shapes ────────────────────────────────────────────────────────────── */
 .dux-avatar--circle { border-radius: var(--dux-radius-full); }
 .dux-avatar--square { border-radius: var(--dux-radius-sm); }

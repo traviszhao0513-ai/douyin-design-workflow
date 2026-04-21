@@ -17,23 +17,25 @@
  */
 
 /* ─────────────────────────────────────────
-   Design tokens — light (default) + dark (via [data-theme="dark"])
-   Aligned with Figma IMBasicMessage variant 深浅模式.
+   IM 语义别名（Layer 3 token aliases）
+   通用颜色、字号、行距等全部指向 Layer 1 --dux-* 单一来源。
+   只有 IM-specific 的值（气泡底色、Link3、语音波形灰阶等）保留本地定义，
+   作为 "IM 扩展 token"。修改请同步 docs/design-system-audit.md。
    ───────────────────────────────────────── */
 .cht-page,
 [data-theme] .cht-page,
 .cht-page[data-theme] {
-  /* Backgrounds */
+  /* Backgrounds — IM 专属灰度，比 dux page 略深便于气泡对比 */
   --cht-BGPage:           #efefef;
   --cht-BGSurface:        #efefef;
   --cht-BGInputBar:       #efefef;
-  --cht-BGInputField:     #ffffff;
-  --cht-BGChip:           #ffffff;
+  --cht-BGInputField:     var(--dux-color-bg-surface);
+  --cht-BGChip:           var(--dux-color-bg-surface);
 
-  /* Bubble colors — from Figma node fills */
-  --cht-bubble-recv:      #ffffff;
-  --cht-bubble-sent:      #168ef9;
-  --cht-bubble-radius:    8px;
+  /* Bubble — IM-specific fills */
+  --cht-bubble-recv:      var(--dux-color-bg-surface);
+  --cht-bubble-sent:      #168EF9;
+  --cht-bubble-radius:    var(--dux-radius-sm);
 
   /* Quote card tints */
   --cht-quote-recv:       rgba(22, 24, 35, 0.06);
@@ -47,39 +49,37 @@
   --cht-call-icon-recv:   rgba(22, 24, 35, 0.06);
   --cht-call-icon-sent:   rgba(255, 255, 255, 0.22);
 
-  /* Text */
-  --cht-text-primary:     #161823;
-  --cht-text-secondary:   rgba(22, 24, 35, 0.60);
-  --cht-text-tertiary:    rgba(22, 24, 35, 0.34);
-  --cht-text-sent:        #ffffff;
-  --cht-text-link:        #04498d;   /* Link/Link3 — light */
-  --cht-text-mention:     #04498d;   /* Link/Link3 — light */
-  --cht-text-mention-sent:#ffffff;
+  /* Text — 直通 dux */
+  --cht-text-primary:     var(--dux-color-text-primary);
+  --cht-text-secondary:   var(--dux-color-text-secondary);
+  --cht-text-tertiary:    var(--dux-color-text-tertiary);
+  --cht-text-sent:        var(--dux-color-text-inverse);
+  --cht-text-link:        #04498D;  /* Link/Link3 — IM 专属 link 色 */
+  --cht-text-mention:     #04498D;
+  --cht-text-mention-sent:var(--dux-color-text-inverse);
 
   /* Line */
-  --cht-line:             rgba(22, 24, 35, 0.12);
+  --cht-line:             var(--dux-color-border-light);
 
   /* Brand */
-  --cht-primary:          #fe2c55;
+  --cht-primary:          var(--dux-color-brand-secondary);  /* Douyin 红 */
 
   /* State/status */
-  --cht-status-error:     #fe2c55;
+  --cht-status-error:     var(--dux-color-status-error);
   --cht-status-spinner:   rgba(22, 24, 35, 0.45);
   --cht-invalid-bg:       rgba(22, 24, 35, 0.04);
   --cht-invalid-fg:       rgba(22, 24, 35, 0.45);
 }
 
-/* ── Dark theme overrides ────────────────── */
+/* ── Dark theme overrides（仅覆写 IM 专属值；通用项由 tokens.css 的 [data-theme="dark"] 处理） */
 [data-theme="dark"] .cht-page,
 .cht-page[data-theme="dark"] {
   --cht-BGPage:           #121212;
   --cht-BGSurface:        #121212;
   --cht-BGInputBar:       #121212;
-  --cht-BGInputField:     #2a2a2a;
-  --cht-BGChip:           #2a2a2a;
 
-  --cht-bubble-recv:      #2a2a2a;
-  --cht-bubble-sent:      #0e6bcb;
+  --cht-bubble-recv:      #2A2A2A;
+  --cht-bubble-sent:      #0E6BCB;
 
   --cht-quote-recv:       rgba(255, 255, 255, 0.08);
   --cht-quote-sent:       rgba(255, 255, 255, 0.16);
@@ -90,15 +90,8 @@
   --cht-call-icon-recv:   rgba(255, 255, 255, 0.10);
   --cht-call-icon-sent:   rgba(255, 255, 255, 0.22);
 
-  --cht-text-primary:     #e6e6e6;
-  --cht-text-secondary:   rgba(255, 255, 255, 0.65);
-  --cht-text-tertiary:    rgba(255, 255, 255, 0.42);
-  --cht-text-sent:        #ffffff;
-  --cht-text-link:        #face15;   /* Link/Link3 — dark */
-  --cht-text-mention:     #face15;   /* Link/Link3 — dark */
-  --cht-text-mention-sent:#ffffff;
-
-  --cht-line:             rgba(255, 255, 255, 0.14);
+  --cht-text-link:        #FACE15;   /* Link/Link3 dark variant */
+  --cht-text-mention:     #FACE15;
 
   --cht-status-spinner:   rgba(255, 255, 255, 0.55);
   --cht-invalid-bg:       rgba(255, 255, 255, 0.06);
@@ -182,12 +175,6 @@
 }
 
 .cht-nav__contact { display: flex; align-items: center; gap: 10px; }
-
-.cht-nav__avatar {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 
 .cht-nav__name-row { display: flex; align-items: center; gap: 4px; }
 
@@ -273,14 +260,6 @@
   color: var(--cht-text-tertiary);
   text-align: center;
   line-height: 1.5;
-}
-
-/* Avatar */
-.cht-row__avatar {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  object-fit: cover;
 }
 
 /* Body (bubble wrapper)  — screen(390)−108=282pt max 360 */

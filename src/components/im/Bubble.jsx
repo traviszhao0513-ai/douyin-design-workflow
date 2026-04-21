@@ -15,15 +15,15 @@
  * All styling tokens live in Chat.css; this component is a renderer switch only.
  */
 
-import IcPlay      from '../icons/svg/ic_s_s_play_16_filled.svg?react'
-import IcVideoCall from '../icons/svg/ic_s_s_video_20_filled.svg?react'
-import IcPhoneUp   from '../icons/svg/ic_s_s_phoneup_20_filled.svg?react'
-import IcPause     from '../icons/svg/ic_s_s_pause_16_filled.svg?react'
-import IcCamera    from '../icons/svg/ic_s_s_camera_16_filled.svg?react'
-import IcDouyin    from '../icons/svg/ic_s_s_douyin_16_filled.svg?react'
-import IcShop      from '../icons/svg/ic_s_s_shop_16_filled.svg?react'
-import IcLink12    from '../icons/svg/ic_s_s_link_12_outlined.svg?react'
-import IcPhoneLinkPlus from '../icons/svg/ic_s_s_phonelinkplus_12_outlined.svg?react'
+import IcPlay      from '../../icons/svg/ic_s_s_play_16_filled.svg?react'
+import IcVideoCall from '../../icons/svg/ic_s_s_video_20_filled.svg?react'
+import IcPhoneUp   from '../../icons/svg/ic_s_s_phoneup_20_filled.svg?react'
+import IcPause     from '../../icons/svg/ic_s_s_pause_16_filled.svg?react'
+import IcCamera    from '../../icons/svg/ic_s_s_camera_16_filled.svg?react'
+import IcDouyin    from '../../icons/svg/ic_s_s_douyin_16_filled.svg?react'
+import IcShop      from '../../icons/svg/ic_s_s_shop_16_filled.svg?react'
+import IcLink12    from '../../icons/svg/ic_s_s_link_12_outlined.svg?react'
+import IcPhoneLinkPlus from '../../icons/svg/ic_s_s_phonelinkplus_12_outlined.svg?react'
 
 /* Canonical type keys (English) mapped to Figma 类型 values for reference */
 export const TYPES = [

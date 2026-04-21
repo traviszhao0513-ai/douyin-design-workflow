@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import './Chat.css'
-import Bubble from '../components/Bubble'
+import Bubble from '../components/im/Bubble'
 import Avatar from '../../Douyin_design_system/ui/components/Avatar/Avatar'
 
 /* ── Figma SVG icons (exported from IM UI Kit 2.0) ── */

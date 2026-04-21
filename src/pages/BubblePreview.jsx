@@ -8,7 +8,7 @@
  */
 
 import { useState, useMemo } from 'react'
-import Bubble, { TYPES } from '../components/Bubble'
+import Bubble, { TYPES } from '../components/im/Bubble'
 import './Chat.css'
 import './BubblePreview.css'
 

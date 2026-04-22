@@ -70,12 +70,11 @@
   --cht-invalid-bg:       rgba(22, 24, 35, 0.04);
   --cht-invalid-fg:       rgba(22, 24, 35, 0.45);
   --cht-reply-slot:       36px;
+  --cht-reply-gap:        16px;
   --cht-reply-threshold:  30px;
   --cht-reply-icon-bg:    var(--dux-color-bg-surface);
-  --cht-reply-icon-fg:    var(--cht-primary);
-  --cht-reply-icon-border: var(--dux-color-border-light);
-  --cht-reply-icon-active-bg: var(--cht-primary);
-  --cht-reply-icon-active-fg: var(--cht-text-sent);
+  --cht-reply-icon-fg:    var(--dux-color-text-primary);
+  --cht-reply-icon-active-fg: var(--dux-color-text-link);
   --cht-reply-preview-bg: var(--dux-color-bg-subtle);
   --cht-reply-preview-border: var(--dux-color-border-light);
   --cht-reply-preview-title: var(--cht-primary);
@@ -114,6 +113,9 @@
   --cht-status-spinner:   rgba(255, 255, 255, 0.55);
   --cht-invalid-bg:       rgba(255, 255, 255, 0.06);
   --cht-invalid-fg:       rgba(255, 255, 255, 0.50);
+  --cht-reply-icon-bg:    var(--dux-color-text-primary);
+  --cht-reply-icon-fg:    var(--dux-color-text-inverse);
+  --cht-reply-icon-active-fg: var(--dux-color-text-link);
 }
 
 .cht-page {
@@ -305,13 +307,13 @@
 .cht-swipe__reply {
   position: absolute;
   top: 50%;
-  left: calc(var(--cht-swipe-shift, 0px) - var(--cht-reply-slot));
+  left: calc(var(--cht-swipe-shift, 0px) - var(--cht-reply-slot) - var(--cht-reply-gap));
   width: var(--cht-reply-slot);
   height: var(--cht-reply-slot);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--cht-reply-icon-border);
+  border: none;
   border-radius: var(--dux-radius-full);
   background: var(--cht-reply-icon-bg);
   color: var(--cht-reply-icon-fg);
@@ -321,7 +323,6 @@
   transform: translateY(-50%) scale(var(--cht-swipe-progress, 0));
   transition:
     background var(--dux-duration-fast) var(--dux-ease-standard),
-    border-color var(--dux-duration-fast) var(--dux-ease-standard),
     color var(--dux-duration-fast) var(--dux-ease-standard),
     left var(--dux-duration-normal) var(--dux-ease-standard),
     opacity var(--dux-duration-fast) var(--dux-ease-standard),
@@ -337,8 +338,6 @@
 }
 
 .cht-swipe.is-ready .cht-swipe__reply {
-  background: var(--cht-reply-icon-active-bg);
-  border-color: var(--cht-reply-icon-active-bg);
   color: var(--cht-reply-icon-active-fg);
 }
 
@@ -358,7 +357,6 @@
 .cht-swipe.is-dragging .cht-swipe__reply {
   transition:
     background var(--dux-duration-fast) var(--dux-ease-standard),
-    border-color var(--dux-duration-fast) var(--dux-ease-standard),
     color var(--dux-duration-fast) var(--dux-ease-standard);
 }
 

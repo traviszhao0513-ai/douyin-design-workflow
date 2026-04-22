@@ -1,5 +1,5 @@
 import Avatar from '../../../Douyin_design_system/ui/components/Avatar/Avatar'
-import IcReply from '../../icons/svg/ic_s_s_arrowuturnleft_20_filled.svg?react'
+import IcReply from '../../icons/svg/ic_s_s_uturnleft_20_outlined.svg?react'
 import Bubble from './Bubble'
 import useSwipeReply from './useSwipeReply'
 
@@ -36,7 +36,7 @@ function MessageBubbleRow({ avatar, isSent, message, onReply }) {
     onTrigger: () => onReply?.(message),
   })
   const bubbleSpec = resolveBubbleSpec(message)
-  const avatarOpacity = Math.max(0.12, 1 - progress)
+  const avatarOpacity = Math.max(0, 1 - progress)
   const swipeClassName = [
     'cht-swipe',
     `cht-swipe--${message.dir}`,

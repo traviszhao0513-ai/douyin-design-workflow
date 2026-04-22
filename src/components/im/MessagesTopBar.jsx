@@ -1,9 +1,22 @@
 /**
  * MessagesTopBar — L3 IM molecule
  * 消息页顶部：菜单 · 标题 · 搜索 · 新建会话。
- * 图标全部 inline SVG，不依赖 Figma CDN。
+ *
+ * 图标约定：icon 级视觉全部走 Figma 导出的 PNG 切图（通过 icons prop 注入），
+ *          不用 inline SVG，避免后续 stroke/shape 与设计稿漂移。
+ *
+ * Props:
+ *   title — 标题文案，默认「消息」
+ *   icons — { menu, search, add } 三个 PNG URL（通常来自 DECORATIVE_ASSETS）
+ *   onMenu / onSearch / onAdd — 事件回调
  */
-export default function MessagesTopBar({ title = '消息', onMenu, onSearch, onAdd }) {
+export default function MessagesTopBar({
+  title = '消息',
+  icons = {},
+  onMenu,
+  onSearch,
+  onAdd,
+}) {
   return (
     <header className="msg-title-bar">
       <button
@@ -12,9 +25,9 @@ export default function MessagesTopBar({ title = '消息', onMenu, onSearch, onA
         aria-label="打开菜单"
         onClick={onMenu}
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 7h12M4 12h16M4 17h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
+        <div className="msg-title-bar__menu-icon">
+          {icons.menu && <img src={icons.menu} alt="" />}
+        </div>
       </button>
       <h1 className="msg-title-bar__title">{title}</h1>
       <div className="msg-title-bar__actions">
@@ -24,10 +37,9 @@ export default function MessagesTopBar({ title = '消息', onMenu, onSearch, onA
           aria-label="搜索"
           onClick={onSearch}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" />
-            <path d="m20 20-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
+          {icons.search && (
+            <img className="msg-title-bar__search-icon" src={icons.search} alt="" />
+          )}
         </button>
         <button
           className="msg-title-bar__touch msg-title-bar__touch--add"
@@ -35,9 +47,11 @@ export default function MessagesTopBar({ title = '消息', onMenu, onSearch, onA
           aria-label="新建会话"
           onClick={onAdd}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
+          <div className="msg-title-bar__add-icon-shell">
+            {icons.add && (
+              <img className="msg-title-bar__add-icon" src={icons.add} alt="" />
+            )}
+          </div>
         </button>
       </div>
     </header>

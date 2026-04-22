@@ -7,8 +7,14 @@
  *       未来若能用 CSS 或 L2 组件表达，再继续替换。
  */
 
-/* ── Decorative Figma cut assets (non-icon artwork) ── */
+/* ── Figma cut PNG assets ──
+   说明：所有 icon 级视觉统一用 Figma 导出的 PNG 切图，不用 inline SVG，
+         避免后续 stroke/shape 与设计稿漂移。 */
 export const DECORATIVE_ASSETS = {
+  // Title bar icons (PNG cuts from Figma)
+  menuIcon:     'https://www.figma.com/api/mcp/asset/3cd67837-ec94-4ad1-a00e-8a3751644923',
+  searchIcon:   'https://www.figma.com/api/mcp/asset/c7d6ef42-4cd7-4e3b-af60-8bc368fb4c63',
+  addIcon:      'https://www.figma.com/api/mcp/asset/f8c78cf1-2dc9-4c09-b366-4d8e2b2f0e95',
   // Story rings (gradient artwork)
   ringActive:   'https://www.figma.com/api/mcp/asset/b617a970-6788-4fae-8216-ceae7a9fbe1d',
   ringMuted:    'https://www.figma.com/api/mcp/asset/583f82b8-5ed2-4cd0-8bd2-04966a841ec9',

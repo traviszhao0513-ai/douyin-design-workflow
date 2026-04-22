@@ -21,7 +21,7 @@ function StoryItem({ story, assets }) {
           {ring === 'muted' && assets.ringMuted && (
             <img className="msg-story__ring" src={assets.ringMuted} alt="" aria-hidden="true" />
           )}
-          <Avatar className="msg-story__avatar" size="56" src={avatar} alt={name} />
+          <Avatar className="msg-story__avatar" size="xl" src={avatar} alt={name} />
           {online && assets.onlineStory && (
             <img className="msg-story__online-image" src={assets.onlineStory} alt="" aria-hidden="true" />
           )}

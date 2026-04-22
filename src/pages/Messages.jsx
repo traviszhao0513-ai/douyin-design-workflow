@@ -14,7 +14,13 @@ export default function Messages({ onChange }) {
   return (
     <div className="msg-page">
       <IMStatusBar />
-      <MessagesTopBar />
+      <MessagesTopBar
+        icons={{
+          menu:   DECORATIVE_ASSETS.menuIcon,
+          search: DECORATIVE_ASSETS.searchIcon,
+          add:    DECORATIVE_ASSETS.addIcon,
+        }}
+      />
       <StoryRail items={STORIES} assets={DECORATIVE_ASSETS} />
       <section className="msg-list" aria-label="会话列表">
         {CONVERSATIONS.map((item) => (

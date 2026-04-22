@@ -6,6 +6,8 @@
   justify-content: space-between;
   height: 44px;
   padding: 0 24px;
+  /* 状态栏保持透明，跟随页面底色（避免出现错位的灰条） */
+  background: transparent;
   color: var(--dux-color-text-primary, #161823);
 }
 

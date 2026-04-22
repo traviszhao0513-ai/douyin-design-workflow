@@ -21,7 +21,7 @@ export default function InputBar({ showKeyboard, onToggleKeyboard }) {
   return (
     <div className="cht-input-bar">
       <div className="cht-input-bar__row">
-        <button className="cht-input-bar__icon-btn" type="button" aria-label="更多功能"><IcModule width={24} height={24} /></button>
+        <button className="cht-input-bar__icon-btn" type="button" aria-label="更多功能"><IcModule width={30} height={30} /></button>
         <div className="cht-input-bar__field" onClick={handleFieldClick}>
           {!showKeyboard && <span className="cht-input-bar__placeholder">发消息</span>}
           <input
@@ -33,9 +33,9 @@ export default function InputBar({ showKeyboard, onToggleKeyboard }) {
           />
         </div>
         <div className="cht-input-bar__actions">
-          <button className="cht-input-bar__icon-btn" type="button" aria-label="语音消息"><IcVoice width={24} height={24} /></button>
-          <button className="cht-input-bar__icon-btn" type="button" aria-label="表情"><IcSticker width={24} height={24} /></button>
-          <button className="cht-input-bar__icon-btn" type="button" aria-label="展开"><IcPlus width={24} height={24} /></button>
+          <button className="cht-input-bar__icon-btn" type="button" aria-label="语音消息"><IcVoice width={30} height={30} /></button>
+          <button className="cht-input-bar__icon-btn" type="button" aria-label="表情"><IcSticker width={30} height={30} /></button>
+          <button className="cht-input-bar__icon-btn" type="button" aria-label="展开"><IcPlus width={30} height={30} /></button>
         </div>
       </div>
     </div>

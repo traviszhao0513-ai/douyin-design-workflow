@@ -817,7 +817,7 @@ img.cht-card__brand-icon { object-fit: cover; }
 .cht-home-indicator__pill {
   width: 135px; height: 5px;
   border-radius: 100px;
-  background: rgba(0, 0, 0, 0.18);
+  background: #000;
 }
 
 /* ═══════════════════════════════════════════════════════════

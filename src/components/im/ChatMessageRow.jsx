@@ -36,6 +36,7 @@ function MessageBubbleRow({ avatar, isSent, message, onReply }) {
     onTrigger: () => onReply?.(message),
   })
   const bubbleSpec = resolveBubbleSpec(message)
+  const avatarOpacity = Math.max(0.12, 1 - progress)
   const swipeClassName = [
     'cht-swipe',
     `cht-swipe--${message.dir}`,
@@ -45,7 +46,11 @@ function MessageBubbleRow({ avatar, isSent, message, onReply }) {
 
   return (
     <div className={`cht-row cht-row--${message.dir}`}>
-      {!isSent && <Avatar className="cht-row__avatar" size="36" src={avatar} alt="" />}
+      {!isSent && (
+        <div className="cht-row__avatar-shell" style={{ opacity: avatarOpacity }}>
+          <Avatar className="cht-row__avatar" size="36" src={avatar} alt="" />
+        </div>
+      )}
       <div className="cht-row__body">
         <div
           className={swipeClassName}
@@ -63,7 +68,11 @@ function MessageBubbleRow({ avatar, isSent, message, onReply }) {
           </div>
         </div>
       </div>
-      {isSent && <Avatar className="cht-row__avatar" size="36" src={avatar} alt="" />}
+      {isSent && (
+        <div className="cht-row__avatar-shell" style={{ opacity: avatarOpacity }}>
+          <Avatar className="cht-row__avatar" size="36" src={avatar} alt="" />
+        </div>
+      )}
     </div>
   )
 }

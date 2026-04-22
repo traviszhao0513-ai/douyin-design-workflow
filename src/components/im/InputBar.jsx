@@ -22,7 +22,7 @@ function ReplyPreview({ onClearReply, replyingTo }) {
   if (!replyingTo) return null
 
   return (
-    <div className="cht-input-bar__reply">
+    <div className="cht-input-bar__reply" key={replyingTo.id}>
       <div className="cht-input-bar__reply-copy">
         <span className="cht-input-bar__reply-eyebrow">回复 {replyingTo.author}</span>
         <p className="cht-input-bar__reply-text">{replyingTo.summary}</p>
@@ -45,7 +45,7 @@ const InputBar = forwardRef(function InputBar({ onClearReply, replyingTo, showKe
 
   const focusComposer = () => {
     onToggleKeyboard(true)
-    window.setTimeout(() => inputRef.current?.focus(), 50)
+    inputRef.current?.focus({ preventScroll: true })
   }
 
   useImperativeHandle(ref, () => ({
@@ -55,7 +55,9 @@ const InputBar = forwardRef(function InputBar({ onClearReply, replyingTo, showKe
   return (
     <div className={`cht-input-bar${replyingTo ? ' cht-input-bar--replying' : ''}`}>
       <div className="cht-input-bar__composer">
-        <ReplyPreview replyingTo={replyingTo} onClearReply={onClearReply} />
+        <div className={`cht-input-bar__reply-shell${replyingTo ? ' is-visible' : ''}`}>
+          <ReplyPreview replyingTo={replyingTo} onClearReply={onClearReply} />
+        </div>
         <div className="cht-input-bar__row">
           <button className="cht-input-bar__icon-btn" type="button" aria-label="更多功能"><IcModule width={24} height={24} /></button>
           <div className="cht-input-bar__field" onClick={focusComposer}>
@@ -65,6 +67,7 @@ const InputBar = forwardRef(function InputBar({ onClearReply, replyingTo, showKe
               className="cht-input-bar__input"
               type="text"
               enterKeyHint="send"
+              onFocus={() => onToggleKeyboard(true)}
               onBlur={() => onToggleKeyboard(false)}
             />
           </div>

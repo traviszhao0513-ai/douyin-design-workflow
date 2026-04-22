@@ -148,9 +148,9 @@ function ConversationFlow({ contactAvatar, myAvatar, onReply }) {
   )
 }
 
-function QuickReplyChips() {
+function QuickReplyChips({ hidden }) {
   return (
-    <div className="cht-acb" aria-label="快捷回复">
+    <div className={`cht-acb${hidden ? ' cht-acb--hidden' : ''}`} aria-label="快捷回复">
       <div className="cht-acb__scroll">
         {QUICK_REPLIES.map((item) => (
           <button key={item.id} className="cht-acb__chip" type="button">
@@ -178,10 +178,6 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
   }, [])
   const forcedTheme = devParams?.get('theme') === 'dark' ? 'dark' : undefined
   const forcedReplyId = Number(devParams?.get('reply') || 0)
-  const [showKeyboard, setShowKeyboard] = useState(false)
-  const [replyingTo, setReplyingTo] = useState(null)
-  const inputBarRef = useRef(null)
-
   const displayName = contactName || '合川路林志玲'
   const displayAvatar = contactAvatar || ASSETS.avatarLeft
   const seededReply = useMemo(() => {
@@ -192,6 +188,9 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
       displayName,
     )
   }, [displayName, forcedReplyId])
+  const [showKeyboard, setShowKeyboard] = useState(Boolean(seededReply))
+  const [replyingTo, setReplyingTo] = useState(seededReply)
+  const inputBarRef = useRef(null)
 
   useEffect(() => {
     setReplyingTo(seededReply)
@@ -217,7 +216,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
         myAvatar={ASSETS.avatarRight}
         onReply={handleReply}
       />
-      <QuickReplyChips />
+      <QuickReplyChips hidden={Boolean(replyingTo)} />
       <InputBar
         ref={inputBarRef}
         onClearReply={() => setReplyingTo(null)}

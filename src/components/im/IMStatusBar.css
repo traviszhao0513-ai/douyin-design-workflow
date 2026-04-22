@@ -1,0 +1,27 @@
+/* IMStatusBar — L3 shared styles (Chat + Messages) */
+.im-status-bar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 0 24px;
+  color: var(--dux-color-text-primary, #161823);
+}
+
+.im-status-bar__time {
+  font-family: "SF Pro Text", -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.165px;
+}
+
+.im-status-bar__icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.im-status-bar__icons svg {
+  display: block;
+}

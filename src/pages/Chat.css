@@ -81,6 +81,12 @@
   --cht-reply-preview-title: var(--cht-primary);
   --cht-reply-preview-text: var(--cht-text-secondary);
   --cht-reply-preview-close: var(--cht-text-secondary);
+  --cht-kbd-bg: var(--dux-color-bg-page);
+  --cht-kbd-panel: var(--dux-color-bg-subtle);
+  --cht-kbd-key: var(--dux-color-bg-surface);
+  --cht-kbd-key-muted: var(--dux-color-border-light);
+  --cht-kbd-key-text: var(--cht-text-primary);
+  --cht-kbd-shadow: var(--dux-shadow-sm);
 }
 
 /* ── Dark theme overrides（仅覆写 IM 专属值；通用项由 tokens.css 的 [data-theme="dark"] 处理） */
@@ -1011,6 +1017,88 @@ img.cht-card__brand-icon { object-fit: cover; }
   width: 135px; height: 5px;
   border-radius: 100px;
   background: rgba(0, 0, 0, 0.18);
+}
+
+/* ─────────────────────────────────────────
+   Mock iOS keyboard
+   ───────────────────────────────────────── */
+.cht-kbd {
+  flex-shrink: 0;
+  background: var(--cht-kbd-bg);
+  padding: 0 var(--dux-spacing-2) var(--dux-spacing-2);
+  animation: cht-kbd-rise var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+.cht-kbd__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--dux-spacing-2);
+  border-top-left-radius: var(--dux-radius-lg);
+  border-top-right-radius: var(--dux-radius-lg);
+  background: var(--cht-kbd-panel);
+}
+
+.cht-kbd__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.cht-kbd__row--2 {
+  padding-inline: 18px;
+}
+
+.cht-kbd__key {
+  height: 42px;
+  min-width: 28px;
+  padding: 0 9px;
+  border: none;
+  border-radius: 8px;
+  background: var(--cht-kbd-key);
+  box-shadow: var(--cht-kbd-shadow);
+  color: var(--cht-kbd-key-text);
+  font-size: var(--dux-font-size-md);
+  font-weight: var(--dux-font-weight-medium);
+  line-height: 1;
+}
+
+.cht-kbd__key--wide {
+  min-width: 42px;
+}
+
+.cht-kbd__key--muted {
+  background: var(--cht-kbd-key-muted);
+}
+
+.cht-kbd__row--bottom .cht-kbd__key {
+  height: 38px;
+}
+
+.cht-kbd__key--bottom {
+  min-width: 54px;
+}
+
+.cht-kbd__key--emoji {
+  min-width: 42px;
+}
+
+.cht-kbd__key--space {
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+@keyframes cht-kbd-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════

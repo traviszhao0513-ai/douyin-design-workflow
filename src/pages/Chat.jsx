@@ -3,6 +3,7 @@ import './Chat.css'
 import ChatMessageRow from '../components/im/ChatMessageRow'
 import ChatTopBar from '../components/im/ChatTopBar'
 import InputBar from '../components/im/InputBar'
+import MockIOSKeyboard from '../components/im/MockIOSKeyboard'
 import { buildReplyPreview } from '../components/im/replyMeta'
 import IcDouyin from '../icons/svg/ic_s_s_douyin_16_filled.svg?react'
 import IcShop from '../icons/svg/ic_s_s_shop_16_filled.svg?react'
@@ -177,6 +178,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
     return new URLSearchParams(window.location.search)
   }, [])
   const forcedTheme = devParams?.get('theme') === 'dark' ? 'dark' : undefined
+  const forcedKeyboard = devParams?.get('keyboard') === '1'
   const forcedReplyId = Number(devParams?.get('reply') || 0)
   const displayName = contactName || '合川路林志玲'
   const displayAvatar = contactAvatar || ASSETS.avatarLeft
@@ -188,14 +190,14 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
       displayName,
     )
   }, [displayName, forcedReplyId])
-  const [showKeyboard, setShowKeyboard] = useState(Boolean(seededReply))
+  const [showKeyboard, setShowKeyboard] = useState(Boolean(seededReply || forcedKeyboard))
   const [replyingTo, setReplyingTo] = useState(seededReply)
   const inputBarRef = useRef(null)
 
   useEffect(() => {
     setReplyingTo(seededReply)
-    setShowKeyboard(Boolean(seededReply))
-  }, [displayAvatar, displayName, seededReply])
+    setShowKeyboard(Boolean(seededReply || forcedKeyboard))
+  }, [displayAvatar, displayName, forcedKeyboard, seededReply])
 
   const handleReply = (message) => {
     setReplyingTo(buildReplyPreview(message, displayName))
@@ -216,7 +218,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
         myAvatar={ASSETS.avatarRight}
         onReply={handleReply}
       />
-      <QuickReplyChips hidden={Boolean(replyingTo)} />
+      <QuickReplyChips hidden={Boolean(replyingTo || showKeyboard)} />
       <InputBar
         ref={inputBarRef}
         onClearReply={() => setReplyingTo(null)}
@@ -224,7 +226,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
         showKeyboard={showKeyboard}
         onToggleKeyboard={setShowKeyboard}
       />
-      <HomeIndicator />
+      {showKeyboard ? <MockIOSKeyboard /> : <HomeIndicator />}
     </div>
   )
 }

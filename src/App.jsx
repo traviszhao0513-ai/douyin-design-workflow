@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import Feed from './pages/Feed'
 import UserProfile from './pages/UserProfile'
 import Capture from './pages/Capture'
@@ -34,10 +34,26 @@ const TRANSITION_MS = 350
 const PUSH_PAIRS = { messages: 'chat' }
 
 export default function App() {
-  const [activeScreen, setActiveScreen] = useState('messages')
-  const [chatContact, setChatContact] = useState(null)
+  const devParams = useMemo(() => {
+    if (!import.meta.env.DEV || typeof window === 'undefined') return null
+    return new URLSearchParams(window.location.search)
+  }, [])
+  const initialScreen = devParams?.get('screen')
+  const initialChatContact = useMemo(() => {
+    if (!devParams?.get('contactName')) return null
+
+    return {
+      avatar: devParams.get('contactAvatar') || undefined,
+      name: devParams.get('contactName'),
+    }
+  }, [devParams])
+
+  const [activeScreen, setActiveScreen] = useState(
+    initialScreen && screens[initialScreen] ? initialScreen : 'messages',
+  )
+  const [chatContact, setChatContact] = useState(initialChatContact)
   /* Once chat has been opened, keep it mounted forever */
-  const [chatMounted, setChatMounted] = useState(false)
+  const [chatMounted, setChatMounted] = useState(activeScreen === 'chat')
 
   const [trans, setTrans] = useState(null)
   const timerRef = useRef(null)

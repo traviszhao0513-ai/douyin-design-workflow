@@ -69,6 +69,18 @@
   --cht-status-spinner:   rgba(22, 24, 35, 0.45);
   --cht-invalid-bg:       rgba(22, 24, 35, 0.04);
   --cht-invalid-fg:       rgba(22, 24, 35, 0.45);
+  --cht-reply-slot:       36px;
+  --cht-reply-threshold:  30px;
+  --cht-reply-icon-bg:    var(--dux-color-bg-surface);
+  --cht-reply-icon-fg:    var(--cht-primary);
+  --cht-reply-icon-border: var(--dux-color-border-light);
+  --cht-reply-icon-active-bg: var(--cht-primary);
+  --cht-reply-icon-active-fg: var(--cht-text-sent);
+  --cht-reply-preview-bg: var(--dux-color-bg-subtle);
+  --cht-reply-preview-border: var(--dux-color-border-light);
+  --cht-reply-preview-title: var(--cht-primary);
+  --cht-reply-preview-text: var(--cht-text-secondary);
+  --cht-reply-preview-close: var(--cht-text-secondary);
 }
 
 /* ── Dark theme overrides（仅覆写 IM 专属值；通用项由 tokens.css 的 [data-theme="dark"] 处理） */
@@ -267,6 +279,69 @@
   display: flex;
   flex-direction: column;
   max-width: min(282px, 360px);
+  overflow: visible;
+}
+
+.cht-swipe {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+  padding-left: var(--cht-reply-slot);
+  margin-left: calc(var(--cht-reply-slot) * -1);
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.cht-swipe__reply {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: var(--cht-reply-slot);
+  height: var(--cht-reply-slot);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--cht-reply-icon-border);
+  border-radius: var(--dux-radius-full);
+  background: var(--cht-reply-icon-bg);
+  color: var(--cht-reply-icon-fg);
+  box-shadow: var(--dux-shadow-sm);
+  opacity: var(--cht-swipe-progress, 0);
+  pointer-events: none;
+  transform: translateY(-50%) scale(var(--cht-swipe-progress, 0));
+  transition:
+    background var(--dux-duration-fast) var(--dux-ease-standard),
+    border-color var(--dux-duration-fast) var(--dux-ease-standard),
+    color var(--dux-duration-fast) var(--dux-ease-standard),
+    opacity var(--dux-duration-fast) var(--dux-ease-standard),
+    transform var(--dux-duration-normal) var(--dux-ease-standard);
+}
+
+.cht-swipe__reply svg {
+  display: block;
+}
+
+.cht-swipe__reply svg path {
+  fill: currentColor;
+}
+
+.cht-swipe.is-ready .cht-swipe__reply {
+  background: var(--cht-reply-icon-active-bg);
+  border-color: var(--cht-reply-icon-active-bg);
+  color: var(--cht-reply-icon-active-fg);
+}
+
+.cht-swipe__bubble {
+  min-width: 0;
+  max-width: 100%;
+  transform: translateX(var(--cht-swipe-shift, 0px));
+  transition: transform var(--dux-duration-normal) var(--dux-ease-standard);
+  will-change: transform;
+}
+
+.cht-swipe.is-dragging .cht-swipe__bubble {
+  transition: none;
 }
 
 /* ─────────────────────────────────────────
@@ -745,11 +820,68 @@ img.cht-card__brand-icon { object-fit: cover; }
    ───────────────────────────────────────── */
 .cht-input-bar {
   flex-shrink: 0;
-  height: 64px;
   background: var(--cht-BGInputBar);
-  padding: 0 12px;
+  padding: var(--dux-spacing-2) var(--dux-spacing-3) var(--dux-spacing-3);
+  display: flex;
+  align-items: flex-end;
+}
+
+.cht-input-bar__composer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--dux-spacing-2);
+}
+
+.cht-input-bar__reply {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--dux-spacing-2);
+  padding: var(--dux-spacing-2) var(--dux-spacing-3);
+  border: 1px solid var(--cht-reply-preview-border);
+  border-radius: var(--dux-radius-md);
+  background: var(--cht-reply-preview-bg);
+}
+
+.cht-input-bar__reply-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cht-input-bar__reply-eyebrow {
+  font-size: var(--dux-font-size-sm);
+  font-weight: var(--dux-font-weight-semibold);
+  color: var(--cht-reply-preview-title);
+  line-height: var(--dux-line-height-tight);
+}
+
+.cht-input-bar__reply-text {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--dux-font-size-base);
+  font-weight: var(--dux-font-weight-regular);
+  color: var(--cht-reply-preview-text);
+  line-height: var(--dux-line-height-tight);
+}
+
+.cht-input-bar__reply-close {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--cht-reply-preview-close);
+  cursor: pointer;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .cht-input-bar__row {
@@ -1062,4 +1194,3 @@ img.cht-card__brand-icon { object-fit: cover; }
   border: 1px solid var(--cht-BGPage);
 }
 .cht-bbl__read-avatars img:first-child { margin-left: 0; }
-

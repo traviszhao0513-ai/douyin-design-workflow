@@ -50,6 +50,12 @@ button {
   color-scheme: light;
 }
 
+.phone-frame--dark {
+  background: var(--dux-color-bg-page);
+  border-color: var(--dux-color-border-light);
+  color-scheme: dark;
+}
+
 .status-bar,
 .nav-bar,
 .tab-bar {

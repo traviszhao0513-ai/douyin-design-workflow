@@ -62,7 +62,19 @@ const CONVERSATIONS = [
   { id: 'hudong',   name: '互动消息',     avatar: ASSETS.avatarHudong,   preview: '小YY 赞了你的作品', time: '11:12' },
   { id: 'sliva',    name: 'Sliva',        avatar: ASSETS.avatarSliva,    preview: '明天去干嘛', time: '11:12', unread: 9 },
   { id: 'jianzhao', name: '建昭',         avatar: ASSETS.avatarJianzhao, preview: '30 分钟内在线', time: '11:12', unread: 1 },
-  { id: 'f3',       name: 'F3 缺一',      avatar: ASSETS.avatarF3,       preview: '今晚豆角胡同？大跃啤酒走起？？？', time: '11:12', muted: true },
+  {
+    id: 'public-group',
+    name: 'AI 公开资源群',
+    avatar: ASSETS.avatarF3,
+    preview: '本周资料目录、群公告和群收藏都更新了，进群空间可直接复访。',
+    time: '11:12',
+    unread: 2,
+    muted: true,
+    mode: 'public-group',
+    groupRole: 'member',
+    navExperiment: 'experiment2',
+    updates: { announcements: true, pins: true },
+  },
   { id: 'huohuo',   name: '火火',         avatar: ASSETS.avatarHuohuo,   preview: '今晚豆角胡同？大跃啤酒走起？？？', time: '11:12', online: true, reaction: true },
   { id: 'chengzi',  name: '橙子味大叔',   avatar: ASSETS.avatarChengzi,  preview: '[分享视频]', time: '11:12' },
   { id: 'simin',    name: 'simin',        avatar: ASSETS.avatarSimin,    preview: '已读 · 这个天气热死了，想在空调里吃西瓜啦啦啦啦', time: '11:12', streak: 3 },
@@ -161,7 +173,19 @@ function MessageList({ onChange }) {
         <ConversationRow
           key={item.id}
           {...item}
-          onTap={() => onChange?.('chat', { contactName: item.name, contactAvatar: item.avatar })}
+          onTap={() => onChange?.('chat', {
+            chatSession: {
+              avatar: item.avatar,
+              id: item.id,
+              mode: item.mode,
+              name: item.name,
+              navExperiment: item.navExperiment,
+              role: item.groupRole,
+              updates: item.updates,
+            },
+            contactAvatar: item.avatar,
+            contactName: item.name,
+          })}
         />
       ))}
     </section>

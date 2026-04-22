@@ -10,6 +10,27 @@ import NavBar from './shared/NavBar'
 import TabBar from './shared/TabBar'
 import StatusBar from './shared/StatusBar'
 
+const searchParams = new URLSearchParams(window.location.search)
+const forcedTheme = searchParams.get('theme')
+const forcedScreen = searchParams.get('screen')
+const forcedChat = searchParams.get('chat')
+const forcedGroupView = searchParams.get('groupView')
+
+const FORCED_PUBLIC_GROUP_SESSION = forcedChat === 'public-group'
+  ? {
+      avatar: 'https://i.pravatar.cc/100?u=public-group-chat',
+      id: 'public-group',
+      initialGroupView: forcedGroupView || 'chat',
+      mode: 'public-group',
+      name: 'AI 公开资源群',
+      navExperiment: 'experiment2',
+      role: 'member',
+      updates: { announcements: true, pins: true },
+    }
+  : null
+
+const INITIAL_SCREEN = forcedScreen || (FORCED_PUBLIC_GROUP_SESSION ? 'chat' : 'messages')
+
 const screens = {
   feed:          Feed,
   profile:       UserProfile,
@@ -34,10 +55,10 @@ const TRANSITION_MS = 350
 const PUSH_PAIRS = { messages: 'chat' }
 
 export default function App() {
-  const [activeScreen, setActiveScreen] = useState('messages')
-  const [chatContact, setChatContact] = useState(null)
+  const [activeScreen, setActiveScreen] = useState(INITIAL_SCREEN)
+  const [chatSession, setChatSession] = useState(FORCED_PUBLIC_GROUP_SESSION)
   /* Once chat has been opened, keep it mounted forever */
-  const [chatMounted, setChatMounted] = useState(false)
+  const [chatMounted, setChatMounted] = useState(INITIAL_SCREEN === 'chat')
 
   const [trans, setTrans] = useState(null)
   const timerRef = useRef(null)
@@ -46,8 +67,13 @@ export default function App() {
     setActiveScreen((prev) => {
       if (prev === next) return prev
 
-      if (extra?.contactName) {
-        setChatContact({ name: extra.contactName, avatar: extra.contactAvatar })
+      if (extra?.chatSession) {
+        setChatSession(extra.chatSession)
+      } else if (extra?.contactName) {
+        setChatSession({
+          name: extra.contactName,
+          avatar: extra.contactAvatar,
+        })
       }
 
       const isPush = PUSH_PAIRS[prev] === next
@@ -93,7 +119,14 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <div className={`phone-frame${isFlush ? ' phone-frame--light' : ''}`}>
+      <div
+        className={[
+          'phone-frame',
+          isFlush ? 'phone-frame--light' : '',
+          isFlush && forcedTheme === 'dark' ? 'phone-frame--dark' : '',
+        ].filter(Boolean).join(' ')}
+        data-theme={forcedTheme || undefined}
+      >
         {!isFlush && <StatusBar />}
         {!isFlush && <NavBar title={meta.title} subtitle={meta.subtitle} />}
         <main className={`screen-content${isFlush ? ' screen-content--flush' : ''}`}>
@@ -109,8 +142,9 @@ export default function App() {
                 <div className={`ios-page ios-page--overlay${chatAnimClass}${chatHiddenClass}`}>
                   <Chat
                     onChange={handleChange}
-                    contactName={chatContact?.name}
-                    contactAvatar={chatContact?.avatar}
+                    chatContext={chatSession}
+                    contactName={chatSession?.name}
+                    contactAvatar={chatSession?.avatar}
                   />
                 </div>
               )}

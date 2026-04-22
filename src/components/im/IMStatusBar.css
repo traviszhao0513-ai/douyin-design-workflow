@@ -6,9 +6,10 @@
   justify-content: space-between;
   height: 44px;
   padding: 0 24px;
-  /* 状态栏铺 surface 色（白/深色模式下的 surface），
-     而不是透明 —— Messages 页 .msg-page 背景是浅灰 token，透明会透出灰条。 */
-  background: var(--dux-color-bg-surface, #fff);
+  /* 状态栏背景保持透明，跟随所在页面底色：
+     Chat 页 .cht-page 是 #efefef，Messages 页 .msg-page 是 rgba(22,24,35,0.03)。
+     任何非透明取值都会在两页至少一个产生视觉割裂。 */
+  background: transparent;
   color: var(--dux-color-text-primary, #161823);
 }
 

@@ -396,6 +396,47 @@ Available component families (22):
 
 ---
 
+## Four-Layer Architecture / 四层架构
+
+> 2026-04 起，所有页面必须按此分层落地。详细决策树见 `CLAUDE.md`，完整流水线见 `docs/component-first-pipeline.md`。
+
+| 层 | 路径 | 职责 | 示例 |
+|---|---|---|---|
+| **L1 · Tokens** | `Douyin_design_system/ui/tokens.css` | `--dux-*` 原始视觉量 | `--dux-color-brand-primary`、`--dux-spacing-4` |
+| **L2 · Atoms** | `Douyin_design_system/ui/components/*` | 通用无业务语义原子件 | Avatar, Badge, Button, Divider, Input |
+| **L3 · IM Molecules** | `src/components/im/*` | 业务特化分子件，内部组合 L2 | Bubble, ConversationRow, ChatTopBar, InputBar |
+| **L4 · Pages** | `src/pages/*` | 布局 + 业务串联 | Chat.jsx, Messages.jsx |
+
+### 当前已沉淀的 IM 分子件
+
+| 分子件 | 文件 | 组合的 L2 | 用处 |
+|---|---|---|---|
+| Bubble | `src/components/im/Bubble.jsx` | Avatar（部分类型） | 16 种消息气泡类型 + 2 视角 + 双主题 |
+| ConversationRow | `src/components/im/ConversationRow.jsx` | Avatar, Badge | Messages 列表单行 |
+| ChatTopBar | `src/components/im/ChatTopBar.jsx` | Avatar | Chat 页顶栏 |
+| InputBar | `src/components/im/InputBar.jsx` | —（仅 SVG 图标） | Chat 页底部输入栏 |
+
+### 分层约束
+
+- **L2 不依赖 L3/L4** — 原子件完全通用，不写死业务文案或 prop
+- **L3 不绕过 L2** — 分子件必须组合原子件，不自己重画 Avatar/Badge
+- **L4 不创造原子件** — 页面只负责组装，新通用视觉能力要沉淀到 L2
+- **颜色禁止 hex 字面量** — 必须走 `var(--dux-*)` 或业务语义别名 `var(--cht-*)`
+
+### Avatar IM 尺寸扩展
+
+Avatar 原子件为 IM 场景扩展了数字尺寸预设：
+
+| 预设 | 尺寸 | 使用场景 |
+|---|---|---|
+| `size="36"` | 36×36 | Chat 顶栏头像 / 消息行头像 |
+| `size="44"` | 44×44 | 备用 |
+| `size="56"` | 56×56 | Messages 列表头像 |
+
+原有 `xs (20) / sm (28) / md (40) / lg (48) / xl (64)` 保持不变。
+
+---
+
 ## Icon Library / 图标库
 
 > Source: Figma「Douyin Delight Icons」

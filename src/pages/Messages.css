@@ -35,6 +35,11 @@
 
 /* ── Status bar ── */
 
+/* Messages 页顶部区域（状态栏 + 标题栏）要铺白的 surface 色，
+   把下方列表的浅灰 BGPage 切出来。IMStatusBar 本身是 transparent，
+   所以在这里由页面侧显式指定。Chat 页不写这条，状态栏继续跟随 cht-page。 */
+.msg-page > .im-status-bar,
+.msg-page > .msg-title-bar,
 .msg-status-bar,
 .msg-title-bar {
   flex-shrink: 0;

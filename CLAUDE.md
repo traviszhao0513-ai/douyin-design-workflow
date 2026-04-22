@@ -386,9 +386,28 @@ npm run build
 | **L3 · IM Molecules** | `src/components/im/*` | 组合 L2，业务语义命名 | 直接写死颜色 hex、绕过 L2 |
 | **L4 · Pages** | `src/pages/*` | 布局 + 业务串联 + 调 L3/L2 | 实现新的纯视觉原子件 |
 
+### Icon 约定（强制）
+
+**所有 icon 级视觉一律使用 Figma 导出的 PNG 切图注入，不要手写或 inline SVG 复刻 Figma 图形。**
+
+- ✅ 通过 props / 集中资产字典（如 `DECORATIVE_ASSETS`）注入 Figma PNG URL，组件内部用 `<img>` 渲染
+- ✅ 极简几何（iOS 状态栏信号/WiFi/电池、Home 条等几条 `<rect>` `<circle>` 能画完的）可以用 inline SVG
+- ❌ 不要用 inline SVG 复刻 Figma 里的菜单/搜索/加号/表情等 icon —— stroke、圆角、内部 shape 一旦和设计稿漂移，后面必然改到爆
+- ❌ 不要在组件里硬编码 Figma CDN URL，URL 集中放在 `src/data/*.js` 的资产对象里，组件通过 prop 吃
+
+对应关系示例（`src/components/im/MessagesTopBar.jsx`）：
+```jsx
+<MessagesTopBar icons={{
+  menu:   DECORATIVE_ASSETS.menuIcon,
+  search: DECORATIVE_ASSETS.searchIcon,
+  add:    DECORATIVE_ASSETS.addIcon,
+}} />
+```
+
 ### 审查清单（PR 或出图前）
 
 - [ ] 新加的 JSX 里有 `<img>` / 原生 `<button>` 做头像或状态点吗？→ 应该用 `<Avatar>` / `<Badge>`
 - [ ] 新加的 CSS 有 hex 颜色字面量吗？→ 应该引用 `var(--dux-*)` 或 `var(--cht-*)`
 - [ ] 新增的页面级组件函数超过 80 行？→ 考虑是否是一个 L3 分子，拆到 `src/components/im/`
 - [ ] 新能力 dark 模式已覆盖？→ `[data-theme="dark"]` 切换时所有颜色都应该自动适配
+- [ ] 任何 icon 级视觉是 inline SVG 手写的吗？→ 除非是极简几何，否则换成 Figma PNG 切图注入

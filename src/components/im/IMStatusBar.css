@@ -6,8 +6,9 @@
   justify-content: space-between;
   height: 44px;
   padding: 0 24px;
-  /* 状态栏保持透明，跟随页面底色（避免出现错位的灰条） */
-  background: transparent;
+  /* 状态栏铺 surface 色（白/深色模式下的 surface），
+     而不是透明 —— Messages 页 .msg-page 背景是浅灰 token，透明会透出灰条。 */
+  background: var(--dux-color-bg-surface, #fff);
   color: var(--dux-color-text-primary, #161823);
 }
 

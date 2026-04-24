@@ -5,10 +5,13 @@
 import IcDouyin from '../icons/svg/ic_s_s_douyin_16_filled.svg?react'
 import IcShop   from '../icons/svg/ic_s_s_shop_16_filled.svg?react'
 
-/* ── Avatar URLs (pravatar — loads in browser) ── */
+/* ── Avatar URLs ──
+ * 主态（avatarRight）固定用本地 mine.png，保证在任何会话里"我"都是同一张脸。
+ * 对方头像（avatarLeft）仍然走会话上下文传进来的 contactAvatar；
+ * 这里的 avatarLeft 只在未提供时作为 fallback。 */
 export const CHAT_ASSETS = {
   avatarLeft:  'https://i.pravatar.cc/100?u=leftavatar',
-  avatarRight: 'https://i.pravatar.cc/100?u=rightavatar',
+  avatarRight: '/assets/avatars/mine.png',
 }
 
 /* ── Quick reply chips — emoji strings ── */
@@ -180,7 +183,7 @@ export const MESSAGES = [
   { id: 30, kind: 'v2', type: 'video',    dir: 'sent', format: 'sq',
     data: { src: 'https://picsum.photos/seed/v1/300/300', duration: '00:12' } },
   { id: 31, kind: 'v2', type: 'viewonce', dir: 'recv', data: {} },
-  { id: 32, kind: 'v2', type: 'status',   data: { text: '你撤回了一条消息' } },
+  { id: 32, kind: 'v2', type: 'notice',   data: { text: '你撤回了一条消息' } },
   { id: 33, kind: 'v2', type: 'announcement', dir: 'recv', data: {
     title: '【周会通知】', body: '本周三下午 3 点在 3 楼会议室召开例会，请各位同学准时参加。',
   } },

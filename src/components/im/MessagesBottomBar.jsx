@@ -4,25 +4,20 @@
  *
  * Props:
  *   unreadCount — number, 消息 tab 徽章数
- *   captureSrc  — string, 中间"拍摄" tab 的图片资源（装饰图）
+ *   CaptureIcon — React 组件，中间"拍摄" tab 的 SVG（来自 DECORATIVE_ASSETS.CaptureTabIcon）
  *   onChange    — (key) => void, tab 切换回调
  */
 import BottomNav from '../../../Douyin_design_system/ui/components/BottomNav/BottomNav'
 
-export default function MessagesBottomBar({ unreadCount = 0, captureSrc, onChange }) {
+export default function MessagesBottomBar({ unreadCount = 0, CaptureIcon, onChange }) {
   const items = [
     { key: 'feed',    icon: <span className="msg-bottom-nav__text">首页</span> },
     { key: 'friends', icon: <span className="msg-bottom-nav__text">朋友</span> },
     {
       key: 'capture',
-      icon: captureSrc ? (
-        <img
-          className="msg-bottom-nav__capture-image"
-          src={captureSrc}
-          alt="拍摄"
-          aria-hidden="true"
-        />
-      ) : <span className="msg-bottom-nav__text">拍摄</span>,
+      icon: CaptureIcon
+        ? <CaptureIcon className="msg-bottom-nav__capture-image" aria-label="拍摄" />
+        : <span className="msg-bottom-nav__text">拍摄</span>,
     },
     {
       key: 'messages',

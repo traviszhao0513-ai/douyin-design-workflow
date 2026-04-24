@@ -4,36 +4,49 @@
  *
  * Props:
  *   items  — [{ id, name, avatar, ring: 'active' | 'muted' | null, online, add }]
- *   assets — { ringActive, ringMuted, storyAddBg, storyAddIcon, onlineStory }
- *            装饰性图片资源（由 src/data/messagesDemo.js 注入）
+ *   assets — {
+ *     RingActiveIcon, RingMutedIcon,
+ *     StoryAddBgIcon, StoryAddPlusIcon,
+ *     OnlineStoryIcon
+ *   }  均为 React 组件（SVG via svgr）
  */
 import Avatar from '../../../Douyin_design_system/ui/components/Avatar/Avatar'
 
 function StoryItem({ story, assets }) {
   const { name, avatar, ring, online, add } = story
+  const {
+    RingActiveIcon,
+    RingMutedIcon,
+    StoryAddBgIcon,
+    StoryAddPlusIcon,
+    OnlineStoryIcon,
+  } = assets
+
   return (
     <div className="msg-story">
       <button className="msg-story__pressable" type="button" aria-label={name}>
         <div className="msg-story__avatar-shell">
-          {ring === 'active' && assets.ringActive && (
-            <img className="msg-story__ring" src={assets.ringActive} alt="" aria-hidden="true" />
+          {ring === 'active' && RingActiveIcon && (
+            <RingActiveIcon className="msg-story__ring msg-story__ring--active" aria-hidden="true" />
           )}
-          {ring === 'muted' && assets.ringMuted && (
-            <img className="msg-story__ring" src={assets.ringMuted} alt="" aria-hidden="true" />
+          {ring === 'muted' && RingMutedIcon && (
+            <RingMutedIcon className="msg-story__ring msg-story__ring--muted" aria-hidden="true" />
           )}
           <Avatar className="msg-story__avatar" size="xl" src={avatar} alt={name} />
-          {online && assets.onlineStory && (
-            <img className="msg-story__online-image" src={assets.onlineStory} alt="" aria-hidden="true" />
+          {online && OnlineStoryIcon && (
+            <span className="msg-story__online" aria-hidden="true">
+              <OnlineStoryIcon className="msg-story__online-image" />
+            </span>
           )}
           {add && (
-            <>
-              {assets.storyAddBg && (
-                <img className="msg-story__add-bg" src={assets.storyAddBg} alt="" aria-hidden="true" />
+            <span className="msg-story__add" aria-hidden="true">
+              {StoryAddBgIcon && (
+                <StoryAddBgIcon className="msg-story__add-bg" />
               )}
-              {assets.storyAddIcon && (
-                <img className="msg-story__add-icon" src={assets.storyAddIcon} alt="" aria-hidden="true" />
+              {StoryAddPlusIcon && (
+                <StoryAddPlusIcon className="msg-story__add-icon" />
               )}
-            </>
+            </span>
           )}
         </div>
       </button>

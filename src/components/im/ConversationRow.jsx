@@ -3,16 +3,16 @@
  * 消息列表中的单行会话。内部组合 L2 Avatar + Badge。
  *
  * Figma: IM UI Kit 2.0 · Message List · Cell
+ *
+ * 装饰 icon（online 绿点、静音喇叭）一律走 src/assets/im 下的 SVG 组件，
+ * fill/stroke 用 currentColor + 父级 color 继承，主题自适应。
+ * 反应贴纸是栅格 PNG（主题无关），从 public 加载。
  */
 import Avatar from '../../../Douyin_design_system/ui/components/Avatar/Avatar'
 import Badge from '../../../Douyin_design_system/ui/components/Badge/Badge'
+import { OnlineCellIcon, MuteIcon } from '../../assets/im'
 
-/* ── Figma cut assets (shared with Messages page) ── */
-const ICONS = {
-  onlineCell:    'https://www.figma.com/api/mcp/asset/1f7a4396-c715-4f85-97c4-0f3f760c1c5b',
-  muteIcon:      'https://www.figma.com/api/mcp/asset/c43e4a4b-8faf-4224-b8a9-efe9a5d9412f',
-  reactionLaugh: 'https://www.figma.com/api/mcp/asset/5e265c06-9983-4cbb-99f9-ac2f0d7e8fae',
-}
+const REACTION_LAUGH_SRC = '/assets/im/reaction-laugh.png'
 
 function StreakBadge({ count }) {
   return (
@@ -47,12 +47,9 @@ export default function ConversationRow({
       <div className="msg-cell__avatar-shell">
         <Avatar className="msg-cell__avatar" size="56" src={avatar} alt={name} />
         {online && (
-          <img
-            className="msg-cell__online-image"
-            src={ICONS.onlineCell}
-            alt=""
-            aria-hidden="true"
-          />
+          <span className="msg-cell__online" aria-hidden="true">
+            <OnlineCellIcon className="msg-cell__online-image" />
+          </span>
         )}
       </div>
 
@@ -65,12 +62,7 @@ export default function ConversationRow({
           <div className="msg-cell__meta">
             {muted && (
               <span className="msg-cell__mute" aria-label="已静音">
-                <img
-                  className="msg-cell__mute-glyph"
-                  src={ICONS.muteIcon}
-                  alt=""
-                  aria-hidden="true"
-                />
+                <MuteIcon className="msg-cell__mute-glyph" aria-hidden="true" />
               </span>
             )}
             <span className="msg-cell__time">{time}</span>
@@ -82,7 +74,7 @@ export default function ConversationRow({
             <span className="msg-cell__reaction" aria-hidden="true">
               <img
                 className="msg-cell__reaction-emoji"
-                src={ICONS.reactionLaugh}
+                src={REACTION_LAUGH_SRC}
                 alt=""
               />
               <span className="msg-cell__reaction-divider" />

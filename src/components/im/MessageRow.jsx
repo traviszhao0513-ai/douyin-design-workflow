@@ -12,6 +12,7 @@ import Bubble from './Bubble'
 
 /* ── Bubble-specific icons ── */
 import IcPlay      from '../../icons/svg/ic_s_s_play_16_filled.svg?react'
+import IcVoicePlay from '../../icons/chat/voice_play.svg?react'
 import IcVideoCall from '../../icons/svg/ic_s_s_video_20_filled.svg?react'
 import IcPhoneUp   from '../../icons/svg/ic_s_s_phoneup_20_filled.svg?react'
 import IcPause     from '../../icons/svg/ic_s_s_pause_16_filled.svg?react'
@@ -86,7 +87,7 @@ function VoiceBubble({ message, dir }) {
   return (
     <div className={`cht-bbl cht-bbl--voice cht-bbl--${dir}`}>
       <button className={`cht-bbl__play cht-bbl__play--${dir}`} type="button" aria-label="播放语音">
-        <IcPlay width={14} height={14} />
+        <IcVoicePlay width={28} height={28} />
       </button>
       <Waveform dir={dir} />
       <span className={`cht-bbl__duration cht-bbl__duration--${dir}`}>{message.duration}</span>
@@ -166,7 +167,7 @@ function LinkCardBubble({ message }) {
         </div>
         <div className={`cht-card__body${hasAction ? ' cht-card__body--has-action' : ''}`}>
           <div className="cht-card__texts">
-            <span ref={titleRef} className="cht-card__title">{card.title}</span>
+            <span ref={titleRef} className={`cht-card__title${titleWraps ? ' cht-card__title--2line' : ''}`}>{card.title}</span>
             {!titleWraps && card.subtitle && (
               <span className="cht-card__subtitle">{card.subtitle}</span>
             )}
@@ -218,11 +219,11 @@ export default function MessageRow({ message, contactAvatar, myAvatar }) {
   }
 
   if (message.kind === 'v2') {
-    const isStatus = message.type === 'status'
+    const isNotice = message.type === 'notice'
     const isRead   = message.type === 'read'
-    if (isStatus) {
+    if (isNotice) {
       return (
-        <div className="cht-row cht-row--status" role="note">
+        <div className="cht-row cht-row--notice" role="note">
           <Bubble type={message.type} data={message.data} />
         </div>
       )

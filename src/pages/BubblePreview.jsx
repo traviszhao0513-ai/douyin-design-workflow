@@ -167,8 +167,8 @@ const MATRIX = {
         text: '给你换一张', quote: { sender: '林志玲' } } },
     ],
   },
-  status: {
-    title: '状态',
+  notice: {
+    title: '通知',
     cells: [
       { label: '入群', perspective: 'recv', data: { text: '合川路林志玲 加入群聊' } },
       { label: '撤回', perspective: 'recv', data: { text: '你撤回了一条消息' } },
@@ -255,7 +255,7 @@ const MATRIX = {
    ═══════════════════════════════════════════════════════════ */
 
 function Cell({ type, cell }) {
-  const isFullWidth = type === 'status' || type === 'read'
+  const isFullWidth = type === 'notice' || type === 'read'
   const alignCls =
     cell.perspective === 'sent' ? 'bp-cell__body--sent' :
     cell.perspective === 'recv' ? 'bp-cell__body--recv' :

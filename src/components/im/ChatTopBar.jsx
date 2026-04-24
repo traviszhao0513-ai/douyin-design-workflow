@@ -9,7 +9,7 @@ import IcBack  from '../../icons/chat/ic_titlebar_back.svg?react'
 import IcVideo from '../../icons/chat/ic_titlebar_video.svg?react'
 import IcMore  from '../../icons/chat/ic_titlebar_more.svg?react'
 
-export default function ChatTopBar({ contactName, contactAvatar, onBack, onPreview }) {
+export default function ChatTopBar({ contactName, contactAvatar, streak, onBack, onPreview }) {
   return (
     <header className="cht-nav">
       <div className="cht-nav__left">
@@ -20,10 +20,17 @@ export default function ChatTopBar({ contactName, contactAvatar, onBack, onPrevi
           <Avatar className="cht-nav__avatar" size="36" src={contactAvatar} alt="" />
           <div className="cht-nav__name-row">
             <span className="cht-nav__name">{contactName}</span>
-            <span className="cht-nav__badge" aria-label="红火等级 3">
-              <span className="cht-nav__badge-icon">🔥</span>
-              <span className="cht-nav__badge-count">3</span>
-            </span>
+            {streak > 0 && (
+              <span className="cht-nav__badge" aria-label={`连续互动 ${streak}`}>
+                <img
+                  className="cht-nav__badge-icon"
+                  src="/assets/streak-flame.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span className="cht-nav__badge-count">{streak}</span>
+              </span>
+            )}
           </div>
         </div>
       </div>

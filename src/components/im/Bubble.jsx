@@ -16,6 +16,7 @@
  */
 
 import IcPlay      from '../../icons/svg/ic_s_s_play_16_filled.svg?react'
+import IcVoicePlay from '../../icons/chat/voice_play.svg?react'
 import IcVideoCall from '../../icons/svg/ic_s_s_video_20_filled.svg?react'
 import IcPhoneUp   from '../../icons/svg/ic_s_s_phoneup_20_filled.svg?react'
 import IcPause     from '../../icons/svg/ic_s_s_pause_16_filled.svg?react'
@@ -40,7 +41,7 @@ export const TYPES = [
   'image',         // 图片
   'video',         // 视频
   'quote',         // 引用回复
-  'status',        // 状态
+  'notice',        // 通知 / 状态提示（撤回、入群等中间行）
   'read',          // 已读
   'linkcard',      // 通用链接卡
 ]
@@ -166,7 +167,7 @@ function VoiceRenderer({ data, perspective, state }) {
       <div className={`cht-bbl cht-bbl--voice-transcript`}>
         <div className={`cht-bbl__voice-head cht-bbl--${perspective}`}>
           <button className={`cht-bbl__play cht-bbl__play--${perspective}`} type="button" aria-label="播放语音">
-            <IcPlay width={14} height={14} />
+            <IcVoicePlay width={28} height={28} />
           </button>
           <Waveform perspective={perspective} />
           <span className={`cht-bbl__duration cht-bbl__duration--${perspective}`}>{data.duration || "9''"}</span>
@@ -178,7 +179,7 @@ function VoiceRenderer({ data, perspective, state }) {
   return (
     <div className={`cht-bbl cht-bbl--voice cht-bbl--${perspective}`}>
       <button className={`cht-bbl__play cht-bbl__play--${perspective}`} type="button" aria-label="播放语音">
-        {state === 'playing' ? <IcPause width={14} height={14} /> : <IcPlay width={14} height={14} />}
+        {state === 'playing' ? <IcPause width={14} height={14} /> : <IcVoicePlay width={28} height={28} />}
       </button>
       <Waveform perspective={perspective} />
       <span className={`cht-bbl__duration cht-bbl__duration--${perspective}`}>{data.duration || "9''"}</span>
@@ -279,9 +280,9 @@ function QuoteRenderer({ data, perspective, subdivision }) {
   )
 }
 
-/* Status notice — centered row, no bubble wrapper needed */
-function StatusRenderer({ data }) {
-  return <div className="cht-bbl cht-bbl--status">{data.text || '消息通知'}</div>
+/* Notice — centered inline text, no bubble background */
+function NoticeRenderer({ data }) {
+  return <div className="cht-bbl cht-bbl--notice">{data.text || '消息通知'}</div>
 }
 
 /* Read receipt — avatars or text summary */
@@ -397,7 +398,7 @@ export default function Bubble({
     case 'image':         body = <ImageRenderer data={payload} perspective={perspective} format={format} />; break
     case 'video':         body = <VideoRenderer data={payload} perspective={perspective} format={format} />; break
     case 'quote':         body = <QuoteRenderer data={payload} perspective={perspective} subdivision={subdivision} />; break
-    case 'status':        body = <StatusRenderer data={payload} />; break
+    case 'notice':        body = <NoticeRenderer data={payload} />; break
     case 'read':          body = <ReadReceiptRenderer data={payload} format={format} />; break
     case 'card_link':
     case 'linkcard':      body = <LinkCardRenderer data={payload} />; break

@@ -395,6 +395,24 @@ npm run build
 - ❌ 不要用 inline SVG 复刻 Figma 里的菜单/搜索/加号/表情等 icon —— stroke、圆角、内部 shape 一旦和设计稿漂移，后面必然改到爆
 - ❌ 不要在组件里硬编码 Figma CDN URL，URL 集中放在 `src/data/*.js` 的资产对象里，组件通过 prop 吃
 
+### 深浅色规则（强制）
+
+**所有新增的页面、组件、元素都必须同时支持 light / dark，并在交付前两个模式都验证过。**
+
+- ✅ 颜色一律走语义 token（`var(--dux-*)` / `var(--cht-*)` / 页面 `--BG* --Text*` 别名），禁止 hex 字面量
+- ✅ 出图或 PR 前，用页面右上角的 `theme-toggle` 调试入口把两套主题都截图走查一遍
+- ✅ **可着色的矢量图（SVG）** → 内部 `fill` / `stroke` 统一写 `currentColor`，外层容器设 `color: var(--cht-text-primary)` 之类的语义 token，主题切换自动生效
+- ✅ **切图（PNG）** → 必须准备 light / dark 两套资产，在资产字典里拆成 `{ light, dark }` 对象，组件按当前 theme 取对应 URL；**禁止**用 `filter: invert()` 之类的一次性 hack 来凑深色
+- ❌ 不要把 icon 颜色锁在 PNG 烘焙里（例：黑色线条 + 透明底），在深色下这类图会直接消失 —— 请在 Figma 侧导出 dark 版本
+- ❌ 不要在组件里写 `[data-theme="dark"] xxx { color: #fff }` 的单点覆盖，应该让颜色从 token 自上而下继承
+
+验证清单（深浅色）：
+
+- [ ] `data-theme="light"` 和 `data-theme="dark"` 下均已截图
+- [ ] 所有颜色通过 token 解析，无 hex 字面量
+- [ ] PNG 切图有 light / dark 两份资产（或被确认为「主题无关」，如用户头像、贴纸）
+- [ ] 可着色 SVG 的 `fill` / `stroke` 都是 `currentColor`
+
 对应关系示例（`src/components/im/MessagesTopBar.jsx`）：
 ```jsx
 <MessagesTopBar icons={{
@@ -409,5 +427,6 @@ npm run build
 - [ ] 新加的 JSX 里有 `<img>` / 原生 `<button>` 做头像或状态点吗？→ 应该用 `<Avatar>` / `<Badge>`
 - [ ] 新加的 CSS 有 hex 颜色字面量吗？→ 应该引用 `var(--dux-*)` 或 `var(--cht-*)`
 - [ ] 新增的页面级组件函数超过 80 行？→ 考虑是否是一个 L3 分子，拆到 `src/components/im/`
-- [ ] 新能力 dark 模式已覆盖？→ `[data-theme="dark"]` 切换时所有颜色都应该自动适配
+- [ ] 新能力 dark 模式已覆盖？→ `[data-theme="dark"]` 切换时所有颜色都应该自动适配，两套主题都已截图验证
 - [ ] 任何 icon 级视觉是 inline SVG 手写的吗？→ 除非是极简几何，否则换成 Figma PNG 切图注入
+- [ ] SVG icon 是否用 `currentColor` 继承 token？PNG icon 是否准备了 light + dark 两套资产？

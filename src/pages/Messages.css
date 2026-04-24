@@ -5,10 +5,12 @@
  */
 
 .msg-page {
-  --BGPage: rgba(22, 24, 35, 0.03);
-  --BGSurface: #ffffff;
-  --BGPrimary: #ffffff;
-  --BGBottom: #ffffff;
+  /* 背景色卡与 Chat 页对齐：BGPage / BGSurface / BGBottom 同色，
+     靠 --LinePrimary 分割 cell，不再靠白灰对比。 */
+  --BGPage: #efefef;
+  --BGSurface: #efefef;
+  --BGPrimary: #efefef;
+  --BGBottom: #efefef;
   --BGInput2: rgba(22, 24, 35, 0.05);
   --BGPlaceholder: rgba(22, 24, 35, 0.05);
   --TextPrimary: #161823;
@@ -173,7 +175,7 @@
   height: 24px;
 }
 
-.msg-title-bar__menu-icon img {
+.msg-title-bar__menu-icon svg {
   position: absolute;
   top: 5px;
   left: 3px;
@@ -262,15 +264,20 @@
   border-radius: 50%;
 }
 
-/* Figma ring image — full 74×74, transparent center shows avatar */
+/* Figma ring SVG — full 74×74, transparent center shows avatar.
+   --muted 变体 stroke 改 currentColor（本征 stroke-opacity 0.2），
+   --active 变体保留内置渐变，不受 color 影响。 */
 .msg-story__ring {
   position: absolute;
   inset: 0;
   width: 74px;
   height: 74px;
-  object-fit: cover;
   pointer-events: none;
   z-index: 0;
+}
+
+.msg-story__ring--muted {
+  color: var(--TextPrimary);
 }
 
 .msg-story__avatar.dux-avatar {
@@ -292,47 +299,80 @@
   text-overflow: ellipsis;
 }
 
-/* Online indicator — Figma cut image (story variant, image 23×23 centered at 60,60 inside 74 shell) */
-.msg-story__online-image {
+/* Online indicator — 现在是 SVG，stroke 改为 currentColor，
+   通过父级 color: var(--BGPage) 让外圈白环自动跟随深浅主题背景。
+   SVG 自身 23×23（viewBox），放进 17×17 圆形窗口 (-3 偏移) 让绿盘居中填满；
+   外再叠 3px box-shadow ring 做视觉缓冲。 */
+.msg-story__online {
   position: absolute;
-  right: 2.5px;
-  bottom: 2.5px;
-  width: 23px;
-  height: 23px;
+  right: 5.5px;
+  bottom: 5.5px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px var(--BGPage);
+  color: var(--BGPage);
   pointer-events: none;
   z-index: 2;
 }
 
-/* Story add button — Figma bg image 25×25 centered at 60,60 inside 74 shell (bg box 18×18 with -19.44% inset image) */
-.msg-story__add-bg {
+.msg-story__online-image {
   position: absolute;
-  right: 1.5px;
-  bottom: 1.5px;
-  width: 25px;
-  height: 25px;
+  inset: -3px;
+  width: 23px;
+  height: 23px;
+  display: block;
+}
+
+/* Story add button — 17×17 圆形窗口 + 3px BGPage ring。
+   bg SVG 25×25（viewBox），stroke 改 currentColor 跟随页面背景色；
+   中央 "+" SVG 8×8 固定白色（fill="white" in svg）。 */
+.msg-story__add {
+  position: absolute;
+  right: 5.5px;
+  bottom: 5.5px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px var(--BGPage);
+  color: var(--BGPage);
   pointer-events: none;
   z-index: 3;
 }
 
-/* Add glyph 8×8 centered on bg center (60,60) */
+.msg-story__add-bg {
+  position: absolute;
+  inset: -4px;
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
 .msg-story__add-icon {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  top: 50%;
+  left: 50%;
   width: 8px;
   height: 8px;
-  pointer-events: none;
-  z-index: 4;
+  transform: translate(-50%, -50%);
+  display: block;
+  z-index: 1;
 }
 
 /* ── Conversation list ── */
 
-.msg-list {
+.msg-scroll {
   flex: 1;
-  background: var(--BGPage);
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  background: var(--BGPage);
+}
+
+.msg-list {
+  background: var(--BGPage);
 }
 
 .msg-cell {
@@ -373,15 +413,28 @@
   background: var(--BGPlaceholder);
 }
 
-/* Online indicator — Figma cut image (cell variant, 23×23 image spilling 3.5 px past 56 shell) */
-.msg-cell__online-image {
+/* Online indicator — cell 变体：与 story 同构，SVG stroke 用 currentColor，
+   父级 color: var(--BGPage) 让外圈自动跟随背景。 */
+.msg-cell__online {
   position: absolute;
-  right: -3.5px;
-  bottom: -3.5px;
-  width: 23px;
-  height: 23px;
+  right: -0.5px;
+  bottom: -0.5px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px var(--BGPage);
+  color: var(--BGPage);
   pointer-events: none;
   z-index: 2;
+}
+
+.msg-cell__online-image {
+  position: absolute;
+  inset: -3px;
+  width: 23px;
+  height: 23px;
+  display: block;
 }
 
 .msg-cell__content {
@@ -467,6 +520,7 @@
   width: 10.14px;
   height: 10.06px;
   display: block;
+  color: var(--TextPrimary);
 }
 
 .msg-cell__time {
@@ -609,12 +663,12 @@
   line-height: 22px;
 }
 
-/* Capture tab — Figma cut image */
+/* Capture tab — Figma SVG，fill 用 currentColor，跟随 nav 文字色 */
 .msg-bottom-nav__capture-image {
   display: block;
   width: 75px;
   height: 49px;
-  object-fit: contain;
+  color: var(--TextPrimary);
 }
 
 .msg-bottom-nav .dux-bottom-nav__badge {
@@ -657,10 +711,10 @@
 .theme-dark .msg-page,
 [data-theme="dark"] .msg-page,
 .phone-frame--dark .msg-page {
-  --BGPage: #161823;
-  --BGSurface: #161823;
-  --BGPrimary: #161823;
-  --BGBottom: #161616;
+  --BGPage: #121212;
+  --BGSurface: #121212;
+  --BGPrimary: #121212;
+  --BGBottom: #121212;
   --BGInput2: rgba(255, 255, 255, 0.03);
   --BGPlaceholder: rgba(255, 255, 255, 0.06);
   --TextPrimary: rgba(255, 255, 255, 0.9);
@@ -676,3 +730,8 @@
 .phone-frame--dark .msg-bottom-bar__home-pill {
   background: rgba(255, 255, 255, 0.9);
 }
+
+/* 深浅主题说明：icon 现在全部是 SVG + currentColor，
+   通过上面各自容器的 `color: var(--Text*) / var(--BGPage)` 继承语义 token，
+   主题切换自动生效，不再需要 filter: invert(...) 之类的 hack。 */
+

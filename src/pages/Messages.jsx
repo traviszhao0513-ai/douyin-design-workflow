@@ -16,24 +16,26 @@ export default function Messages({ onChange }) {
       <IMStatusBar />
       <MessagesTopBar
         icons={{
-          menu:   DECORATIVE_ASSETS.menuIcon,
-          search: DECORATIVE_ASSETS.searchIcon,
-          add:    DECORATIVE_ASSETS.addIcon,
+          menu:   DECORATIVE_ASSETS.MenuIcon,
+          search: DECORATIVE_ASSETS.SearchIcon,
+          add:    DECORATIVE_ASSETS.AddIcon,
         }}
       />
-      <StoryRail items={STORIES} assets={DECORATIVE_ASSETS} />
-      <section className="msg-list" aria-label="会话列表">
-        {CONVERSATIONS.map((item) => (
-          <ConversationRow
-            key={item.id}
-            {...item}
-            onTap={() => onChange?.('chat', { contactName: item.name, contactAvatar: item.avatar })}
-          />
-        ))}
-      </section>
+      <div className="msg-scroll">
+        <StoryRail items={STORIES} assets={DECORATIVE_ASSETS} />
+        <section className="msg-list" aria-label="会话列表">
+          {CONVERSATIONS.map((item) => (
+            <ConversationRow
+              key={item.id}
+              {...item}
+              onTap={() => onChange?.('chat', { contactName: item.name, contactAvatar: item.avatar, streak: item.streak })}
+            />
+          ))}
+        </section>
+      </div>
       <MessagesBottomBar
         unreadCount={6}
-        captureSrc={DECORATIVE_ASSETS.captureTab}
+        CaptureIcon={DECORATIVE_ASSETS.CaptureTabIcon}
         onChange={onChange}
       />
     </div>

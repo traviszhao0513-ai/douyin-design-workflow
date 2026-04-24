@@ -12,7 +12,7 @@ import { CHAT_ASSETS, QUICK_REPLIES, MESSAGES } from '../data/chatDemo'
  * Chat — L4 page
  * 只做页面级装配 + 业务串联，所有 UI 来自 src/components/im/* L3 分子件。
  */
-export default function Chat({ onChange, contactName, contactAvatar }) {
+export default function Chat({ onChange, contactName, contactAvatar, streak }) {
   const [showKeyboard, setShowKeyboard] = useState(false)
 
   const displayName   = contactName   || '合川路林志玲'
@@ -24,6 +24,7 @@ export default function Chat({ onChange, contactName, contactAvatar }) {
       <ChatTopBar
         contactName={displayName}
         contactAvatar={displayAvatar}
+        streak={streak}
         onBack={() => onChange?.('messages')}
         onPreview={() => onChange?.('bubblepreview')}
       />

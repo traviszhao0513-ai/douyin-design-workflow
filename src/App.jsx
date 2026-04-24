@@ -38,6 +38,7 @@ export default function App() {
   const [chatContact, setChatContact] = useState(null)
   /* Once chat has been opened, keep it mounted forever */
   const [chatMounted, setChatMounted] = useState(false)
+  const [theme, setTheme] = useState('light')
 
   const [trans, setTrans] = useState(null)
   const timerRef = useRef(null)
@@ -47,7 +48,7 @@ export default function App() {
       if (prev === next) return prev
 
       if (extra?.contactName) {
-        setChatContact({ name: extra.contactName, avatar: extra.contactAvatar })
+        setChatContact({ name: extra.contactName, avatar: extra.contactAvatar, streak: extra.streak })
       }
 
       const isPush = PUSH_PAIRS[prev] === next
@@ -93,7 +94,18 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <div className={`phone-frame${isFlush ? ' phone-frame--light' : ''}`}>
+      <button
+        type="button"
+        className="theme-toggle"
+        onClick={() => setTheme((t) => (t === 'light' ? 'dark' : 'light'))}
+        aria-label="切换深浅色"
+      >
+        {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+      </button>
+      <div
+        className={`phone-frame${isFlush ? ' phone-frame--light' : ''}${theme === 'dark' ? ' phone-frame--dark' : ''}`}
+        data-theme={theme}
+      >
         {!isFlush && <StatusBar />}
         {!isFlush && <NavBar title={meta.title} subtitle={meta.subtitle} />}
         <main className={`screen-content${isFlush ? ' screen-content--flush' : ''}`}>
@@ -111,6 +123,7 @@ export default function App() {
                     onChange={handleChange}
                     contactName={chatContact?.name}
                     contactAvatar={chatContact?.avatar}
+                    streak={chatContact?.streak}
                   />
                 </div>
               )}

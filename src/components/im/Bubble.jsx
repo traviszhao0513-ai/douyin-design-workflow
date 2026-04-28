@@ -15,12 +15,13 @@
  * All styling tokens live in Chat.css; this component is a renderer switch only.
  */
 
-import IcPlay      from '../../icons/svg/ic_s_s_play_16_filled.svg?react'
 import IcVoicePlay from '../../icons/chat/voice_play.svg?react'
 import IcVideoCall from '../../icons/svg/ic_s_s_video_20_filled.svg?react'
 import IcPhoneUp   from '../../icons/svg/ic_s_s_phoneup_20_filled.svg?react'
 import IcPause     from '../../icons/svg/ic_s_s_pause_16_filled.svg?react'
-import IcCamera    from '../../icons/svg/ic_s_s_camera_16_filled.svg?react'
+import IcLinkCardPlay  from '../../icons/svg/linkcard_btn_play.svg?react'
+import IcLinkCardPause from '../../icons/svg/linkcard_btn_m.svg?react'
+import IcLinkCardCam   from '../../icons/svg/linkcard_btn_c.svg?react'
 import IcDouyin    from '../../icons/svg/ic_s_s_douyin_16_filled.svg?react'
 import IcShop      from '../../icons/svg/ic_s_s_shop_16_filled.svg?react'
 import IcLink12    from '../../icons/svg/ic_s_s_link_12_outlined.svg?react'
@@ -230,9 +231,8 @@ function VideoRenderer({ data, perspective, format }) {
     <div className={`cht-bbl cht-bbl--video cht-bbl--${perspective}`}>
       <img className={`cht-bbl__media cht-bbl__media--${f}`} src={data.src} alt="视频" />
       <div className="cht-bbl__video-overlay">
-        <div className="cht-bbl__video-play"><IcPlayFilled size={16} /></div>
+        <img className="cht-bbl__video-play-icon" src="/assets/IMCard/videoplay.svg" alt="播放" />
       </div>
-      {data.duration && <span className="cht-bbl__video-duration">{data.duration}</span>}
     </div>
   )
 }
@@ -332,9 +332,9 @@ function LinkCardRenderer({ data }) {
     return <span className="cht-card__brand-icon cht-card__brand-icon--placeholder" style={brandColor ? { background: brandColor } : undefined} aria-hidden="true" />
   }
   const actionIcon = (type) => {
-    if (type === 'play')   return <IcPlay   width={14} height={14} />
-    if (type === 'pause')  return <IcPause  width={14} height={14} />
-    if (type === 'camera') return <IcCamera width={14} height={14} />
+    if (type === 'play')   return <IcLinkCardPlay  className="cht-card__action-btn-svg" />
+    if (type === 'pause')  return <IcLinkCardPause className="cht-card__action-btn-svg" />
+    if (type === 'camera') return <IcLinkCardCam   className="cht-card__action-btn-svg" />
     return null
   }
 
@@ -357,7 +357,7 @@ function LinkCardRenderer({ data }) {
         </div>
         {card.action && (
           <div className="cht-card__right-action">
-            <button className="cht-card__action-btn" type="button" aria-label="动作">
+            <button className="cht-card__action-btn cht-card__action-btn--asset" type="button" aria-label="动作">
               {actionIcon(card.action.type)}
             </button>
           </div>

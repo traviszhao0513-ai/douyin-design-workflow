@@ -2,8 +2,6 @@
  * Chat 页示例数据 — demo only
  * 从 src/pages/Chat.jsx 抽出，页面只负责装配。
  */
-import IcDouyin from '../icons/svg/ic_s_s_douyin_16_filled.svg?react'
-import IcShop   from '../icons/svg/ic_s_s_shop_16_filled.svg?react'
 
 /* ── Avatar URLs ──
  * 主态（avatarRight）固定用本地 mine.png，保证在任何会话里"我"都是同一张脸。
@@ -16,12 +14,12 @@ export const CHAT_ASSETS = {
 
 /* ── Quick reply chips — emoji strings ── */
 export const QUICK_REPLIES = [
-  { id: 'poke',   emoji: '👋',  label: '戳一戳' },
-  { id: 'heart',  emoji: '❤️',  label: '比个心' },
-  { id: 'laugh',  emoji: '🤔',  label: '在干嘛' },
-  { id: 'happy',  emoji: '😊',  label: '很开心' },
-  { id: 'poke2',  emoji: '🤩',  label: '好开心' },
-  { id: 'happy2', emoji: '💩',  label: '转便便' },
+  { id: 'poke',   emoji: '/assets/IMCard/emoji_chuo.png',     label: '戳一戳' },
+  { id: 'heart',  emoji: '/assets/IMCard/emoji_xin.png',      label: '比个心' },
+  { id: 'laugh',  emoji: '/assets/IMCard/emoji_dazhaohu.png', label: '在干嘛' },
+  { id: 'happy',  emoji: '/assets/IMCard/emoji_kaixin.png',   label: '很开心' },
+  { id: 'poke2',  emoji: '/assets/IMCard/emoji_dazhaohu.png', label: '好开心' },
+  { id: 'happy2', emoji: '/assets/IMCard/emoji_bianbian.png', label: '转便便' },
 ]
 
 /* ══════════════════════════════════════════════════════════
@@ -108,7 +106,7 @@ export const MESSAGES = [
       thumb: '/assets/cards/card_topic.png',
       title: '这个视频也太好笑了😂 周末去哪玩 #日常生活',
       subtitle: '抖音短视频',
-      brand: { icon: IcDouyin, name: '抖音' },
+      brand: { icon: '/assets/card_icon_topic.png', name: '抖音' },
     }
   },
 
@@ -118,16 +116,17 @@ export const MESSAGES = [
       thumb: '/assets/cards/card_pet.png',
       title: '夏季新款休闲短裤男宽松运动裤纯棉薄款',
       subtitle: '¥ 89.00',
-      brand: { icon: IcShop, name: '抖音小店' },
+      brand: { icon: '/assets/card_icon_pet.png', name: '抖音小店' },
     }
   },
 
-  // ── Link card — no brand footer, two text lines (received)
+  // ── Link card — news / 今日头条 (received)
   { id: 23, kind: 'card_link', dir: 'recv',
     card: {
       thumb: '/assets/cards/card_news.png',
       title: '北京今晚有雨，记得带伞',
-      subtitle: '来自：今日头条',
+      subtitle: '本地天气推送',
+      brand: { icon: '/assets/card_icon_hot.png', name: '今日头条' },
     }
   },
 
@@ -173,7 +172,7 @@ export const MESSAGES = [
       thumb: '/assets/cards/card_xlink.png',
       title: 'Clawdbot 教程01 模型推理和思维链',
       subtitle: 'https://x.com/op7418/status/1234567890',
-      brand: { icon: '/assets/card_icon_link.png', name: '网页链接' },
+      brand: { isWebLink: true, name: '网页链接' },
     }
   },
 

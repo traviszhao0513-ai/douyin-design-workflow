@@ -29,8 +29,9 @@
   --cht-BGPage:           #efefef;
   --cht-BGSurface:        #efefef;
   --cht-BGInputBar:       #efefef;
-  --cht-BGInputField:     var(--dux-color-bg-surface);
-  --cht-BGChip:           var(--dux-color-bg-surface);
+  /* 输入框 / ACB chip 背景对齐 recv 气泡（design.md：BGInputBar 输入区背景，BGCard 气泡），统一指向 --cht-bubble-recv */
+  --cht-BGInputField:     var(--cht-bubble-recv);
+  --cht-BGChip:           var(--cht-bubble-recv);
 
   /* Bubble — IM-specific fills */
   --cht-bubble-recv:      var(--dux-color-bg-surface);
@@ -49,10 +50,15 @@
   --cht-call-icon-recv:   rgba(22, 24, 35, 0.06);
   --cht-call-icon-sent:   rgba(255, 255, 255, 0.22);
 
+  /* BGInput — 按 design.md：light #161823 5% / dark #FFFFFF 15%。 */
+  --cht-bginput:          rgba(22, 24, 35, 0.05);
+
   /* Text — 直通 dux */
   --cht-text-primary:     var(--dux-color-text-primary);
   --cht-text-secondary:   var(--dux-color-text-secondary);
-  --cht-text-tertiary:    var(--dux-color-text-tertiary);
+  /* TextTertiary — 严格按 design.md：light #161823 60% / dark #FFFFFF 50%。
+     dux token 当前是 solid #C4C5CB / rgba(255,255,255,0.40)，会和规范偏色，这里直显式覆盖。 */
+  --cht-text-tertiary:    rgba(22, 24, 35, 0.6);
   --cht-text-sent:        var(--dux-color-text-inverse);
   --cht-text-link:        #04498D;  /* Link/Link3 — IM 专属 link 色 */
   --cht-text-mention:     #04498D;
@@ -100,6 +106,15 @@
   --cht-status-spinner:   rgba(255, 255, 255, 0.55);
   --cht-invalid-bg:       rgba(255, 255, 255, 0.06);
   --cht-invalid-fg:       rgba(255, 255, 255, 0.50);
+
+  /* TextTertiary dark — 按 design.md：#FFFFFF 50% */
+  --cht-text-tertiary:    rgba(255, 255, 255, 0.5);
+
+  /* LinkCard divider dark — 比默认 line 浅，避开通用 --cht-line */
+  --cht-card-divider:     rgba(255, 255, 255, 0.08);
+
+  /* BGInput dark — 按 design.md：#FFFFFF 15% */
+  --cht-bginput:          rgba(255, 255, 255, 0.15);
 }
 
 .cht-page {
@@ -607,7 +622,7 @@
 .cht-card__divider {
   height: 1px;
   width: 100%;
-  background: var(--cht-line);
+  background: var(--cht-card-divider, rgba(22, 24, 35, 0.06));
   border: 0;
   flex-shrink: 0;
 }
@@ -676,11 +691,15 @@ img.cht-card__brand-icon { object-fit: cover; }
   background: var(--cht-brand-placeholder, #8C7AE6);
 }
 
-/* Web link variant — 浅底 + tertiary 色 phonelinkplus icon */
+/* Web link variant — 浅底 + tertiary 色 phonelinkplus / link icon */
 .cht-card__brand-icon--link {
   background: var(--cht-invalid-bg);
   color: var(--cht-text-tertiary);
 }
+/* Figma 切图里 fill / opacity 写死，会让 dark 模式下 icon 淡化甚至消失。
+   统一覆盖：fill 走 currentColor，g 上的预设 opacity 还原成 1，由父容器 color 控制可见度。 */
+.cht-card__brand-icon--link svg path { fill: currentColor; }
+.cht-card__brand-icon--link svg g { opacity: 1; }
 
 .cht-card__brand-name {
   font-size: 11px;
@@ -729,22 +748,37 @@ img.cht-card__brand-icon { object-fit: cover; }
   background: var(--cht-quote-recv);
 }
 
-/* Force SVG icon (play/pause/camera) 用 currentColor，覆盖 Figma 切图里硬编码的 #161823
-   原始 fill 是 light 下的文字色，在 dark 下会直接消失。和 .cht-bbl__play / .cht-bbl__call-icon 的处理同构。 */
-.cht-card__action-btn svg path { fill: currentColor; }
+/* LinkCard action btn — svgr 内联，圆底走 BGInput / icon 走 TextPrimary，深浅自动适配。
+   切图源在 src/icons/svg/linkcard_btn_*.svg，circle.cht-card__action-btn-bg 与 path.cht-card__action-btn-glyph
+   两个 hook class 由 SVG 文件本身指定。 */
+.cht-card__action-btn--asset {
+  background: transparent;
+  padding: 0;
+}
+.cht-card__action-btn-svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.cht-card__action-btn-bg    { fill: var(--cht-bginput); }
+.cht-card__action-btn-glyph { fill: var(--cht-text-primary); }
 
 /* ─────────────────────────────────────────
    Quick reply chips  (ACB)
    ───────────────────────────────────────── */
 .cht-acb {
   flex-shrink: 0;
-  padding: 4px 12px;
+  /* 横向 0：让 scroll 容器自己撑满整屏，chips 可以滑到边缘；
+     底部 0：与 input-bar 内部 10px 居中合成 10px 视觉间距（64 - 44 = 上下各 10） */
+  padding: 4px 0 0;
   background: var(--cht-BGPage);
 }
 
 .cht-acb__scroll {
   display: flex;
   gap: 6px;
+  /* 起始/结尾各 12px 内边距，模拟"贴边"前的安全距离；滑动后 chip 可整个进入并贴住屏幕边缘 */
+  padding: 0 12px;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -777,6 +811,12 @@ img.cht-card__brand-icon { object-fit: cover; }
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cht-acb__emoji img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .cht-acb__label {
@@ -1054,20 +1094,9 @@ img.cht-card__brand-icon { object-fit: cover; }
   display: flex; align-items: center; justify-content: center;
   pointer-events: none;
 }
-.cht-bbl__video-play {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: rgba(0,0,0,0.45);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-}
-.cht-bbl__video-duration {
-  position: absolute; right: 6px; bottom: 6px;
-  padding: 2px 6px;
-  border-radius: 4px;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  font-size: 11px; font-weight: 500;
-  line-height: 1;
+.cht-bbl__video-play-icon {
+  width: 30px; height: 30px;
+  display: block;
 }
 
 /* ── Notice (通知) — full-row centered，纯文字无气泡 ── */

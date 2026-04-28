@@ -11,13 +11,13 @@ import Avatar from '../../../Douyin_design_system/ui/components/Avatar/Avatar'
 import Bubble from './Bubble'
 
 /* ── Bubble-specific icons ── */
-import IcPlay      from '../../icons/svg/ic_s_s_play_16_filled.svg?react'
 import IcVoicePlay from '../../icons/chat/voice_play.svg?react'
 import IcVideoCall from '../../icons/svg/ic_s_s_video_20_filled.svg?react'
 import IcPhoneUp   from '../../icons/svg/ic_s_s_phoneup_20_filled.svg?react'
-import IcPause     from '../../icons/svg/ic_s_s_pause_16_filled.svg?react'
-import IcCamera    from '../../icons/svg/ic_s_s_camera_16_filled.svg?react'
 import IcLink12    from '../../icons/svg/ic_s_s_link_12_outlined.svg?react'
+import IcLinkCardPlay  from '../../icons/svg/linkcard_btn_play.svg?react'
+import IcLinkCardPause from '../../icons/svg/linkcard_btn_m.svg?react'
+import IcLinkCardCam   from '../../icons/svg/linkcard_btn_c.svg?react'
 
 /* Exact waveform heights from Figma node measurement (px) */
 const WAVE_HEIGHTS = [9, 12, 14, 20, 14, 10, 10, 10, 10, 10, 10]
@@ -128,10 +128,10 @@ function CallBubble({ message, dir }) {
   )
 }
 
-function CardActionIcon({ type }) {
-  if (type === 'play')   return <IcPlay   width={14} height={14} />
-  if (type === 'pause')  return <IcPause  width={14} height={14} />
-  if (type === 'camera') return <IcCamera width={14} height={14} />
+function CardActionButton({ type }) {
+  if (type === 'play')   return <IcLinkCardPlay  className="cht-card__action-btn-svg" />
+  if (type === 'pause')  return <IcLinkCardPause className="cht-card__action-btn-svg" />
+  if (type === 'camera') return <IcLinkCardCam   className="cht-card__action-btn-svg" />
   return null
 }
 
@@ -172,10 +172,11 @@ function LinkCardBubble({ message }) {
               <span className="cht-card__subtitle">{card.subtitle}</span>
             )}
           </div>
+          {card.brand && <div className="cht-card__divider" aria-hidden="true" />}
           {card.brand && (
             <div className="cht-card__brand">
               {card.brand.isWebLink ? (
-                <span className="cht-card__brand-link-icon" aria-hidden="true">
+                <span className="cht-card__brand-icon cht-card__brand-icon--link" aria-hidden="true">
                   <IcLink12 width={12} height={12} />
                 </span>
               ) : card.brand.icon ? (
@@ -187,9 +188,9 @@ function LinkCardBubble({ message }) {
         </div>
         {card.action && (
           <div className="cht-card__right-action">
-            <button className="cht-card__action-btn" type="button"
+            <button className="cht-card__action-btn cht-card__action-btn--asset" type="button"
               aria-label={card.action.type === 'play' ? '播放' : card.action.type === 'pause' ? '暂停' : '拍同款'}>
-              <CardActionIcon type={card.action.type} />
+              <CardActionButton type={card.action.type} />
             </button>
           </div>
         )}

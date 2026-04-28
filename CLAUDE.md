@@ -71,6 +71,22 @@ DOUYIN_COMPONENTS = ./Douyin_design_system
 - `project_douyin_design_system.md` → 组件库真实来源和复用规则
 - `memory/` → 团队偏好沉淀，跨会话持久化
 
+### 色卡真源（强制）
+
+**所有色卡（Text / BG / Line / Brand 等）以 `design.md` 为唯一真源。**
+
+`Douyin_design_system/ui/tokens.css` 里的 `--dux-*` token 是从 Figma 同步而来，历史上存在 alpha 信息丢失（如 TextTertiary 被简化成 solid `#C4C5CB`，与 design.md 规范的 `#161823 60%` 对不上）。当二者冲突时：
+
+1. **design.md 规范优先**，按其透明度 / rgba 写法落地
+2. 在最靠近冲突点的层覆盖（页面级 `--cht-*` / 组件级局部变量），避免直接改 dux 源引发连锁回归
+3. 长期目标：把 `Douyin_design_system/ui/tokens.css` 的色卡逐项对齐到 design.md（参见根目录任务追踪）
+
+落地建议：
+- ✅ 引用规范色 → `var(--cht-text-tertiary)` / `var(--cht-line)` 等页面级别名
+- ✅ 别名定义在 Chat.css / 各页面 CSS 顶部，值取自 design.md（rgba 形式）
+- ❌ 不要在组件 CSS 直接写 `var(--dux-color-text-tertiary)`，绕开页面别名意味着 dux 源出错时无可控覆盖点
+- ❌ 不要在组件 CSS 写 hex 字面量去"绕过偏色问题"
+
 ---
 
 ## Tool Routing / 工具路由表
@@ -421,6 +437,23 @@ npm run build
   add:    DECORATIVE_ASSETS.addIcon,
 }} />
 ```
+
+### 通用链接卡（LinkCard）专用规则
+
+- **必须包含来源模块（brand）**：所有 `card_link` / `linkcard` 实例在落地或示例数据中都必须提供 `card.brand`，至少包含 `name`。来源模块由 12×12 brand icon + 来源名称组成，渲染在分割线下方。不要省略 `brand` 字段，也不要让来源模块被 UI 裁掉。
+- **副标题与来源文字色**：副标题 `.cht-card__subtitle` 与来源名 `.cht-card__brand-name` 都使用 `var(--cht-text-tertiary)`，不要降级成 secondary 或 primary。
+- **分割线**：`.cht-card__divider` 固定 `height: 1px` + `background: var(--cht-line)`，不要改为 border / 0.5px。
+
+### LinkCard 资源命名与目录约定（强制）
+
+| 资源类别 | 目录 | 命名格式 | 示例 |
+|---------|------|---------|------|
+| **封面大图、操作按钮**（thumb / action btn 等） | `public/assets/cards/` | `card_XXX` | `card_music_play.png`、`card_hot.png`、`card_topic.png` |
+| **来源小 icon**（12×12 brand icon） | `public/assets/` | `card_icon_XXX` | `card_icon_music.png`、`card_icon_link.png` |
+
+- ❌ 不要把来源 icon 放进 `public/assets/cards/`，也不要把封面/操作切图放进 `public/assets/` 根
+- ❌ 不要把链接卡相关资源散落到 `public/assets/IMCard/`（IMCard 仅用于消息列表/聊天页头部装饰，不是链接卡资源域）
+- ✅ 引用时直接走绝对路径：`<img src="/assets/card_icon_music.png">` / `<img src="/assets/cards/card_music_play.png">`
 
 ### 审查清单（PR 或出图前）
 

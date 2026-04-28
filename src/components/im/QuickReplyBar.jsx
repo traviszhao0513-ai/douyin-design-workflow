@@ -17,7 +17,11 @@ export default function QuickReplyBar({ items = [], onPick }) {
             type="button"
             onClick={() => onPick?.(item)}
           >
-            <span className="cht-acb__emoji" aria-hidden="true">{item.emoji}</span>
+            <span className="cht-acb__emoji" aria-hidden="true">
+              {typeof item.emoji === 'string' && item.emoji.startsWith('/')
+                ? <img src={item.emoji} alt="" />
+                : item.emoji}
+            </span>
             <span className="cht-acb__label">{item.label}</span>
           </button>
         ))}
